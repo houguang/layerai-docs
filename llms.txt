@@ -1,0 +1,31 @@
+# LayerAI 使用文档
+
+> LayerAI 是本地优先的浏览器扩展，用于网页内容采集、AI 翻译、术语治理与云端协作。
+
+## 站点
+
+- 文档首页：https://sovitech.mintlify.app
+- MCP 端点：https://sovitech.mintlify.app/mcp
+- GitHub：https://github.com/houguang/layerai-docs
+
+## 快速链接
+
+- [快速开始](https://sovitech.mintlify.app/quickstart/first-translation)
+- [安装扩展](https://sovitech.mintlify.app/quickstart/install)
+- [模型配置](https://sovitech.mintlify.app/models/overview)
+- [故障排查](https://sovitech.mintlify.app/troubleshooting)
+
+## 文档结构
+
+- 开始：核心概念、界面导览
+- 快速开始：安装、设置、登录、首个翻译
+- 网页采集：手动 / 当前页 / 整站
+- 翻译管理：编辑、AI 批量、手动翻译、提交共享
+- 页面替换：自动替换、替换模式、翻译列表弹窗
+- 翻译队列：任务进度与管理
+- 模型配置：平台模型、自定义模型、提示词
+- 词库：本地与平台术语
+- 数据同步：JSON、Layer 云、Google Drive
+- 共享翻译：浏览、下载、提交、发现策略
+- 账号与订阅：登录、套餐、配额
+- 故障排查与附录

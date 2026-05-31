@@ -1,0 +1,60 @@
+---
+title: LayerAI 使用文档
+description: 本地优先的网页翻译助手——采集、翻译、术语治理与云端协作。
+icon: "book-open"
+---
+
+## 欢迎使用 LayerAI
+
+LayerAI 是一款**本地优先**的浏览器扩展，帮助你在网页内完成：
+
+- **采集** — 从当前页面或整站抓取待翻译文本
+- **翻译** — AI 批量翻译或手动精修
+- **替换** — 保存后立即生效，再次访问自动应用
+- **治理** — 词库约束术语，队列管理批量任务
+- **协作** — 云同步、共享翻译下载与提交
+
+<CardGroup cols={2}>
+  <Card title="5 分钟上手" icon="rocket" href="/quickstart/first-translation">
+    安装扩展并完成第一个页面的采集与翻译。
+  </Card>
+  <Card title="采集方式" icon="mouse-pointer" href="/collection/overview">
+    了解手动、当前页、整站三种采集模式。
+  </Card>
+  <Card title="模型配置" icon="cpu" href="/models/overview">
+    选择平台模型或接入自定义 OpenAI 兼容服务。
+  </Card>
+  <Card title="故障排查" icon="circle-help" href="/troubleshooting">
+    定位 AI 调用失败、同步异常等常见问题。
+  </Card>
+</CardGroup>
+
+## 推荐阅读路径
+
+<Steps>
+  <Step title="安装与基础设置">
+    完成 [安装扩展](/quickstart/install)，配置 [界面语言与目标语言](/quickstart/basic-settings)。
+  </Step>
+  <Step title="完成首次翻译">
+    按 [第一个翻译流程](/quickstart/first-translation) 走通采集 → 翻译 → 保存 → 自动替换。
+  </Step>
+  <Step title="按需深入">
+    团队场景可继续阅读 [词库](/glossary/overview)、[云同步](/sync/layer-cloud)、[共享翻译](/shared/overview)。
+  </Step>
+</Steps>
+
+## 核心概念
+
+| 概念 | 说明 |
+| --- | --- |
+| **站点** | 按域名（如 `example.com`）组织的翻译集合 |
+| **词条** | 一条原文及其各目标语言的译文，绑定页面元素定位信息 |
+| **精确替换** | 按 DOM 定位精确替换已采集的文本 |
+| **内容匹配替换** | 按文本内容匹配替换，适合手动添加的通用译文 |
+| **翻译队列** | 后台批量执行 AI 翻译任务，支持进度追踪与重试 |
+
+## 需要帮助？
+
+- 遇到报错：查看 [故障排查](/troubleshooting)
+- 需要升级能力：查看 [套餐说明](/account/plans)
+- 术语与数据格式：查看 [附录](/appendix/glossary)
