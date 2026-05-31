@@ -1,9 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "LayerAI 使用文档",
+  "name": "LayerAI",
   "description": "LayerAI 浏览器扩展官方使用文档：采集、翻译、词库、同步与共享协作。",
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "/"
+  },
   "seo": {
     "metatags": {
       "og:site_name": "LayerAI 使用文档",
@@ -24,7 +29,8 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "使用文档",
+        "tab": "文档",
+        "icon": "book-open",
         "groups": [
           {
             "group": "开始",
@@ -33,16 +39,6 @@
               "index",
               "introduction/concepts",
               "introduction/ui-tour"
-            ]
-          },
-          {
-            "group": "快速开始",
-            "icon": "play",
-            "pages": [
-              "quickstart/install",
-              "quickstart/basic-settings",
-              "quickstart/login",
-              "quickstart/first-translation"
             ]
           },
           {
@@ -168,36 +164,31 @@
             ]
           }
         ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "官网",
-          "href": "https://local-layer.com",
-          "icon": "globe"
-        },
-        {
-          "anchor": "定价",
-          "href": "https://local-layer.com/pricing",
-          "icon": "tag"
-        }
-      ]
-    }
-  },
-  "navbar": {
-    "links": [
+      },
       {
-        "label": "订阅",
-        "href": "https://local-layer.com/subscription"
+        "tab": "安装",
+        "icon": "download",
+        "groups": [
+          {
+            "group": "快速开始",
+            "icon": "play",
+            "pages": [
+              "quickstart/install",
+              "quickstart/basic-settings",
+              "quickstart/login",
+              "quickstart/first-translation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "官网",
+        "icon": "globe",
+        "href": "https://local-layer.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "安装扩展",
-      "href": "/quickstart/install"
-    }
+    ]
   },
+  "navbar": {},
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude", "cursor", "mcp"]
   },
