@@ -2,39 +2,41 @@
 
 LayerAI 浏览器扩展官方使用文档（Mintlify）。
 
+- GitHub：https://github.com/houguang/layerai-docs
+- 线上站点：https://sovitech.mintlify.app
+
 ## 本地预览
 
 需要 Node.js **v20.17+**。
 
 ```bash
-cd docs
 npm i -g mint
 mint dev
 ```
 
 浏览器打开 http://localhost:3000
 
-## 线上地址
+## 关联 Mintlify 项目（sovitech）
 
-- 文档站点：https://sovitech.mintlify.app
-- MCP 端点：https://sovitech.mintlify.app/mcp（供 Cursor / Claude 搜索文档）
+文档已推送到本仓库 `main` 分支。在 [Mintlify Dashboard](https://dashboard.mintlify.com) 完成以下配置后，`sovitech.mintlify.app` 会自动部署：
+
+1. 打开 **sovitech** 项目 → **Git Settings**
+2. 仓库：`houguang/layerai-docs`
+3. 分支：`main`
+4. 文档根目录：留空（本仓库根目录即 `docs.json` 所在位置）
+5. 安装并授权 **Mintlify GitHub App**
+6. 保存后等待 1–3 分钟刷新站点
+
+若仍显示 Mintlify 默认「Product Guide」模板，说明 Git 尚未指向本仓库。
 
 ## Cursor MCP
 
-项目已配置 `.cursor/mcp.json`，重启 Cursor 后可在对话中搜索 LayerAI 文档。
-
-若站点内容仍为 Mintlify 默认模板，请将本仓库 `docs/` 推送到 Mintlify 关联仓库并确认文档根目录为 `docs/`。
-
-## 部署到 Mintlify
-
-1. 在 [mintlify.com/start](https://mintlify.com/start) 创建项目（或使用已有 `sovitech` 项目）
-2. 连接本仓库，**文档根目录** 设为 `docs/`
-3. 安装 Mintlify GitHub App，推送 `main` 后自动部署
+- 文档搜索：`https://sovitech.mintlify.app/mcp`
+- 在 monorepo 根目录 `.cursor/mcp.json` 已配置 `layerai-docs`
 
 ## 目录结构
 
 ```
-docs/
 ├── docs.json          # 导航、主题、Navbar
 ├── index.mdx          # 首页
 ├── introduction/      # 概念与界面
@@ -58,7 +60,7 @@ docs/
 
 1. 在对应目录创建 `page-name.mdx`（含 frontmatter `title` / `description`）
 2. 在 `docs.json` → `navigation.tabs` 对应 group 的 `pages` 中加入路径（不含扩展名）
-3. 本地 `mint dev` 预览后提交
+3. 本地 `mint dev` 预览后 `git push`
 
 ## 检查死链
 
