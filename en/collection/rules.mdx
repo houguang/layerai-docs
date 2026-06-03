@@ -1,0 +1,27 @@
+---
+title: Collection Rules
+description: What content is collected, skipped, or handled specially.
+icon: "filter"
+---
+
+## Automatic skip
+
+The following are not collected again:
+
+- Text that already has a matching translation locally
+- Nodes in non-visible areas such as scripts or styles
+- Inline structures covered by [protected HTML tags](/en/advanced/protected-tags)
+
+## Placeholders
+
+Variable placeholders on the page (e.g. `{{@id#1|source text}}`) keep their structure during AI translation; only the text after the pipe is translated. See [Appendix · Data format](/en/appendix/data-format).
+
+## Sensitive information
+
+When [sensitive masking](/en/advanced/sensitive-mask) is enabled, text sent to AI is masked according to rules first, reducing leak risk.
+
+## Best practices
+
+- Large sites in batches: core pages first, then sub-paths
+- After collection, review the **Translation management** list and remove clearly incorrect entries
+- Add brand terms to the [glossary](/en/glossary/overview) in advance

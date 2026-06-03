@@ -1,0 +1,62 @@
+---
+title: Export Data Format
+description: Main fields in local JSON backups.
+icon: "braces"
+---
+
+## Export File Structure
+
+Locally exported JSON typically includes:
+
+```json
+{
+  "version": "1.x",
+  "exportTime": "ISO-8601 timestamp",
+  "translationGroups": [],
+  "aiConfig": {},
+  "aiTranslateRuntimeConfig": {},
+  "customModels": [],
+  "promptConfig": {}
+}
+```
+
+## translationGroups
+
+Each site object:
+
+| Field | Description |
+| --- | --- |
+| url | Site domain identifier |
+| enabled | Whether replacement is enabled |
+| replacementMode | `exact` or `content_match` |
+| items | Array of entries |
+| sharedSourceId | ID from a shared package (optional) |
+
+## items (Entries)
+
+| Field | Description |
+| --- | --- |
+| id | Unique ID |
+| source | Source text |
+| target | Form such as `{ "zh-CN": "translation" }` |
+| locator | `{ "xpaths": ["..."] }` |
+| enabled | Whether the entry is enabled |
+| variablePattern | Placeholder pattern (if any) |
+
+## Placeholders
+
+AI translation preserves format:
+
+```
+{{@identifier#index|source text}}
+```
+
+On output, only the text after the pipe `|` is translated; the rest of the structure stays unchanged.
+
+## Glossary Export
+
+Glossaries can be exported separately; the structure includes a `categories` array, each with an `entries` list. See [Local Glossary](/en/glossary/local-glossary).
+
+<Warning>
+  Export files may contain API keys; redact before sharing.
+</Warning>

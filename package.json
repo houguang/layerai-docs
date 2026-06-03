@@ -5,9 +5,13 @@
   "description": "LayerAI 扩展 Mintlify 使用文档",
   "scripts": {
     "dev": "mint dev",
+    "validate": "mint validate",
     "broken-links": "mint broken-links"
   },
   "engines": {
     "node": ">=20.17.0"
+  },
+  "devDependencies": {
+    "mint": "^4.2.359"
   }
 }

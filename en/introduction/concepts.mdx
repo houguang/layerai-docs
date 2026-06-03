@@ -1,0 +1,71 @@
+---
+title: Core Concepts
+description: LayerAI product philosophy, data model, and key terminology.
+icon: "lightbulb"
+---
+
+This page explains LayerAI's design philosophy, core data model, and key terms to help users understand how the extension's modules work together.
+
+## Local-First
+
+LayerAI stores translation data in the browser by default, which enables:
+
+- Saved translations **do not require repeated AI calls**, saving Tokens and wait time
+- On return visits to the same page, the extension automatically applies saved translations
+- Users can back up data anytime via [JSON export](/en/sync/local-import-export) or restore on another device
+
+After signing in with a Layer account, Pro and Max users can also use [cloud sync](/en/sync/layer-cloud) and [shared translations](/en/shared/overview).
+
+## Translate Once, Persist Forever
+
+LayerAI's typical workflow:
+
+```
+Visit page → Collect text → AI/manual translation → Save → Auto-replace on page
+                ↑                                    │
+                └──────── Auto-applied on revisit ───┘
+```
+
+## Three UI Surfaces
+
+LayerAI provides three interaction surfaces: popup, options page, and in-page overlay.
+
+| Surface | Entry | Purpose |
+| --- | --- | --- |
+| **Browser popup** | Click the extension icon | Quick collection, auto-replace toggle, download shared translations |
+| **Options page** | "Manage" in popup, or right-click extension → Options | Translation management, queue, glossaries, models, sync |
+| **In-page overlay** | Side button / translation list on the page | View, edit, and save entries on the current page |
+
+See [UI Tour](/en/introduction/ui-tour) for details.
+
+## Data Model
+
+### Site (Translation Group)
+
+LayerAI groups translation data by **domain**. For example, all entries under `docs.example.com` belong to the same site configuration.
+
+### Entry (Translation Item)
+
+Each entry includes:
+
+- **Source** — Text collected from the page
+- **Target** — Stored by target language, e.g. `{ "zh-CN": "队列" }`
+- **Locator** — DOM positioning such as XPath, used for exact replacement
+- **Enabled state** — Individual translations can be disabled
+
+### Glossary
+
+A glossary consists of term categories and entries used during AI translation to constrain brand names, product names, and similar terms. See [Glossary Overview](/en/glossary/overview).
+
+## Replacement Modes
+
+<AccordionGroup>
+  <Accordion title="Exact replacement (exact)">
+    Replaces text using the DOM locator from collection; suitable for most web pages. Manually added entries are not available in exact mode.
+  </Accordion>
+  <Accordion title="Content-match replacement (content_match)">
+    Finds and replaces by source text in the page; suitable for reusing the same translation across pages or manually maintained generic entries.
+  </Accordion>
+</AccordionGroup>
+
+See [Replacement Modes](/en/replace/modes) for details.

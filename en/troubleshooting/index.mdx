@@ -1,0 +1,48 @@
+---
+title: Troubleshooting Overview
+description: Common issues index and diagnostic approach.
+icon: "circle-help"
+---
+
+This page summarizes common LayerAI issues and diagnostic steps, organized from basic checks to deeper investigation.
+
+## Diagnostic Order
+
+<Steps>
+  <Step title="Confirm the extension is enabled">
+    On the browser extensions page, confirm LayerAI is enabled and the target site has been granted access.
+  </Step>
+  <Step title="Check auto-replacement">
+    Confirm **Auto-replace** is enabled in the popup and relevant entries are not disabled.
+  </Step>
+  <Step title="Inspect the console">
+    Enable [debug logging](/en/advanced/developer) and review Console output via F12.
+  </Step>
+  <Step title="Browse by category">
+    AI issues → [AI Errors](/en/troubleshooting/ai-errors); sync → [Sync Errors](/en/troubleshooting/sync-errors).
+  </Step>
+</Steps>
+
+## Common Issues
+
+<AccordionGroup>
+  <Accordion title="Extension icon gray / popup won't open">
+    Reload the extension; check whether it is blocked by browser policy.
+  </Accordion>
+  <Accordion title="No manual collection button on the page">
+    Confirm the current URL is not an internal browser page (`chrome://`, `edge://`, etc.); refresh the page.
+  </Accordion>
+  <Accordion title="Text cannot be collected">
+    The page may use Shadow DOM or Canvas rendering; try [manual collection](/en/collection/manual).
+  </Accordion>
+  <Accordion title="Incomplete replacement">
+    Check [replacement modes](/en/replace/modes); dynamically loaded content requires re-collection.
+  </Accordion>
+  <Accordion title="Sign-in failure">
+    Clear site cookies and retry; check network connectivity and system time.
+  </Accordion>
+</AccordionGroup>
+
+## Still Unresolved
+
+Support can be reached via the feedback channel on the Basic Settings page. Include: browser version, problem URL, reproduction steps, and console logs.

@@ -1,0 +1,27 @@
+---
+title: Google Drive Sync
+description: Back up configuration to Google Drive and manage version history.
+icon: "brand-google"
+---
+
+## Purpose
+
+Syncs **configuration data** (models, prompts, custom models, etc.) to Google Drive.
+
+<Note>
+  By default this **does not include** translation site content—configuration only. For full translation backups, use [local JSON export](/en/sync/local-import-export) or [Layer Cloud Sync](/en/sync/layer-cloud).
+</Note>
+
+## First-Time Setup
+
+1. Import/Export page → Google Drive Sync
+2. Authorize the Google account
+3. Run sync to create `LayerAI-sync-config.json` and timestamped backups
+
+## Backup Management
+
+**Backup Management** lists historical files and supports restore or deletion of specific backups.
+
+## Revoke Authorization
+
+Users can **revoke Google authorization** on the sync page without affecting local data.

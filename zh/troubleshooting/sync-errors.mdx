@@ -1,0 +1,33 @@
+---
+title: 同步错误排查
+description: 云同步、导入导出与 Google Drive 问题。
+icon: "cloud-off"
+---
+
+## Layer 云同步
+
+| 现象 | 处理 |
+| --- | --- |
+| 需要 Pro 会员 | [升级套餐](/zh/account/plans) |
+| 未登录 | [登录账号](/zh/quickstart/login) |
+| 同步冲突 / 数据不对 | 先 [本地导出备份](/zh/sync/local-import-export)，再单向拉取或推送 |
+| 请求失败 | 检查网络与 API 服务状态 |
+
+## 本地导入
+
+| 现象 | 处理 |
+| --- | --- |
+| 未检测到可导入数据 | 确认 JSON 格式与导出版本兼容 |
+| 导入后缺站点 | 检查 JSON 内 `translationGroups` 字段 |
+
+## Google Drive
+
+| 现象 | 处理 |
+| --- | --- |
+| 授权失败 | 重新授权 Google 账号 |
+| 同步失败 | 查看错误详情；确认 Drive API 配额 |
+| 备份列表为空 | 先执行一次成功同步 |
+
+## 自动同步
+
+自动同步间隔过短时可能与其他操作冲突，可适当增大间隔分钟数。

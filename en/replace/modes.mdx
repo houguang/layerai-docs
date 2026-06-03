@@ -1,0 +1,31 @@
+---
+title: Replace Modes
+description: Differences between exact replace and content match, and when to use each.
+icon: "git-compare"
+---
+
+LayerAI provides two page replace modes to apply saved translations on the page. Switch under: extension popup → **Replace mode**.
+
+## Exact replace
+
+- Replaces text using the **DOM locator (XPath)** from collection
+- Applies to entries obtained through collection
+- **Manually added** entries are not available in this mode
+
+## Content match replace
+
+- Searches the page DOM for text nodes matching the **source text** and replaces them
+- Applies when the same translation is reused across pages
+- Supports [manually added translations](/en/translation/edit-entries)
+
+## How to choose
+
+| Scenario | Recommended mode |
+| --- | --- |
+| Typical web localization | Exact replace |
+| Same copy on multiple pages | Content match |
+| Many manually maintained generic terms | Content match |
+
+<Tip>
+  Either mode can be switched at any time; saved entry data is unaffected.
+</Tip>

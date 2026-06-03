@@ -1,0 +1,30 @@
+---
+title: Prompt Configuration
+description: System and User prompt templates and placeholder rules.
+icon: "message-square"
+---
+
+Model Configuration → **Prompts**.
+
+## Structure
+
+- **System Prompt** — Defines the translation engine role and output format (JSON)
+- **User Prompt** — User-side instructions, typically including target-language placeholders
+
+## Default Behavior
+
+Built-in prompts require the model to:
+
+- Output JSON only, with keys matching the input one-to-one
+- Preserve the `{{@identifier#index|source}}` placeholder structure
+- Keep identifying content such as addresses, IDs, and brand names unchanged
+
+## Customization Tips
+
+- Add industry tone guidance (formal vs. conversational)
+- Add constraints such as "must use glossary terms" (works with the [glossary](/en/glossary/overview))
+- Avoid breaking the JSON output format, which causes parsing failures
+
+## Manual Translation
+
+The [manual translation](/en/translation/manual-translation) workflow copies the current prompts and batched JSON.

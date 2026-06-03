@@ -1,0 +1,30 @@
+---
+title: 提示词配置
+description: System / User 提示词模板与占位符规则。
+icon: "message-square"
+---
+
+模型配置 → **提示词**。
+
+## 结构
+
+- **System Prompt** — 定义翻译引擎角色与输出格式（JSON）
+- **User Prompt** — 用户侧指令，通常包含目标语言占位符
+
+## 默认行为
+
+内置提示词要求模型：
+
+- 仅输出 JSON，key 与输入一一对应
+- 保留 `{{@标识符#序号|原文}}` 占位符结构
+- 地址、ID、品牌名等识别性内容保持原样
+
+## 自定义建议
+
+- 增加行业语气说明（正式 / 口语）
+- 添加「必须使用词库术语」类约束（配合 [词库](/zh/glossary/overview)）
+- 避免破坏 JSON 输出格式，否则解析失败
+
+## 手动翻译
+
+[手动翻译](/zh/translation/manual-translation) 工作流会复制当前提示词与分片 JSON。

@@ -1,0 +1,46 @@
+---
+title: UI Tour
+description: Feature layout across popup, options page, and in-page overlay.
+icon: "layout-dashboard"
+---
+
+LayerAI uses a browser popup, options page, and in-page overlay for operations at different granularities. The sections below describe each surface by area.
+
+## Browser Popup
+
+Clicking the LayerAI icon in the toolbar opens the popup. Main areas:
+
+| Area | Function |
+| --- | --- |
+| Account | Sign-in status and plan badge (Free / Pro / Max) |
+| Collection | Manual collection; one-click current page / current site |
+| Auto-replace | Controls whether saved translations appear on the page |
+| Replacement mode | Switch between exact and content-match replacement |
+| Shared translations | Quick download when matching community packages are discovered |
+
+## Options Page (Management Console)
+
+The options page is available via **Manage** in the popup or browser extension menu → **Options**. The sidebar includes:
+
+| Module | Description |
+| --- | --- |
+| Translation management | Browse and edit entries by site; start AI translation |
+| Translation queue | View batch translation task progress |
+| Glossary management | Maintain local and platform terminology |
+| Shared translations | Browse, download, and submit shared packages |
+| Model configuration | Default model, prompts, and runtime parameters |
+| Import/export | Local JSON, cloud sync, Google Drive |
+| Basic settings | Language, theme, account, shared discovery policy |
+| Developer settings | Debug logs, protected tags, sensitive word masking |
+
+## In-Page Overlay
+
+On pages where the extension is enabled, LayerAI provides:
+
+- **Manual collection button** — Floats at the page edge; click to enter box-selection collection mode
+- **Translation list panel** — Shows collected entries on the current page; supports edit, AI translation, and save
+- **Shared translation prompts** — When a matching shared package is found, alerts appear as a popup or icon badge per configuration
+
+<Tip>
+  The options page suits bulk management and global configuration; day-to-day single-page translation can be done in the in-page overlay.
+</Tip>

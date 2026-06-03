@@ -1,0 +1,29 @@
+---
+title: Protected HTML Tags
+description: Inline tag list kept intact during collection.
+icon: "code"
+---
+
+Developer Settings → **Protected Tags**.
+
+## Purpose
+
+During text collection, content inside certain inline tags (e.g. `code`, `kbd`) should be processed together with the outer context so the DOM structure is not split and replacement does not fail.
+
+## Configuration Format
+
+One tag name per line (lowercase), for example:
+
+```
+code
+kbd
+span
+```
+
+## Defaults
+
+The extension ships with a built-in list of common inline tags; modification is usually unnecessary. Adjust only when a site’s structure behaves unexpectedly.
+
+## Restore Defaults
+
+**Restore defaults** resets the list to the factory preset.

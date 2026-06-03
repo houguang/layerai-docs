@@ -1,0 +1,31 @@
+---
+title: Translation Queue Overview
+description: Lifecycle and entry points for batch AI translation tasks.
+icon: "list-ordered"
+---
+
+The translation queue runs batch AI translation in the background so large numbers of pending fields do not block page work. Entry point: options page → **Translation queue**.
+
+## Purpose
+
+Pending translation fields are processed in a background queue with configured **sharding, concurrency, and retries**, keeping the UI responsive.
+
+## Task sources
+
+- **AI translate** from translation management or the page popup
+- Batch translation after whole-site collection
+
+## Task states
+
+| State | Meaning |
+| --- | --- |
+| Queued | Waiting to run |
+| In progress | Calling the model |
+| Completed | All succeeded or partially succeeded |
+| Failed | Manual or automatic retry available |
+| Cancelled | Stopped by the user |
+
+## Related
+
+- [Task management](/en/queue/task-management)
+- [Runtime configuration](/en/models/runtime-config)

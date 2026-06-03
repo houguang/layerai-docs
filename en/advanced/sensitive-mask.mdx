@@ -1,0 +1,32 @@
+---
+title: Sensitive Data Masking
+description: Mask sensitive information with regex rules before sending to AI.
+icon: "shield"
+---
+
+Developer Settings → **Sensitive Data Masking**.
+
+## Purpose
+
+Before AI translation runs, text matching configured regular expressions is masked (e.g. phone numbers, email addresses) to reduce leakage risk when content is sent to third-party models.
+
+## Configuration
+
+- **Toggle** — enable / disable
+- **Rule list** — one regex per line, with an optional rule name
+
+## Examples
+
+```
+Phone|\d{11}
+Email|[\w.-]+@[\w.-]+\.\w+
+```
+
+## Notes
+
+- Masking affects **content sent to AI only**; local storage retains the original text (unless the translation result itself changes)
+- Complex regex patterns may affect performance; add rules carefully
+
+## Restore Defaults
+
+Built-in rule sets can be restored in one click.

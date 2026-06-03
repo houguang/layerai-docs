@@ -1,0 +1,48 @@
+---
+title: 故障排查总览
+description: 常见问题索引与排查思路。
+icon: "circle-help"
+---
+
+本文汇总 LayerAI 使用过程中的常见问题及排查思路，按由浅入深的顺序组织。
+
+## 排查顺序
+
+<Steps>
+  <Step title="确认扩展已启用">
+    在浏览器扩展页中确认 LayerAI 已开启，且目标站点已授予访问权限。
+  </Step>
+  <Step title="检查自动替换">
+    确认弹窗中 **自动替换** 已开启，且相关词条未被禁用。
+  </Step>
+  <Step title="查看控制台">
+    开启 [调试日志](/zh/advanced/developer)，通过 F12 查看 Console 输出。
+  </Step>
+  <Step title="分类查阅">
+    AI 问题 → [AI 错误](/zh/troubleshooting/ai-errors)；同步 → [同步错误](/zh/troubleshooting/sync-errors)。
+  </Step>
+</Steps>
+
+## 常见问题
+
+<AccordionGroup>
+  <Accordion title="扩展图标灰色 / 弹窗打不开">
+    重新加载扩展；检查是否被浏览器策略禁用。
+  </Accordion>
+  <Accordion title="页面没有手动采集按钮">
+    确认当前 URL 不是浏览器内部页（chrome://、edge:// 等）；刷新页面。
+  </Accordion>
+  <Accordion title="采集不到文本">
+    页面可能是 Shadow DOM 或 Canvas 渲染；尝试 [手动采集](/zh/collection/manual)。
+  </Accordion>
+  <Accordion title="替换不完整">
+    检查 [替换模式](/zh/replace/modes)；动态加载内容需重新采集。
+  </Accordion>
+  <Accordion title="登录失败">
+    清除站点 Cookie 后重试；检查网络与系统时间。
+  </Accordion>
+</AccordionGroup>
+
+## 仍无法解决
+
+可通过基础配置页的反馈渠道联系支持，并提供：浏览器版本、问题 URL、复现步骤、控制台日志。

@@ -1,0 +1,87 @@
+---
+title: 核心概念
+description: LayerAI 的产品理念、数据模型与关键术语。
+icon: "lightbulb"
+---
+
+本文介绍 LayerAI 的产品设计理念、核心数据模型及关键术语，便于理解各模块之间的协作关系。
+
+## 本地优先
+
+LayerAI 的翻译数据默认保存在浏览器本地，由此带来以下特性：
+
+- 已翻译内容**无需重复翻译**，可节省纠错与重翻时间
+- 再次访问同一页面时，扩展自动应用已保存的译文
+- 用户可随时通过 [导出 JSON](/zh/sync/local-import-export) 备份数据，或在其他设备恢复
+
+登录 Layer 账号后，Pro / Max 用户还可使用 [云同步](/zh/sync/layer-cloud) 与 [共享翻译](/zh/shared/overview)。
+
+## 一次翻译，永久生效
+
+LayerAI 把外文阅读拆成两段：**先在网页里把译稿写好并存档，之后每次打开同一页面，扩展自动把原文换成你已确认的译文**——不必像即时翻译那样，每次访问都重新问 AI 一遍。
+
+下面以 [Drizzle ORM 文档 · Overview](https://orm.drizzle.team/docs/overview) 为例说明完整过程。
+
+### 第一次访问：完成翻译
+
+<Steps>
+  <Step title="打开目标页面">
+    打开 [Drizzle ORM 文档 · Overview](https://orm.drizzle.team/docs/overview)。页面显示英文原文，扩展尚未介入。
+  </Step>
+  <Step title="采集页面文本">
+    点击扩展图标 → **一键采集当前页**（或框选部分段落）。原文被提取到翻译列表，并按该站点域名归档。
+  </Step>
+  <Step title="翻译并校对">
+    勾选待翻条目 → **AI 一键翻译**；若某句术语不准，可在列表里**手动修改**，必要时借助 [词库](/zh/glossary/overview) 约束品牌名等译法。
+  </Step>
+  <Step title="保存译文">
+    确认无误后点击 **保存**。当前页原文会**立即替换**为译文，同时写入浏览器本地——这就是你的「翻译资产」，可备份、可同步。
+  </Step>
+</Steps>
+
+### 之后每次访问：直接使用
+
+<Steps>
+  <Step title="再次打开同一页面">
+    刷新、关标签后再开，或过几天回访同一篇文章——只要开启 **自动替换**，扩展会读取本地已保存的译文。
+  </Step>
+  <Step title="自动应用，无需重翻">
+    页面上对应原文被替换为你上次确认过的译文。**不再调用 AI**、不再等待、译法也不会随每次即时翻译而漂移。若个别句子需微调，仍可在浮层中编辑后重新保存。
+  </Step>
+</Steps>
+
+<Tip>
+  **翻译**通常只做一次（或内容更新时再补翻）；**使用**则是你日常阅读时的常态——像读中文页面一样打开即可。
+</Tip>
+
+## 数据模型
+
+### 站点（Translation Group）
+
+LayerAI 按**域名**聚合翻译数据，例如 `docs.example.com` 下的所有词条属于同一站点配置。
+
+### 词条（Translation Item）
+
+每条词条包含以下字段：
+
+- **原文（source）** — 页面上采集到的文本
+- **译文（target）** — 按目标语言存储，如 `{ "zh-CN": "队列" }`
+- **定位（locator）** — XPath 等 DOM 定位信息，用于精确替换
+- **启用状态** — 可单独禁用某条译文
+
+### 词库（Glossary）
+
+词库由术语分类与条目组成，在 AI 翻译时用于约束品牌名、产品名等译法。详见 [词库概述](/zh/glossary/overview)。
+
+## 替换模式
+
+<AccordionGroup>
+  <Accordion title="精确替换（exact）">
+    根据采集时的 DOM 定位替换文本，适用于大多数网页场景。手动添加的词条在精确模式下不可用。
+  </Accordion>
+  <Accordion title="内容匹配替换（content_match）">
+    按原文内容在页面中查找并替换，适用于跨页面复用相同译文，或手动维护的通用词条。
+  </Accordion>
+</AccordionGroup>
+
+详见 [替换模式](/zh/replace/modes)。

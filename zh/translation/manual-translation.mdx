@@ -1,0 +1,37 @@
+---
+title: 手动翻译
+description: 分片导出、外部 AI 翻译后粘贴 JSON 保存。
+icon: "clipboard"
+---
+
+适用于希望**完全自控 AI 流程**的场景：自行调用 ChatGPT、Claude 等，再把结果贴回扩展。
+
+## 流程
+
+<Steps>
+  <Step title="进入手动翻译页">
+    翻译管理 → 选择站点 → 手动翻译
+  </Step>
+  <Step title="设置分片大小">
+    按条数拆分待翻译 JSON，避免单次 prompt 过长
+  </Step>
+  <Step title="复制提示词 + 分片">
+    一键复制系统提示词与当前分片 JSON
+  </Step>
+  <Step title="在外部 AI 中翻译">
+    将复制内容粘贴到任意 AI 对话，获取 JSON 结果
+  </Step>
+  <Step title="粘贴并保存">
+    回到扩展，粘贴翻译结果 JSON → **粘贴并保存**
+  </Step>
+</Steps>
+
+## 说明
+
+- 手动添加的词条（非 DOM 采集）主要在 [内容匹配替换](/zh/replace/modes) 下生效
+- 分片 JSON 结构必须与导出一致，否则会校验失败
+
+## 相关
+
+- [提示词配置](/zh/models/prompts)
+- [AI 批量翻译](/zh/translation/ai-batch)（扩展内一键完成）

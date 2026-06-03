@@ -1,0 +1,30 @@
+---
+title: 模型配置概述
+description: 平台模型与自定义模型的选择与权限。
+icon: "cpu"
+---
+
+模型配置模块用于管理 AI 翻译所使用的模型来源与运行参数。入口：扩展管理页 → **模型配置**。
+
+## 两类模型
+
+| 类型 | 说明 |
+| --- | --- |
+| **平台模型** | Layer 官方提供的模型，需登录，按套餐分配 Token |
+| **自定义模型** | 用户自行配置的 OpenAI 兼容 / Anthropic / Gemini / Ollama 等 |
+
+## 配置项
+
+- 默认模型选择
+- 各平台 API Key、Endpoint
+- [提示词模板](/zh/models/prompts)
+- [运行时参数](/zh/models/runtime-config)（分片、并发、重试）
+
+## 套餐限制
+
+部分平台模型标注 `Pro` / `Max` 要求，Free 用户不可选。详见 [套餐说明](/zh/account/plans)。
+
+## 相关文档
+
+- [平台模型](/zh/models/platform-models)
+- [自定义模型](/zh/models/custom-models)

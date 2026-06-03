@@ -1,19 +1,15 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "luma",
   "name": "LayerAI",
-  "description": "LayerAI 浏览器扩展官方使用文档：采集、翻译、词库、同步与共享协作。",
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-    "href": "/"
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png",
+    "href": "/zh"
   },
-  "seo": {
-    "metatags": {
-      "og:site_name": "LayerAI 使用文档",
-      "og:url": "https://sovitech.mintlify.app"
-    }
+  "icons": {
+    "library": "lucide"
   },
   "colors": {
     "primary": "#22D3EE",
@@ -26,171 +22,360 @@
       "dark": "#050816"
     }
   },
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "文档",
-        "icon": "book-open",
-        "groups": [
-          {
-            "group": "开始",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "introduction/concepts",
-              "introduction/ui-tour"
-            ]
-          },
-          {
-            "group": "网页采集",
-            "icon": "mouse-pointer",
-            "pages": [
-              "collection/overview",
-              "collection/manual",
-              "collection/current-page",
-              "collection/current-site",
-              "collection/rules"
-            ]
-          },
-          {
-            "group": "翻译管理",
-            "icon": "language",
-            "pages": [
-              "translation/site-list",
-              "translation/edit-entries",
-              "translation/manual-translation",
-              "translation/ai-batch",
-              "translation/submit-shared"
-            ]
-          },
-          {
-            "group": "页面替换",
-            "icon": "repeat",
-            "pages": [
-              "replace/auto-replace",
-              "replace/modes",
-              "replace/page-modal"
-            ]
-          },
-          {
-            "group": "翻译队列",
-            "icon": "list-ordered",
-            "pages": [
-              "queue/overview",
-              "queue/task-management"
-            ]
-          },
-          {
-            "group": "模型配置",
-            "icon": "cpu",
-            "pages": [
-              "models/overview",
-              "models/platform-models",
-              "models/custom-models",
-              "models/prompts",
-              "models/runtime-config"
-            ]
-          },
-          {
-            "group": "词库",
-            "icon": "book-a",
-            "pages": [
-              "glossary/overview",
-              "glossary/local-glossary",
-              "glossary/platform-glossary",
-              "glossary/sync"
-            ]
-          },
-          {
-            "group": "数据同步",
-            "icon": "cloud",
-            "pages": [
-              "sync/local-import-export",
-              "sync/layer-cloud",
-              "sync/google-drive"
-            ]
-          },
-          {
-            "group": "共享翻译",
-            "icon": "share-2",
-            "pages": [
-              "shared/overview",
-              "shared/browse-download",
-              "shared/submit",
-              "shared/discover-modes"
-            ]
-          },
-          {
-            "group": "账号与订阅",
-            "icon": "credit-card",
-            "pages": [
-              "account/login",
-              "account/plans",
-              "account/quotas"
-            ]
-          },
-          {
-            "group": "基础配置",
-            "icon": "settings",
-            "pages": [
-              "settings/basic",
-              "settings/shared-settings"
-            ]
-          },
-          {
-            "group": "高级设置",
-            "icon": "wrench",
-            "pages": [
-              "advanced/developer",
-              "advanced/protected-tags",
-              "advanced/sensitive-mask"
-            ]
-          },
-          {
-            "group": "故障排查",
-            "icon": "circle-help",
-            "pages": [
-              "troubleshooting/index",
-              "troubleshooting/ai-errors",
-              "troubleshooting/sync-errors"
-            ]
-          },
-          {
-            "group": "附录",
-            "icon": "file-text",
-            "pages": [
-              "appendix/glossary",
-              "appendix/data-format"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "安装",
-        "icon": "download",
-        "groups": [
-          {
-            "group": "快速开始",
-            "icon": "play",
-            "pages": [
-              "quickstart/install",
-              "quickstart/basic-settings",
-              "quickstart/login",
-              "quickstart/first-translation"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "官网",
-        "icon": "globe",
-        "href": "https://local-layer.com"
-      }
-    ]
-  },
-  "navbar": {},
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/zh"
+    }
+  ],
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude", "cursor", "mcp"]
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "zh",
+        "default": true,
+        "description": "LayerAI 浏览器扩展官方文档：网页采集、AI 翻译、词库治理、数据同步与共享协作。",
+        "seo": {
+          "metatags": {
+            "og:site_name": "LayerAI 使用文档",
+            "og:url": "https://sovitech.mintlify.app/zh"
+          }
+        },
+        "tabs": [
+          {
+            "tab": "文档",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "开始",
+                "icon": "rocket",
+                "pages": [
+                  "zh/introduction",
+                  "zh/introduction/concepts",
+                  "zh/introduction/ui-tour"
+                ]
+              },
+              {
+                "group": "快速开始",
+                "icon": "play",
+                "pages": [
+                  "zh/quickstart/install",
+                  "zh/quickstart/basic-settings",
+                  "zh/quickstart/login",
+                  "zh/quickstart/first-translation"
+                ]
+              },
+              {
+                "group": "网页采集",
+                "icon": "mouse-pointer",
+                "pages": [
+                  "zh/collection/overview",
+                  "zh/collection/manual",
+                  "zh/collection/current-page",
+                  "zh/collection/current-site",
+                  "zh/collection/rules"
+                ]
+              },
+              {
+                "group": "翻译管理",
+                "icon": "language",
+                "pages": [
+                  "zh/translation/site-list",
+                  "zh/translation/edit-entries",
+                  "zh/translation/manual-translation",
+                  "zh/translation/ai-batch",
+                  "zh/translation/submit-shared"
+                ]
+              },
+              {
+                "group": "页面替换",
+                "icon": "repeat",
+                "pages": [
+                  "zh/replace/auto-replace",
+                  "zh/replace/modes",
+                  "zh/replace/page-modal"
+                ]
+              },
+              {
+                "group": "翻译队列",
+                "icon": "list-ordered",
+                "pages": [
+                  "zh/queue/overview",
+                  "zh/queue/task-management"
+                ]
+              },
+              {
+                "group": "模型配置",
+                "icon": "cpu",
+                "pages": [
+                  "zh/models/overview",
+                  "zh/models/platform-models",
+                  "zh/models/custom-models",
+                  "zh/models/prompts",
+                  "zh/models/runtime-config"
+                ]
+              },
+              {
+                "group": "词库",
+                "icon": "book-a",
+                "pages": [
+                  "zh/glossary/overview",
+                  "zh/glossary/local-glossary",
+                  "zh/glossary/platform-glossary",
+                  "zh/glossary/sync"
+                ]
+              },
+              {
+                "group": "数据同步",
+                "icon": "cloud",
+                "pages": [
+                  "zh/sync/local-import-export",
+                  "zh/sync/layer-cloud",
+                  "zh/sync/google-drive"
+                ]
+              },
+              {
+                "group": "共享翻译",
+                "icon": "share-2",
+                "pages": [
+                  "zh/shared/overview",
+                  "zh/shared/browse-download",
+                  "zh/shared/submit",
+                  "zh/shared/discover-modes"
+                ]
+              },
+              {
+                "group": "账号与订阅",
+                "icon": "credit-card",
+                "pages": [
+                  "zh/account/login",
+                  "zh/account/plans",
+                  "zh/account/quotas"
+                ]
+              },
+              {
+                "group": "基础配置",
+                "icon": "settings",
+                "pages": [
+                  "zh/settings/basic",
+                  "zh/settings/shared-settings"
+                ]
+              },
+              {
+                "group": "高级设置",
+                "icon": "wrench",
+                "pages": [
+                  "zh/advanced/developer",
+                  "zh/advanced/protected-tags",
+                  "zh/advanced/sensitive-mask"
+                ]
+              },
+              {
+                "group": "故障排查",
+                "icon": "circle-help",
+                "pages": [
+                  "zh/troubleshooting/index",
+                  "zh/troubleshooting/ai-errors",
+                  "zh/troubleshooting/sync-errors"
+                ]
+              },
+              {
+                "group": "附录",
+                "icon": "file-text",
+                "pages": [
+                  "zh/appendix/glossary",
+                  "zh/appendix/data-format"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "安装",
+            "icon": "download",
+            "pages": [
+              "zh/quickstart/install"
+            ]
+          },
+          {
+            "tab": "官网",
+            "icon": "globe",
+            "href": "https://locallayer.com"
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "description": "Official LayerAI browser extension docs: web collection, AI translation, glossary, sync, and shared translations.",
+        "seo": {
+          "metatags": {
+            "og:site_name": "LayerAI Docs",
+            "og:url": "https://sovitech.mintlify.app/en"
+          }
+        },
+        "tabs": [
+          {
+            "tab": "Docs",
+            "icon": "book-open",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "icon": "rocket",
+                "pages": [
+                  "en/introduction",
+                  "en/introduction/concepts",
+                  "en/introduction/ui-tour"
+                ]
+              },
+              {
+                "group": "Quick Start",
+                "icon": "play",
+                "pages": [
+                  "en/quickstart/install",
+                  "en/quickstart/basic-settings",
+                  "en/quickstart/login",
+                  "en/quickstart/first-translation"
+                ]
+              },
+              {
+                "group": "Web Collection",
+                "icon": "mouse-pointer",
+                "pages": [
+                  "en/collection/overview",
+                  "en/collection/manual",
+                  "en/collection/current-page",
+                  "en/collection/current-site",
+                  "en/collection/rules"
+                ]
+              },
+              {
+                "group": "Translation",
+                "icon": "language",
+                "pages": [
+                  "en/translation/site-list",
+                  "en/translation/edit-entries",
+                  "en/translation/manual-translation",
+                  "en/translation/ai-batch",
+                  "en/translation/submit-shared"
+                ]
+              },
+              {
+                "group": "Page Replacement",
+                "icon": "repeat",
+                "pages": [
+                  "en/replace/auto-replace",
+                  "en/replace/modes",
+                  "en/replace/page-modal"
+                ]
+              },
+              {
+                "group": "Translation Queue",
+                "icon": "list-ordered",
+                "pages": [
+                  "en/queue/overview",
+                  "en/queue/task-management"
+                ]
+              },
+              {
+                "group": "Model Configuration",
+                "icon": "cpu",
+                "pages": [
+                  "en/models/overview",
+                  "en/models/platform-models",
+                  "en/models/custom-models",
+                  "en/models/prompts",
+                  "en/models/runtime-config"
+                ]
+              },
+              {
+                "group": "Glossary",
+                "icon": "book-a",
+                "pages": [
+                  "en/glossary/overview",
+                  "en/glossary/local-glossary",
+                  "en/glossary/platform-glossary",
+                  "en/glossary/sync"
+                ]
+              },
+              {
+                "group": "Data Sync",
+                "icon": "cloud",
+                "pages": [
+                  "en/sync/local-import-export",
+                  "en/sync/layer-cloud",
+                  "en/sync/google-drive"
+                ]
+              },
+              {
+                "group": "Shared Translations",
+                "icon": "share-2",
+                "pages": [
+                  "en/shared/overview",
+                  "en/shared/browse-download",
+                  "en/shared/submit",
+                  "en/shared/discover-modes"
+                ]
+              },
+              {
+                "group": "Account & Plans",
+                "icon": "credit-card",
+                "pages": [
+                  "en/account/login",
+                  "en/account/plans",
+                  "en/account/quotas"
+                ]
+              },
+              {
+                "group": "Settings",
+                "icon": "settings",
+                "pages": [
+                  "en/settings/basic",
+                  "en/settings/shared-settings"
+                ]
+              },
+              {
+                "group": "Advanced",
+                "icon": "wrench",
+                "pages": [
+                  "en/advanced/developer",
+                  "en/advanced/protected-tags",
+                  "en/advanced/sensitive-mask"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "icon": "circle-help",
+                "pages": [
+                  "en/troubleshooting/index",
+                  "en/troubleshooting/ai-errors",
+                  "en/troubleshooting/sync-errors"
+                ]
+              },
+              {
+                "group": "Appendix",
+                "icon": "file-text",
+                "pages": [
+                  "en/appendix/glossary",
+                  "en/appendix/data-format"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Install",
+            "icon": "download",
+            "target": "_blank",
+            "href": "https://chromewebstore.google.com/detail/local-layer-interface-loc/ehhgbbhlookhlindmdkafmekmgkoilfl"
+          },
+          {
+            "tab": "Website",
+            "icon": "globe",
+            "href": "https://locallayer.com"
+          }
+        ]
+      }
+    ]
   },
   "footer": {
     "socials": {}

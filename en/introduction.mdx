@@ -1,0 +1,68 @@
+---
+title: Introduction
+description: Overview of LayerAI's positioning, core capabilities, and typical use cases.
+icon: "book-open"
+---
+
+LayerAI is a local-first browser extension that turns foreign-language web pages from "re-translate on every visit" into a **translate once, persist forever** controllable content layer. The extension runs locally in the user's browser; translation data is stored on the device by default, and core features do not require account registration. On any web page, users can collect text, translate with AI or manually, and replace page content in real time.
+
+## What LayerAI Solves
+
+When users revisit the same foreign-language sites, they often need to call AI repeatedly, wait for results, and lose confirmed translations. Teams also struggle to align terminology. LayerAI connects the full workflow—**collect → translate → save → auto-replace**—within the page. Glossary constraints and a translation queue for batch tasks turn scattered translation work into a reusable, collaborative workflow.
+
+## Core Features
+
+<CardGroup cols={2}>
+  <Card title="Web Collection" icon="mouse-pointer" href="/en/collection/overview">
+    Three collection modes: manual selection, one-click current page, and whole-site rules—with automatic skipping of already translated content.
+  </Card>
+
+  <Card title="Translation Management" icon="language" href="/en/translation/site-list">
+    Organize entries by site; supports AI batch translation, manual refinement, and submission to the shared community.
+  </Card>
+
+  <Card title="Page Replacement" icon="repeat" href="/en/replace/auto-replace">
+    Exact and content-match modes; changes take effect immediately after saving and apply automatically on return visits.
+  </Card>
+
+  <Card title="Glossary Governance" icon="book-a" href="/en/glossary/overview">
+    Local and platform glossaries constrain terminology during AI translation to keep brand and product names consistent.
+  </Card>
+
+  <Card title="Translation Queue" icon="list-ordered" href="/en/queue/overview">
+    Runs AI translation tasks in the background with progress tracking, retry on failure, and task management.
+  </Card>
+
+  <Card title="Sync & Sharing" icon="cloud" href="/en/sync/layer-cloud">
+    Local JSON import/export, Layer cloud sync, Google Drive backup, and community shared translation packages.
+  </Card>
+</CardGroup>
+
+## Supported Browsers and Models
+
+LayerAI is built on the Chromium extension platform and supports multiple AI translation backends:
+
+| Type | Description |
+| --- | --- |
+| **Chrome / Edge** | Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/local-layer-interface-loc/ehhgbbhlookhlindmdkafmekmgkoilfl) |
+| **Platform models** | After signing in with a Layer account, users can use officially integrated GPT, Claude, Gemini, and other models |
+| **Custom models** | Supports OpenAI-compatible APIs, Anthropic, Gemini, Ollama, and more—see [Model Configuration](/en/models/overview) |
+| **Prompts & glossaries** | Custom translation prompts; local/platform glossaries constrain terminology during AI translation |
+
+## Privacy and Data
+
+<Note>
+  LayerAI is designed local-first. Translation data is stored in the browser by default; core capabilities do not depend on an account. The extension does not use visited page content for model training.
+
+  After sign-in, users can enable cloud sync and shared translations for collaboration. Site read/write permissions are requested only when needed for collection and page replacement; users can revoke them anytime in browser extension settings. Backups can be configured via [local import/export](/en/sync/local-import-export) or [Google Drive](/en/sync/google-drive), with data flow under the user's control.
+</Note>
+
+## Use Cases
+
+LayerAI serves individuals and teams who need long-term, high-quality web translation:
+
+- **Reading foreign-language sites** — News, blogs, technical docs, and more; translate once and persist
+- **Product localization** — Help centers, marketing pages, whole-site collection, and batch AI translation
+- **Team collaboration** — Unify terminology via glossaries; reuse community translations through shared packages
+- **Long-lived operational systems** — ERP, admin consoles, and other interfaces visited repeatedly
+- **Independent developers** — Custom model integration for Token cost control and translation quality

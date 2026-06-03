@@ -1,0 +1,33 @@
+---
+title: Sync Error Troubleshooting
+description: Cloud sync, import/export, and Google Drive issues.
+icon: "cloud-off"
+---
+
+## Layer Cloud Sync
+
+| Symptom | Resolution |
+| --- | --- |
+| Pro membership required | [Upgrade plan](/en/account/plans) |
+| Not signed in | [Sign in](/en/quickstart/login) |
+| Sync conflict / incorrect data | [Export a local backup](/en/sync/local-import-export) first, then pull or push in one direction |
+| Request failed | Check network and API service status |
+
+## Local Import
+
+| Symptom | Resolution |
+| --- | --- |
+| No importable data detected | Confirm JSON format and export version compatibility |
+| Sites missing after import | Check the `translationGroups` field in the JSON |
+
+## Google Drive
+
+| Symptom | Resolution |
+| --- | --- |
+| Authorization failed | Re-authorize the Google account |
+| Sync failed | Review error details; confirm Drive API quota |
+| Backup list empty | Run a successful sync first |
+
+## Auto Sync
+
+An auto-sync interval that is too short may conflict with other operations; increasing the interval in minutes is recommended.
