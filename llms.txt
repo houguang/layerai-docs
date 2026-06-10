@@ -4,18 +4,16 @@
 
 ## Site
 
-- Docs (zh): https://sovitech.mintlify.app/zh
-- Docs (en): https://sovitech.mintlify.app/en
+- Docs: https://sovitech.mintlify.app
 - MCP: https://sovitech.mintlify.app/mcp
 - GitHub: https://github.com/houguang/layerai-docs
 
 ## Quick links
 
-- [Introduction (zh)](https://sovitech.mintlify.app/zh/introduction)
-- [Introduction (en)](https://sovitech.mintlify.app/en/introduction)
-- [Install](https://sovitech.mintlify.app/zh/quickstart/install)
-- [First translation](https://sovitech.mintlify.app/en/quickstart/first-translation)
+- [Introduction](https://sovitech.mintlify.app/introduction)
+- [Install](https://sovitech.mintlify.app/journey/install)
+- [First translation](https://sovitech.mintlify.app/journey/first-translation)
 
 ## Structure
 
-Content lives under `zh/` and `en/` with mirrored navigation in `docs.json`.
+Source documentation lives under `docs/` with navigation in `docs.json`.

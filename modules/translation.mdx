@@ -1,0 +1,125 @@
+---
+title: 翻译管理
+description: 按站点组织词条，支持搜索、AI 批量翻译与提交共享。
+icon: "language"
+---
+
+翻译管理是 LayerAI 的核心数据模块：按域名聚合词条，支持搜索、批量 AI 翻译、手动精修与提交社区共享。
+
+<Frame caption="翻译管理概览（约 30 秒）">
+  <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/translation-overview_zh.mp4" />
+</Frame>
+
+## 站点列表
+
+扩展管理页 → **翻译管理**，按域名分组展示所有站点及翻译进度。
+
+<Frame caption="扩展管理页 · 翻译管理">
+  <img src="/assets/images/ui-tour/1_cn.png" alt="翻译管理主区：站点列表与词条统计" />
+</Frame>
+
+<Tabs>
+  <Tab title="站点卡片信息">
+    域名标识、词条数量、翻译进度、是否启用替换、共享来源标识。
+  </Tab>
+  <Tab title="常用操作">
+    点击进入站点详情，搜索源文/译文，勾选批量操作。
+  </Tab>
+</Tabs>
+
+<Card title="翻译管理（参考）" icon="folder-open" href="/translation/site-list">
+  站点列表字段与站点详情操作说明。
+</Card>
+
+## 编辑词条
+
+在站点详情或网页浮层中编辑单条或多条词条的译文。
+
+<Frame caption="当前页的翻译列表面板">
+  <img src="/assets/images/ui-tour/5_cn.png" alt="翻译列表弹窗：词条列表与 AI 翻译、保存操作" />
+</Frame>
+
+<Steps>
+  <Step title="定位词条">
+    在列表中点击词条，页面滚动到原文位置；或点击页面原文，列表自动定位。
+  </Step>
+  <Step title="编辑译文">
+    手动修改译文，或禁用不需要替换的词条。
+  </Step>
+  <Step title="保存">
+    确认后保存，页面立即应用（需开启自动替换）。
+  </Step>
+</Steps>
+
+<Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
+  批量编辑、启用/禁用与定位信息说明。
+</Card>
+
+## 手动翻译
+
+不依赖 AI，逐条或批量维护译文，适合术语敏感或 AI 效果不佳的内容。
+
+<Card title="手动翻译工作流" icon="hand" href="/translation/manual-translation">
+  手动添加词条、跨页复用与内容匹配模式配合。
+</Card>
+
+## AI 批量翻译
+
+勾选待译条目，由翻译队列在后台依次调用 AI 模型完成翻译。
+
+<Frame caption="翻译列表 · AI 一键翻译">
+  <img src="/assets/images/ui-tour/5_cn.png" alt="翻译列表中的 AI 一键翻译按钮" />
+</Frame>
+
+<Steps>
+  <Step title="选择条目">
+    在弹窗或站点详情中勾选待翻译词条。
+  </Step>
+  <Step title="发起翻译">
+    点击 **AI 一键翻译**，任务加入 [翻译队列](/modules/queue)。
+  </Step>
+  <Step title="确认结果">
+    队列完成后检查译文，必要时结合 [词库](/modules/glossary) 修正术语。
+  </Step>
+</Steps>
+
+<Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
+  前置条件、分片并发与错误处理。
+</Card>
+
+## 提交共享翻译
+
+站点翻译进度达 100% 且质量符合规范时，可将整站翻译包提交至社区。
+
+<Frame caption="提交共享入口（翻译管理 · 站点详情）">
+  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="站点详情中的提交共享按钮与进度提示" />
+</Frame>
+
+<Tabs>
+  <Tab title="提交条件">
+    已登录 Layer 账号；翻译进度 100%；无大量空译文。
+  </Tab>
+  <Tab title="操作">
+    翻译管理 → 选择站点 → **提交共享** → 确认。
+  </Tab>
+  <Tab title="审核状态">
+    审核中 / 已通过 / 已拒绝，可在共享翻译 → 我的共享查看。
+  </Tab>
+</Tabs>
+
+<Card title="提交共享翻译（参考）" icon="upload" href="/translation/submit-shared">
+  审核流程与状态说明。
+</Card>
+
+## 与其他模块的衔接
+
+译文保存后 → [页面替换](/modules/replace) 自动应用；可经 [数据同步](/modules/sync) 备份，或通过 [共享翻译](/modules/shared) 与社区交换整站包。
+
+<CardGroup cols={2}>
+  <Card title="共享翻译模块" icon="share-2" href="/modules/shared">
+    浏览下载社区翻译包。
+  </Card>
+  <Card title="第一个翻译流程" icon="sparkles" href="/journey/first-translation">
+    从采集到保存的完整演示。
+  </Card>
+</CardGroup>

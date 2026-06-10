@@ -1,0 +1,104 @@
+---
+title: 网页采集
+description: 手动框选、当前页与整站三种采集方式，自动跳过已翻译内容。
+icon: "mouse-pointer"
+---
+
+网页采集是 LayerAI 翻译流程的起点：从目标页面提取原文并按站点归档，为后续 AI 翻译与页面替换提供数据基础。
+
+<Frame caption="网页采集概览（约 30 秒）">
+  <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/collection-overview_zh.mp4" />
+</Frame>
+
+## 手动采集
+
+在页面上框选元素，精确添加待翻译文本，适合复杂布局或少量 UI 文案。
+
+<Frame caption="页面边缘的手动采集悬浮按钮">
+  <img src="/assets/images/ui-tour/4_cn.png" alt="贴靠页面边缘的手动采集按钮" />
+</Frame>
+
+<Steps>
+  <Step title="打开目标网页">
+    访问需要翻译的页面。
+  </Step>
+  <Step title="点击手动采集按钮">
+    点击页面边缘 **手动采集** 悬浮按钮，进入框选模式。
+  </Step>
+  <Step title="选中元素">
+    鼠标悬停高亮元素，点击选中；内容加入翻译列表。
+  </Step>
+</Steps>
+
+<Card title="手动采集详细说明" icon="crosshair" href="/collection/manual">
+  适用场景、退出采集与精确替换配合方式。
+</Card>
+
+## 一键采集当前页面
+
+从扩展弹窗发起，扫描当前 DOM 可见文本，适合单页文档与文章。
+
+<Frame caption="弹窗 → 一键采集当前页面">
+  <img src="/assets/images/ui-tour/2_cn.png" alt="浏览器弹窗中的采集功能区域" />
+</Frame>
+
+<Steps>
+  <Step title="打开弹窗">
+    点击工具栏 LayerAI 图标。
+  </Step>
+  <Step title="一键采集">
+    点击 **一键采集当前页面**，扩展提取可见文本并跳过已翻译内容。
+  </Step>
+  <Step title="查看结果">
+    采集完成后在翻译列表弹窗或翻译管理中查看词条。
+  </Step>
+</Steps>
+
+<Card title="采集当前页面" icon="file-text" href="/collection/current-page">
+  行为说明与整站采集的区别。
+</Card>
+
+## 一键采集当前网站
+
+跟随同域链接批量采集多页，适合文档站与帮助中心。
+
+<Frame caption="扩展管理页 · 翻译管理站点列表">
+  <img src="/assets/images/ui-tour/1_cn.png" alt="扩展管理页翻译管理主区" />
+</Frame>
+
+<Tabs>
+  <Tab title="适用场景">
+    产品文档站、Wiki、帮助中心等需要整站本地化的场景。
+  </Tab>
+  <Tab title="操作">
+    扩展弹窗 → **一键采集当前网站**，扩展会跟随同域链接继续采集。
+  </Tab>
+  <Tab title="注意">
+    大规模整站采集建议配合 [翻译队列](/modules/queue) 后台处理 AI 翻译。
+  </Tab>
+</Tabs>
+
+<Card title="采集当前网站" icon="globe" href="/collection/current-site">
+  整站采集范围、链接跟随与进度说明。
+</Card>
+
+## 采集规则
+
+三种方式均会**自动跳过已翻译内容**，避免重复词条。
+
+<Card title="采集规则与跳过逻辑" icon="file-text" href="/collection/rules">
+  了解跳过条件、DOM 过滤与特殊标签处理。
+</Card>
+
+## 与其他模块的衔接
+
+采集完成后 → 在 [翻译管理](/modules/translation) 中 AI 翻译或手动编辑 → 保存后在 [页面替换](/modules/replace) 中自动应用译文。
+
+<CardGroup cols={2}>
+  <Card title="采集方式总览（参考）" icon="layers" href="/collection/overview">
+    三种方式对比表与选择建议。
+  </Card>
+  <Card title="第一个翻译流程" icon="sparkles" href="/journey/first-translation">
+    端到端演示从采集到替换的完整路径。
+  </Card>
+</CardGroup>

@@ -1,0 +1,63 @@
+---
+title: 替换模式
+description: 精确替换与内容匹配替换的区别与选用。
+icon: "git-compare"
+---
+
+<Note>
+  建议先阅读 [页面替换模块概览](/modules/replace)，再查看本页细节。
+</Note>
+
+LayerAI 提供两种页面替换模式，用于在不同场景下将已保存的译文应用到网页显示。切换入口：扩展弹窗 → **替换模式**。
+
+## 精确替换（Exact）
+
+- 使用采集时的 **DOM 定位（XPath）** 替换文本
+- 适用于通过采集得到的词条
+- **手动添加**的词条在此模式下不可用
+
+## 内容匹配替换（Content Match）
+
+- 在页面 DOM 中搜索与 **原文相同** 的文本节点并替换
+- 适用于跨页面复用相同译文
+- 支持 [手动添加翻译](/translation/edit-entries)
+
+## 如何选择
+
+| 场景 | 推荐模式 |
+| --- | --- |
+| 常规网页本地化 | 精确替换 |
+| 同一文案出现在多个页面 | 内容匹配 |
+| 大量手动维护通用词 | 内容匹配 |
+
+<Tip>
+  两种模式可随时切换；已保存的词条数据不受影响。
+</Tip>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="自动替换" icon="toggle-right" href="/replace/auto-replace">
+    自动替换
+  </Card>
+  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
+    翻译列表弹窗
+  </Card>
+  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="自动替换" icon="toggle-right" href="/replace/auto-replace">
+    自动替换
+  </Card>
+  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
+    翻译列表弹窗
+  </Card>
+  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

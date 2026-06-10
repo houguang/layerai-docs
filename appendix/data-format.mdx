@@ -1,0 +1,62 @@
+---
+title: 导出数据格式
+description: 本地 JSON 备份的主要字段说明。
+icon: "braces"
+---
+
+## 导出文件结构
+
+本地导出的 JSON 通常包含：
+
+```json
+{
+  "version": "1.x",
+  "exportTime": "ISO-8601 时间戳",
+  "translationGroups": [],
+  "aiConfig": {},
+  "aiTranslateRuntimeConfig": {},
+  "customModels": [],
+  "promptConfig": {}
+}
+```
+
+## translationGroups
+
+每个站点对象：
+
+| 字段 | 说明 |
+| --- | --- |
+| url | 站点域名标识 |
+| enabled | 是否启用替换 |
+| replacementMode | `exact` 或 `content_match` |
+| items | 词条数组 |
+| sharedSourceId | 来自共享包的 ID（可选） |
+
+## items 词条
+
+| 字段 | 说明 |
+| --- | --- |
+| id | 唯一 ID |
+| source | 原文 |
+| target | `{ "zh-CN": "译文" }` 形式 |
+| locator | `{ "xpaths": ["..."] }` |
+| enabled | 是否启用 |
+| variablePattern | 占位符模式（如有） |
+
+## 占位符
+
+AI 翻译保留格式：
+
+```
+{{@标识符#序号|原文}}
+```
+
+输出时仅翻译竖线 `|` 后的文本，其余结构不变。
+
+## 词库导出
+
+词库可单独导出，结构含 `categories` 数组，每类含 `entries` 列表。详见 [本地词库](/glossary/local-glossary)。
+
+<Warning>
+  导出文件可能包含 API Key，分享前请脱敏。
+</Warning>

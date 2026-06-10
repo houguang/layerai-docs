@@ -1,0 +1,84 @@
+---
+title: 共享翻译
+description: 浏览下载社区翻译包，提交整站译文供他人使用。
+icon: "share-2"
+---
+
+共享翻译是 LayerAI 的社区协作能力：用户将审校后的整站翻译包发布到社区，其他用户可下载到本地直接使用。
+
+<Frame caption="共享翻译概览（约 30 秒）">
+  <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/shared-overview_zh.mp4" />
+</Frame>
+
+## 工作机制
+
+<Tabs>
+  <Tab title="浏览">
+    在共享翻译 → 浏览中发现各域名下的公开翻译包。
+  </Tab>
+  <Tab title="下载">
+    导入本地翻译库，配合自动替换直接阅读。
+  </Tab>
+  <Tab title="提交">
+    将自己 100% 翻译完成的站点包提交审核后发布。
+  </Tab>
+</Tabs>
+
+<Card title="共享翻译概述（参考）" icon="share-2" href="/shared/overview">
+  两个视图与互动操作说明。
+</Card>
+
+## 浏览与下载
+
+<Frame caption="发现可下载共享包时的提示">
+  <img src="/assets/images/ui-tour/2_1_cn.png" alt="共享翻译发现提示浮层" />
+</Frame>
+
+<Steps>
+  <Step title="发现">
+    访问站点时按 [发现策略](/shared/discover-modes) 提示匹配包。
+  </Step>
+  <Step title="下载">
+    在弹窗或共享翻译页下载，导入本地库。
+  </Step>
+  <Step title="使用">
+    开启自动替换后，页面应用社区译文。
+  </Step>
+</Steps>
+
+<Card title="浏览与下载" icon="download" href="/shared/browse-download">
+  下载配额、点赞与撤回说明。
+</Card>
+
+## 提交共享
+
+在 [翻译管理](/modules/translation) 中站点进度达 100% 后提交整站包。
+
+<Frame caption="提交共享（翻译管理 · 站点详情）">
+  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="提交共享按钮与审核入口" />
+</Frame>
+
+<Card title="提交共享（参考）" icon="upload" href="/shared/submit">
+  提交条件与审核流程。
+</Card>
+
+## 发现策略
+
+在基础配置中设定访问站点时发现共享包的处理方式：手动下载、自动下载或仅角标提醒。
+
+<Card title="发现策略" icon="radar" href="/shared/discover-modes">
+  三种发现模式对比与配置位置。
+</Card>
+
+## 与其他模块的衔接
+
+共享包本质是整站 [翻译管理](/modules/translation) 数据的发布形态；下载后可通过 [数据同步](/modules/sync) 备份，提交前建议结合 [词库](/modules/glossary) 统一术语。
+
+<CardGroup cols={2}>
+  <Card title="提交共享翻译（参考）" icon="upload" href="/translation/submit-shared">
+    翻译管理中的提交入口与状态表。
+  </Card>
+  <Card title="账号与设置" icon="credit-card" href="/modules/account-settings">
+    登录与共享下载配额。
+  </Card>
+</CardGroup>

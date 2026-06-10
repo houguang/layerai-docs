@@ -1,0 +1,82 @@
+---
+title: 手动翻译
+description: 分片导出、外部 AI 翻译后粘贴 JSON 保存。
+icon: "clipboard"
+---
+
+<Note>
+  建议先阅读 [翻译管理模块概览](/modules/translation)，再查看本页细节。
+</Note>
+
+适用于希望**完全自控 AI 流程**的场景：自行调用 ChatGPT、Claude 等，再把结果贴回扩展。
+
+## 流程
+
+<Steps>
+  <Step title="进入手动翻译页">
+    翻译管理 → 选择站点 → 手动翻译
+  </Step>
+  <Step title="设置分片大小">
+    按条数拆分待翻译 JSON，避免单次 prompt 过长
+  </Step>
+  <Step title="复制提示词 + 分片">
+    一键复制系统提示词与当前分片 JSON
+  </Step>
+  <Step title="在外部 AI 中翻译">
+    将复制内容粘贴到任意 AI 对话，获取 JSON 结果
+  </Step>
+  <Step title="粘贴并保存">
+    回到扩展，粘贴翻译结果 JSON → **粘贴并保存**
+  </Step>
+</Steps>
+
+## 说明
+
+- 手动添加的词条（非 DOM 采集）主要在 [内容匹配替换](/replace/modes) 下生效
+- 分片 JSON 结构必须与导出一致，否则会校验失败
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
+    翻译管理
+  </Card>
+  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
+    编辑词条
+  </Card>
+  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
+    AI 批量翻译
+  </Card>
+  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
+    提交共享翻译
+  </Card>
+  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
+    翻译管理
+  </Card>
+  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
+    编辑词条
+  </Card>
+  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
+    AI 批量翻译
+  </Card>
+  <Card title="翻译队列概述" icon="list" href="/queue/overview">
+    翻译队列概述
+  </Card>
+  <Card title="队列任务管理" icon="settings-2" href="/queue/task-management">
+    队列任务管理
+  </Card>
+  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
+    提交共享翻译
+  </Card>
+  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

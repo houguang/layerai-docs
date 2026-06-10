@@ -1,0 +1,74 @@
+---
+title: 提示词配置
+description: System / User 提示词模板与占位符规则。
+icon: "message-square"
+---
+
+<Note>
+  建议先阅读 [模型配置模块概览](/modules/models)，再查看本页细节。
+</Note>
+
+模型配置 → **提示词**。
+
+## 结构
+
+- **System Prompt** — 定义翻译引擎角色与输出格式（JSON）
+- **User Prompt** — 用户侧指令，通常包含目标语言占位符
+
+## 默认行为
+
+内置提示词要求模型：
+
+- 仅输出 JSON，key 与输入一一对应
+- 保留 `{{@标识符#序号|原文}}` 占位符结构
+- 地址、ID、品牌名等识别性内容保持原样
+
+## 自定义建议
+
+- 增加行业语气说明（正式 / 口语）
+- 添加「必须使用词库术语」类约束（配合 [词库](/glossary/overview)）
+- 避免破坏 JSON 输出格式，否则解析失败
+
+## 手动翻译
+
+[手动翻译](/translation/manual-translation) 工作流会复制当前提示词与分片 JSON。
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="模型配置概述" icon="cpu" href="/models/overview">
+    模型配置概述
+  </Card>
+  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
+    平台模型
+  </Card>
+  <Card title="自定义模型" icon="plug" href="/models/custom-models">
+    自定义模型
+  </Card>
+  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
+    运行时配置
+  </Card>
+  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="模型配置概述" icon="cpu" href="/models/overview">
+    模型配置概述
+  </Card>
+  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
+    平台模型
+  </Card>
+  <Card title="自定义模型" icon="plug" href="/models/custom-models">
+    自定义模型
+  </Card>
+  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
+    运行时配置
+  </Card>
+  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

@@ -1,0 +1,73 @@
+---
+title: 数据同步
+description: 本地 JSON 导入导出、Layer 云同步与 Google Drive 备份。
+icon: "cloud"
+---
+
+数据同步保障翻译资产可备份、可迁移、可跨设备使用，是本地优先架构下的安全网。
+
+<Frame caption="数据同步概览（约 25 秒）">
+  <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/sync-overview_zh.mp4" />
+</Frame>
+
+## 同步方式对比
+
+| 方式 | 是否需要登录 | 适用场景 |
+| --- | --- | --- |
+| **本地导入导出** | 否 | 手动备份、迁移、版本归档 |
+| **Layer 云同步** | 是（Pro / Max） | 多设备自动同步翻译与配置 |
+| **Google Drive** | 否（需授权） | 个人云盘定时备份 JSON |
+
+<Card title="数据同步入口（参考）" icon="cloud" href="/sync/local-import-export">
+  扩展管理页 → 数据同步。
+</Card>
+
+## 本地导入导出
+
+将翻译、词库、配置导出为 JSON 文件，或从备份恢复。
+
+<Frame caption="扩展管理页 · 数据同步">
+  <img src="/assets/images/ui-tour/1_cn.png" alt="数据同步模块入口" />
+</Frame>
+
+<Steps>
+  <Step title="导出">
+    选择导出范围（全部或按站点），保存 JSON 到本地。
+  </Step>
+  <Step title="导入">
+    选择备份文件，合并或覆盖导入（注意冲突策略）。
+  </Step>
+</Steps>
+
+<Card title="本地导入导出" icon="file-json" href="/sync/local-import-export">
+  文件格式与导入冲突处理。
+</Card>
+
+## Layer 云同步
+
+Pro / Max 用户登录后，翻译数据与配置可自动同步至 Layer 云端。
+
+<Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
+  同步范围、触发时机与冲突解决。
+</Card>
+
+## Google Drive 备份
+
+配置 Google 账号后，可定时将 JSON 备份上传至 Drive。
+
+<Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
+  授权、备份计划与恢复流程。
+</Card>
+
+## 与其他模块的衔接
+
+同步的数据包括 [翻译管理](/modules/translation) 词条、[词库](/modules/glossary) 与部分配置；[共享翻译](/modules/shared) 则是与社区交换整站包的另一条协作路径。
+
+<CardGroup cols={2}>
+  <Card title="共享翻译" icon="share-2" href="/modules/shared">
+    浏览下载社区翻译包。
+  </Card>
+  <Card title="同步错误排查" icon="circle-help" href="/troubleshooting/sync-errors">
+    云同步失败时的排查指引。
+  </Card>
+</CardGroup>

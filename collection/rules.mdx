@@ -1,0 +1,71 @@
+---
+title: 采集规则
+description: 哪些内容会被采集、跳过与特殊处理。
+icon: "filter"
+---
+
+<Note>
+  建议先阅读 [网页采集模块概览](/modules/collection)，再查看本页细节。
+</Note>
+
+## 自动跳过
+
+以下情况不会重复采集：
+
+- 该文本在本地已有对应译文
+- 节点位于脚本、样式等非可见区域
+- 符合 [受保护 HTML 标签](/advanced/protected-tags) 策略的内联结构
+
+## 占位符
+
+页面中的变量占位符（如 `{{@id#1|原文}}`）在 AI 翻译时会保留结构，仅翻译竖线后的文本。详见 [附录 · 数据格式](/appendix/data-format)。
+
+## 敏感信息
+
+若启用 [敏感词脱敏](/advanced/sensitive-mask)，发往 AI 的文本会先按规则掩码，降低泄露风险。
+
+## 最佳实践
+
+- 大站分批：先核心页面，再扩展子路径
+- 采集后检查 **翻译管理** 列表，删除明显误采的条目
+- 品牌术语提前写入 [词库](/glossary/overview)
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="采集方式总览" icon="layers" href="/collection/overview">
+    采集方式总览
+  </Card>
+  <Card title="手动采集" icon="crosshair" href="/collection/manual">
+    手动采集
+  </Card>
+  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
+    采集当前页面
+  </Card>
+  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
+    采集当前网站
+  </Card>
+  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="采集方式总览" icon="layers" href="/collection/overview">
+    采集方式总览
+  </Card>
+  <Card title="手动采集" icon="crosshair" href="/collection/manual">
+    手动采集
+  </Card>
+  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
+    采集当前页面
+  </Card>
+  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
+    采集当前网站
+  </Card>
+  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

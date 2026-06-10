@@ -1,0 +1,9 @@
+# Dependencies (mint dev may still scan nested node_modules without this)
+node_modules/
+**/node_modules/**
+
+# Maintenance templates — not navigation pages
+assets/templates/
+
+# Asset directory readmes
+assets/**/README.md

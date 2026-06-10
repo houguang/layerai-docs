@@ -1,0 +1,91 @@
+---
+title: 受保护 HTML 标签
+description: 采集时保持不被拆分的内联标签列表。
+icon: "code"
+---
+
+<Note>
+  建议先阅读 [账号与设置模块概览](/modules/account-settings)，再查看本页细节。
+</Note>
+
+开发者配置 → **受保护标签**。
+
+## 作用
+
+采集文本时，某些内联标签（如 `code`、`kbd`）内的内容应与外层一起处理，避免 DOM 结构被拆碎导致替换失败。
+
+## 配置格式
+
+每行一个标签名（小写），例如：
+
+```
+code
+kbd
+span
+```
+
+## 默认值
+
+扩展内置常用内联标签列表，一般无需修改。仅当特殊站点结构异常时调整。
+
+## 恢复默认
+
+点击 **恢复默认值** 还原出厂列表。
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="登录账号" icon="user" href="/account/login">
+    登录账号
+  </Card>
+  <Card title="套餐说明" icon="credit-card" href="/account/plans">
+    套餐说明
+  </Card>
+  <Card title="额度与配额" icon="gauge" href="/account/quotas">
+    额度与配额
+  </Card>
+  <Card title="基础配置" icon="settings" href="/settings/basic">
+    基础配置
+  </Card>
+  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
+    共享相关设置
+  </Card>
+  <Card title="开发者配置" icon="code" href="/advanced/developer">
+    开发者配置
+  </Card>
+  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
+    敏感词脱敏
+  </Card>
+  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="登录账号" icon="user" href="/account/login">
+    登录账号
+  </Card>
+  <Card title="套餐说明" icon="credit-card" href="/account/plans">
+    套餐说明
+  </Card>
+  <Card title="额度与配额" icon="gauge" href="/account/quotas">
+    额度与配额
+  </Card>
+  <Card title="基础配置" icon="settings" href="/settings/basic">
+    基础配置
+  </Card>
+  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
+    共享相关设置
+  </Card>
+  <Card title="开发者配置" icon="code" href="/advanced/developer">
+    开发者配置
+  </Card>
+  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
+    敏感词脱敏
+  </Card>
+  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

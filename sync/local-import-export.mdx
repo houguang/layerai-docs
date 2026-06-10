@@ -1,0 +1,58 @@
+---
+title: 本地导入导出
+description: JSON 备份翻译数据、配置与词库。
+icon: "hard-drive"
+---
+
+<Note>
+  建议先阅读 [数据同步模块概览](/modules/sync)，再查看本页细节。
+</Note>
+
+本地导入导出允许用户将翻译数据、AI 配置与词库以 JSON 格式备份或迁移，不依赖云端服务。入口：扩展管理页 → **导入/导出**。
+
+## 导出
+
+可将当前 **翻译站点、AI 配置、自定义模型、提示词、词库** 等导出为 JSON 文件，用于：
+
+- 定期备份
+- 迁移到其他浏览器 / 设备
+- 团队内分享配置（注意脱敏 API Key）
+
+## 导入
+
+选择 JSON 文件导入，行为如下：
+
+- 与现有数据 **合并**
+- 域名冲突时 **保留导入版本** 的站点规则
+
+## 分项导入
+
+支持仅导入翻译、仅配置或仅词库（以扩展管理页实际入口为准）。
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
+    Layer 云同步
+  </Card>
+  <Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
+    Google Drive 备份
+  </Card>
+  <Card title="数据同步（模块概览）" icon="layout-grid" href="/modules/sync">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
+    Layer 云同步
+  </Card>
+  <Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
+    Google Drive 备份
+  </Card>
+  <Card title="数据同步（模块概览）" icon="layout-grid" href="/modules/sync">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

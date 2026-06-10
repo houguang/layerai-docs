@@ -1,0 +1,67 @@
+---
+title: 运行时配置
+description: 分片大小、并发数与失败重试次数。
+icon: "gauge"
+---
+
+<Note>
+  建议先阅读 [模型配置模块概览](/modules/models)，再查看本页细节。
+</Note>
+
+模型配置 → **运行时参数**（或翻译相关高级设置）。
+
+## 参数说明
+
+| 参数 | 作用 | 建议 |
+| --- | --- | --- |
+| **分片大小（batchSize）** | 单次 API 请求包含的条数 | 过大易超 token 上限；过小请求次数多 |
+| **并发（concurrency）** | 同时进行的请求数 | 按 API 速率限制调整 |
+| **重试次数（retryCount）** | 单分片失败后的重试 | 网络不稳时可适当提高 |
+
+## 与队列的关系
+
+这些参数作用于 [翻译队列](/queue/overview) 中的批量任务，不影响单条手动编辑。
+
+## 排错
+
+频繁超时或 429 限流 → 降低并发或分片大小，参见 [AI 错误排查](/troubleshooting/ai-errors)。
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="模型配置概述" icon="cpu" href="/models/overview">
+    模型配置概述
+  </Card>
+  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
+    平台模型
+  </Card>
+  <Card title="自定义模型" icon="plug" href="/models/custom-models">
+    自定义模型
+  </Card>
+  <Card title="翻译提示词" icon="message-square" href="/models/prompts">
+    翻译提示词
+  </Card>
+  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>
+
+## 本模块其他参考
+
+<CardGroup cols={2}>
+  <Card title="模型配置概述" icon="cpu" href="/models/overview">
+    模型配置概述
+  </Card>
+  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
+    平台模型
+  </Card>
+  <Card title="自定义模型" icon="plug" href="/models/custom-models">
+    自定义模型
+  </Card>
+  <Card title="翻译提示词" icon="message-square" href="/models/prompts">
+    翻译提示词
+  </Card>
+  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
+    返回模块 Hub 页，查看分块介绍与演示视频。
+  </Card>
+</CardGroup>

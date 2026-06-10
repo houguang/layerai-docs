@@ -1,6 +1,6 @@
 ---
 name: layer-ai
-description: LayerAI 浏览器扩展使用文档（中/英）。用于安装配置、网页采集、AI 翻译、词库治理、云同步与共享翻译协作。
+description: LayerAI 浏览器扩展使用文档（简体中文）。用于安装配置、网页采集、AI 翻译、词库治理、云同步与共享翻译协作。
 ---
 
 # LayerAI 文档技能
@@ -9,15 +9,16 @@ description: LayerAI 浏览器扩展使用文档（中/英）。用于安装配�
 
 ## 语言与路径
 
-- 中文：`docs/zh/` → 线上 `/zh/...`
-- 英文：`docs/en/` → 线上 `/en/...`
+- 源文档：`docs/` → 线上 `/...`
+- 其它语言可通过 LayerAI 扩展对文档站点自行翻译，仓库内不维护英文等多语言副本
 
 ## 关键路径
 
-- 快速上手：`zh/quickstart/first-translation.mdx` / `en/quickstart/first-translation.mdx`
-- 采集：`zh/collection/overview.mdx`
-- 模型：`zh/models/overview.mdx`
-- 故障排查：`zh/troubleshooting/index.mdx`
+- 快速上手：`journey/first-translation.mdx`
+- 产品地图：`journey/product-map.mdx`
+- 采集：`collection/overview.mdx`
+- 模型：`models/overview.mdx`
+- 故障排查：`troubleshooting/index.mdx`
 
 ## 产品定位
 
