@@ -1,6 +1,6 @@
 # LayerAI Docs
 
-> LayerAI is a local-first browser extension for web content collection, AI translation, glossary governance, and cloud collaboration.
+> LayerAI is a browser extension for persistent web translation on sites with relatively stable page content—collect, translate, save, and auto-replace on revisit.
 
 ## Site
 

@@ -22,5 +22,8 @@
 | `modules/sync-overview_zh.mp4` | ~25s | 导出 JSON / 云同步 |
 | `modules/shared-overview_zh.mp4` | ~30s | 浏览下载 + 提交共享 |
 | `modules/account-settings-overview_zh.mp4` | ~20s | 登录 + 基础设置 |
+| `ui-tour/manual-collection_zh.mp4` | ~30s | 网页内浮层 · 手动框选采集 |
 
 运行 `python scripts/generate-media-placeholders.py` 生成占位视频；录制完成后覆盖同名文件即可。
+
+> **大小限制**：Mintlify 单文件须 **小于 20 MB**（建议压到 5 MB 以内，HandBrake `-crf 28`）。超出上限时本地预览与线上部署都会 404。

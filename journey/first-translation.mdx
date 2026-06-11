@@ -6,68 +6,12 @@ icon: "sparkles"
 
 下文演示 LayerAI 最常用的端到端翻译流程：从网页采集文本，翻译后保存，并在页面上自动替换显示。
 
-<Frame caption="完整翻译流程演示（约 60–90 秒）">
-  <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/journey/first-translation_zh.mp4" />
-</Frame>
+<video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/journey/first-translation_zh.mp4" />
 
 ## 前置条件
 
 - 已完成 [扩展安装](/journey/install)
 - 已在 [模型配置](/modules/models) 中选择默认模型并完成 API Key 配置（若使用自定义模型）
-
-## 步骤
-
-<Steps>
-  <Step title="打开目标网页">
-    打开 [Drizzle ORM 文档 · Overview](https://orm.drizzle.team/docs/overview)。
-
-    <Frame caption="打开目标页面">
-      <img src="/assets/images/journey/step-open-page_zh.png" alt="Drizzle ORM 文档页面，尚未应用译文" />
-    </Frame>
-  </Step>
-  <Step title="采集当前页面">
-    点击扩展图标 → **一键采集当前页面**。扩展会抓取可见文本并跳过已翻译内容。
-
-    <Frame caption="弹窗 · 一键采集当前页面">
-      <img src="/assets/images/ui-tour/2_cn.png" alt="浏览器弹窗中的采集按钮" />
-    </Frame>
-  </Step>
-  <Step title="打开翻译列表">
-    采集完成后，页面会出现翻译列表弹窗（或通过弹窗进入管理页查看该站点词条）。
-
-    <Frame caption="翻译列表弹窗">
-      <img src="/assets/images/ui-tour/5_cn.png" alt="当前页翻译列表面板" />
-    </Frame>
-  </Step>
-  <Step title="AI 一键翻译">
-    在弹窗中勾选待翻译条目 → 点击 **AI 一键翻译**，等待队列处理完成。
-
-    <Frame caption="AI 一键翻译">
-      <img src="/assets/images/journey/step-ai-translate_zh.png" alt="勾选条目并点击 AI 一键翻译" />
-    </Frame>
-  </Step>
-  <Step title="保存">
-    确认译文无误后点击 **保存**。页面上的原文会立即替换为译文。
-
-    <Frame caption="保存后页面替换效果">
-      <img src="/assets/images/journey/step-save-replace_zh.png" alt="保存后原文被译文替换" />
-    </Frame>
-  </Step>
-  <Step title="验证持久生效">
-    刷新页面或关闭标签后重新打开，译文应自动应用（需开启 **自动替换**）。
-
-    <Frame caption="刷新后自动应用">
-      <img src="/assets/images/journey/step-refresh-verify_zh.png" alt="刷新页面后译文仍然生效" />
-    </Frame>
-  </Step>
-</Steps>
-
-## 弹窗快捷开关
-
-| 开关 | 作用 |
-| --- | --- |
-| **自动替换** | 关闭后仅保存译文，不在页面上替换显示 |
-| **替换模式** | 精确替换（默认）或内容匹配替换 |
 
 ## 常见问题
 
