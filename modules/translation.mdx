@@ -1,7 +1,7 @@
 ---
 title: 翻译管理
 description: 按站点组织词条，支持搜索、AI 批量翻译与提交共享。
-icon: "language"
+icon: "Globe"
 ---
 
 翻译管理是 LayerAI 的核心数据模块：按域名聚合词条，支持搜索、批量 AI 翻译、手动精修与提交社区共享。
@@ -36,20 +36,8 @@ icon: "language"
 在站点详情或网页浮层中编辑单条或多条词条的译文。
 
 <Frame caption="当前页的翻译列表面板">
-  <img src="/assets/images/ui-tour/5_cn.png" alt="翻译列表弹窗：词条列表与 AI 翻译、保存操作" />
+  <img src="/assets/images/ui-tour/5.gif" alt="翻译列表弹窗：词条列表与 AI 翻译、保存操作" />
 </Frame>
-
-<Steps>
-  <Step title="定位词条">
-    在列表中点击词条，页面滚动到原文位置；或点击页面原文，列表自动定位。
-  </Step>
-  <Step title="编辑译文">
-    手动修改译文，或禁用不需要替换的词条。
-  </Step>
-  <Step title="保存">
-    确认后保存，页面立即应用（需开启自动替换）。
-  </Step>
-</Steps>
 
 <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
   批量编辑、启用/禁用与定位信息说明。
@@ -67,10 +55,12 @@ icon: "language"
 
 勾选待译条目，由翻译队列在后台依次调用 AI 模型完成翻译。
 
-<Frame caption="翻译列表 · AI 一键翻译">
-  <img src="/assets/images/ui-tour/5_cn.png" alt="翻译列表中的 AI 一键翻译按钮" />
+<Frame caption="AI 一键翻译">
+  <img src="/assets/images/ui-tour/6.gif" alt="AI 一键翻译按钮" />
 </Frame>
-
+<Tip>
+  站点列表与词条列表中均可发起 AI 一键翻译，区别在于词条列表中可以勾选需要翻译的词条，站点列表中会把全部未翻译的词条加入翻译队列。
+</Tip>
 <Steps>
   <Step title="选择条目">
     在弹窗或站点详情中勾选待翻译词条。
@@ -86,6 +76,11 @@ icon: "language"
 <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
   前置条件、分片并发与错误处理。
 </Card>
+
+## 手动翻译
+<Frame caption="手动翻译">
+  <img src="/assets/images/ui-tour/7.gif" alt="手动翻译按钮" />
+</Frame>
 
 ## 提交共享翻译
 

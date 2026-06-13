@@ -121,7 +121,7 @@
           },
           {
             "group": "翻译管理",
-            "icon": "language",
+            "icon": "globe",
             "pages": [
               "translation/site-list",
               "translation/edit-entries",
@@ -189,15 +189,12 @@
               "account/plans",
               "account/quotas",
               "settings/basic",
-              "settings/shared-settings",
-              "advanced/developer",
-              "advanced/protected-tags",
-              "advanced/sensitive-mask"
+              "settings/shared-settings"
             ]
           },
           {
             "group": "故障排查",
-            "icon": "circle-help",
+            "icon": "file-question-mark",
             "pages": [
               "troubleshooting/index",
               "troubleshooting/ai-errors",
