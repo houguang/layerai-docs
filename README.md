@@ -1,78 +1,32 @@
-# LayerAI 使用文档
+# LayerAI 文档
 
-LayerAI 浏览器扩展官方使用文档（Mintlify），当前仅维护**简体中文**源文档。其它语言版本可通过 LayerAI 扩展自行翻译生成。
+LayerAI 是一款**本地优先**的浏览器扩展，帮助用户在网页上完成采集、AI 翻译、术语治理与多语言替换。与「每次打开页面都即时翻译」不同，LayerAI 把译文沉淀为可复用的翻译资产：同一页面内容不变时，已确认的译法可以自动应用，减少重复翻译与术语漂移。
 
-- GitHub：https://github.com/houguang/layerai-docs
-- 线上站点：https://docs.layerai.yun
+- **线上文档**：https://docs.layerai.yun
 
-## 本地预览
+当前以**简体中文**为源语言维护；其它语言版本可由 LayerAI 扩展自行翻译生成。
 
-需要 Node.js **v20.17+**。
+## 产品定位
 
-```bash
-cd docs
-npm install
-npm run dev
-```
+LayerAI 把「零散的外文网页阅读」升级为**可协作的翻译工作流**：
 
-浏览器打开 http://localhost:3000。
+- **采集** — 在当前页、整站或框选范围内提取待译文本
+- **翻译** — 支持多种 AI 模型与词库约束，队列化执行、失败可重试
+- **替换** — 将已保存译文自动应用到原网页，像阅读母语页面一样浏览
+- **治理** — 术语分类、共享翻译提交与审核，让团队译法保持一致
+- **同步** — 本地导入导出，Pro / Max 用户可使用 Layer 云同步与 Google Drive 备份
 
-## 文档结构（三层）
+Free 套餐可用于验证流程；Pro / Max 提供更高额度、协作与同步能力。官网与订阅入口见 [layerai.yun](https://layerai.yun)。
 
-```
-docs/
-├── docs.json              # 导航与重定向
-├── journey/               # 入门串联
-├── modules/               # 功能模块 Hub
-├── collection/ …          # 各模块详细参考页
-├── introduction/ …
-├── assets/                # 静态资源（图片、视频、Logo、组件片段）
-│   ├── images/
-│   ├── videos/
-│   ├── logo/
-│   ├── snippets/
-│   └── favicon.ico
-└── docs.json
-```
+## 文档内容概览
 
-- **入门** — 产品故事线与端到端流程
-- **功能模块** — 各模块 Hub 页，分块介绍 + 多媒体
-- **各功能分组** — 详细操作说明与参数
+文档按「入门 → 功能模块 → 详细参考」组织，帮助用户理解 LayerAI 的设计理念与实际操作：
 
-## 路径约定
+| 部分 | 说明 |
+|------|------|
+| 入门（Journey） | 安装、登录、基础设置与第一个完整翻译流程 |
+| 简介 | 核心概念、界面导览与产品术语 |
+| 功能模块 | 采集、翻译、词库、同步、共享翻译等模块说明 |
+| 故障排查 | 常见问题与排查指引 |
 
-- 导航与内容均在 `docs/` 根目录下
-- 站内链接使用 `/...` 前缀
-- 根路径 `/` 为文档首页（`index.mdx`）
-
-## 媒体贡献指南
-
-### 截图
-
-- 命名：`assets/images/{ui-tour|journey|modules}/{feature}_zh.png`
-- 在 MDX 中用 `<Frame caption="...">` 包裹，写清 alt 文本
-
-### 视频
-
-- 命名：`assets/videos/{journey|modules}/{name}_zh.mp4`
-- 规格：1280×720 或 1920×1080，H.264，单文件 < 5MB
-
-## 新增页面
-
-1. 在对应目录下创建 MDX（含 `title` / `description`）
-2. Hub 页放 `modules/`，详细说明放对应参考目录
-3. 在 `docs.json` → `navigation` → `tabs` → `groups` → `pages` 中加入路径
-4. 本地 `npm run validate` 后推送
-
-## 检查
-
-```bash
-npm run validate
-npm run broken-links
-```
-
-> 说明：`mint broken-links` 对站内链接可能误报，以 `mint validate` 为准。
-
-## 关联 Mintlify 项目（sovitech）
-
-文档已推送到本仓库 `main` 分支。在 [Mintlify Dashboard](https://dashboard.mintlify.com) 完成 Git 关联后自动部署。
+建议新用户从 [产品功能地图](https://docs.layerai.yun/journey/product-map) 开始，了解各模块如何串联。
