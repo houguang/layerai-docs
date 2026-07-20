@@ -1,71 +1,48 @@
 ---
-title: 采集规则
-description: 哪些内容会被采集、跳过与特殊处理。
+title: Collection rules
+description: What gets collected, skipped, or specially handled.
 icon: "ruler"
 ---
 
 <Note>
-  建议先阅读 [网页采集模块概览](/modules/collection)，再查看本页细节。
+  We recommend reading the [Page collection module overview](/modules/collection) first, then returning here for details.
 </Note>
 
-## 自动跳过
+## Automatic skip
 
-以下情况不会重复采集：
+These cases are not collected again:
 
-- 该文本在本地已有对应译文
-- 节点位于脚本、样式等非可见区域
-- 符合 [受保护 HTML 标签](/advanced/protected-tags) 策略的内联结构
+- The text already has a matching translation locally
+- The node is in non-visible areas such as scripts or styles
+- Inline structures covered by the [protected HTML tags](/advanced/protected-tags) policy
 
-## 占位符
+## Placeholders
 
-页面中的变量占位符（如 `{{@id#1|原文}}`）在 AI 翻译时会保留结构，仅翻译竖线后的文本。详见 [附录 · 数据格式](/appendix/data-format)。
+Variable placeholders on the page (for example `{{@id#1|source text}}`) keep their structure during AI translation; only the text after the pipe is translated. See [Appendix · Data format](/appendix/data-format).
 
-## 敏感信息
+## Sensitive information
 
-若启用 [敏感词脱敏](/advanced/sensitive-mask)，发往 AI 的文本会先按规则掩码，降低泄露风险。
+If [sensitive masking](/advanced/sensitive-mask) is enabled, text sent to the AI is masked by rule first to reduce leakage risk.
 
-## 最佳实践
+## Best practices
 
-- 大站分批：先核心页面，再扩展子路径
-- 采集后检查 **翻译管理** 列表，删除明显误采的条目
-- 品牌术语提前写入 [词库](/glossary/overview)
+- For large sites, work in batches: core pages first, then subpaths
+- After collection, review the **Translation management** list and remove obvious false positives
+- Add brand terms to the [glossary](/modules/glossary) ahead of time
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
-  </Card>
-  <Card title="手动采集" icon="crosshair" href="/collection/manual">
-    手动采集
-  </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
-  </Card>
-  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
-    采集当前网站
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
+  <Card title="Manual collection" icon="crosshair" href="/collection/manual">
+    Select elements on the page to add text for translation.
   </Card>
-  <Card title="手动采集" icon="crosshair" href="/collection/manual">
-    手动采集
+  <Card title="Collect current page" icon="file-text" href="/collection/current-page">
+    One-click capture of visible text on the current page.
   </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
+  <Card title="Collect current site" icon="globe" href="/collection/current-site">
+    Discover same-domain links and collect pages in batch.
   </Card>
-  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
-    采集当前网站
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Page collection (module overview)" icon="layout-grid" href="/modules/collection">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

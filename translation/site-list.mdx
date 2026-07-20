@@ -1,76 +1,52 @@
 ---
-title: 翻译管理
-description: 按站点浏览、搜索与管理所有翻译词条。
+title: Translation management
+description: Browse, search, and manage all translation entries by site.
 icon: "folder-open"
 ---
 
 <Note>
-  建议先阅读 [翻译管理模块概览](/modules/translation)，再查看本页细节。
+  We recommend reading the [Translation management module overview](/modules/translation) first, then returning here for details.
 </Note>
 
-翻译管理是 LayerAI 的核心数据管理模块，按站点组织所有翻译词条，支持搜索、批量操作与 AI 翻译。入口：扩展管理页 → **翻译管理**。
+Translation management is LayerAI’s core data module. It organizes all translation entries by site and supports search, batch actions, and AI translation. Entry point: extension management page → **Translation management**.
 
-列表按 **域名（站点）** 分组，点击进入站点详情。
+The list is grouped by **domain (site)**; click a site to open its details.
 
-## 站点列表
+## Site list
 
-每个站点卡片显示：
+Each site card shows:
 
-- 域名 / URL 标识
-- 词条数量与翻译进度
-- 是否启用该站点替换
-- 共享来源标识（若从共享包下载）
+- Domain / URL identifier
+- Entry count and translation progress
+- Whether replacement is enabled for the site
+- Shared-source badge (if downloaded from a shared pack)
 
-## 站点详情
+## Site details
 
-- 搜索源文 / 译文
-- 勾选条目批量操作
-- **AI 一键翻译** 选中条目
-- **提交共享**（进度 100% 时可用）
-- 进入 [手动翻译](/translation/manual-translation) 工作流
+- Search source or translation text
+- Select entries for batch actions
+- **AI translate** selected entries
+- **Submit to shared** (available when progress is 100%)
+- Open the [manual translation](/translation/manual-translation) workflow
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
-    编辑词条
-  </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
-  </Card>
-  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
-    AI 批量翻译
-  </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
-  </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
-    编辑词条
+  <Card title="Edit entries" icon="pencil" href="/translation/edit-entries">
+    Edit translations, enable/disable, or delete individual records.
   </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
+  <Card title="Manual translation" icon="hand" href="/translation/manual-translation">
+    Export chunks, translate externally, then paste JSON back.
   </Card>
-  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
-    AI 批量翻译
+  <Card title="AI batch translation" icon="zap" href="/translation/ai-batch">
+    Start AI translation in the extension and write jobs to the queue.
+  </Card><Card title="Queue task management" icon="settings-2" href="/queue/task-management">
+    Track progress, retry failures, cancel, and clean up jobs.
   </Card>
-  <Card title="翻译队列概述" icon="list" href="/queue/overview">
-    翻译队列概述
+  <Card title="Submit shared translation" icon="upload" href="/translation/submit-shared">
+    Submit a site pack for others to download.
   </Card>
-  <Card title="队列任务管理" icon="settings-2" href="/queue/task-management">
-    队列任务管理
-  </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
-  </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Translation management (module overview)" icon="layout-grid" href="/modules/translation">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

@@ -1,81 +1,73 @@
 ---
-title: 共享翻译
-description: 浏览下载社区翻译包，提交整站译文供他人使用。
+title: Shared Translations
+description: Browse and download community translation packs; submit whole-site translations for others to use.
 icon: "share-2"
 ---
 
-共享翻译是 LayerAI 的社区协作能力：用户将审校后的整站翻译包发布到社区，其他用户可下载到本地直接使用。
+Shared translations are LayerAI’s community collaboration feature: users submit reviewed whole-site packs for publication; others download them locally. Entry point: options page → **Shared translations**.
 
-<Frame caption="共享翻译概览（约 30 秒）">
-  <img src="/assets/images/modules/6.png" alt="共享翻译概览" />
+<Frame caption="Shared translations overview (~30 seconds)">
+  <img src="/assets/images/modules/6.png" alt="Shared translations overview" />
 </Frame>
 
-## 工作机制
+| View | Description |
+| --- | --- |
+| **Downloaded shares** | Packs you have downloaded |
+| **My shares** | Submission history and review status |
 
-<Tabs>
-  <Tab title="下载">
-    查看已经下载的共享翻译包。
-  </Tab>
-  <Tab title="提交">
-    将自己 100% 翻译完成的站点包提交审核后发布。
-  </Tab>
-</Tabs>
+Liking a pack requires downloading it first.
 
-<Card title="共享翻译概述（参考）" icon="share-2" href="/shared/overview">
-  两个视图与互动操作说明。
-</Card>
+## Browse and download
 
-## 浏览与下载
-
-<Frame caption="发现可下载共享包时的提示">
-  <img src="/assets/images/ui-tour/2_1_cn.png" alt="共享翻译发现提示浮层" />
+<Frame caption="Prompt when a downloadable shared pack is available">
+  <img src="/assets/images/ui-tour/2_1_cn.png" alt="Shared translation discovery prompt overlay" />
 </Frame>
 
 <Steps>
-  <Step title="发现">
-    访问站点时按 [发现策略](/shared/discover-modes) 提示匹配包。
+  <Step title="Discover">
+    When visiting a site, matching packs are prompted per [discovery policy](/shared/discover-modes).
   </Step>
-  <Step title="下载">
-    在弹窗或共享翻译页下载，导入本地库。
+  <Step title="Download">
+    Download from the popup or Shared translations page into the local library.
   </Step>
-  <Step title="使用">
-    开启自动替换后，页面应用社区译文。
+  <Step title="Use">
+    With auto-replace on, the page applies community translations.
   </Step>
 </Steps>
 
-<Card title="浏览与下载" icon="download" href="/shared/browse-download">
-  下载配额、点赞与撤回说明。
+<Card title="Browse and download" icon="download" href="/shared/browse-download">
+  Download quotas, likes, and withdraw details.
 </Card>
 
-## 提交共享
+## Submit shared
 
-在 [翻译管理](/modules/translation) 中站点进度达 100% 后提交整站包。
+In [Translation management](/modules/translation), submit a whole-site pack after the site reaches 100% progress.
 
-<Frame caption="提交共享（翻译管理 · 站点详情）">
-  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="提交共享按钮与审核入口" />
+<Frame caption="Submit shared (Translation management · site details)">
+  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="Submit shared button and review entry" />
 </Frame>
 
-<Card title="提交共享（参考）" icon="upload" href="/shared/submit">
-  提交条件与审核流程。
+<Card title="Submit shared (reference)" icon="upload" href="/shared/submit">
+  Submit requirements and review flow.
 </Card>
 
-## 发现策略
+## Discovery policy
 
-在基础配置中设定访问站点时发现共享包的处理方式：手动下载、自动下载或仅角标提醒。
+In basic settings, choose how matching shared packs are handled when you visit a site: manual download, auto download, or badge-only reminder.
 
-<Card title="发现策略" icon="radar" href="/shared/discover-modes">
-  三种发现模式对比与配置位置。
+<Card title="Discovery policy" icon="radar" href="/shared/discover-modes">
+  Comparison of the three discovery modes and where to configure them.
 </Card>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-共享包本质是整站 [翻译管理](/modules/translation) 数据的发布形态；下载后可通过 [数据同步](/modules/sync) 备份，提交前建议结合 [词库](/modules/glossary) 统一术语。
+A shared pack is essentially a published form of whole-site [Translation management](/modules/translation) data. After download, back it up via [Data sync](/modules/sync); before submit, unify terms with the [glossary](/modules/glossary).
 
 <CardGroup cols={2}>
-  <Card title="提交共享翻译（参考）" icon="upload" href="/translation/submit-shared">
-    翻译管理中的提交入口与状态表。
+  <Card title="Submit shared translation (reference)" icon="upload" href="/translation/submit-shared">
+    Submit entry and status table in translation management.
   </Card>
-  <Card title="账号与设置" icon="credit-card" href="/modules/account-settings">
-    登录与共享下载配额。
+  <Card title="Account & Settings" icon="credit-card" href="/modules/account-settings">
+    Sign-in and shared download quotas.
   </Card>
 </CardGroup>

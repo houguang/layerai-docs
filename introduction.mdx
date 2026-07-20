@@ -1,115 +1,101 @@
 ---
-title: 简介
-description: LayerAI 的功能定位、核心能力与典型使用场景概览。
+title: Introduction
+description: What LayerAI is, who it is for, and how the core modules fit together.
 icon: "book-open"
 ---
 
 <Frame>
-  <img src="/assets/images/ui-tour/1_cn.png" alt="LayerAI 简介" />
+  <img src="/assets/images/ui-tour/1_cn.png" alt="LayerAI introduction" />
 </Frame>
 
-LayerAI 是一款浏览器扩展，支持 Chrome、Firefox、Edge 等主流浏览器，适合**页面内容相对固定**、需要反复访问的外文网站。与每次打开页面都**重新翻译**的即时翻译不同，它将页面文本**按站点采集并持久保存**——经 AI 批量翻译或手动精修确认后，再次访问**同一页面**时**自动替换**原文，无需重新翻译。扩展支持手动、整页与整站规则三种采集方式，可结合词库约束术语、翻译队列处理批量任务；数据默认存于浏览器本地，核心功能无需注册账号，亦可按需启用云同步与社区共享翻译包。
+LayerAI is a browser extension for **foreign-language sites whose page content is relatively stable**. It collects page text, saves confirmed translations, and **auto-replaces** them on return visits—so you do not re-translate the same page every time.
 
-## 产品解决什么问题
+## Who it is for
 
-LayerAI 将外文网页的阅读体验拆成两个独立阶段：**先完成翻译，再次访问时直接使用**。
-常见即时翻译工具把二者混在一起——每次打开页面都要重新翻译，效率低下，
-也无法沉淀你已确认过的译法。
+| Fit | Examples |
+| --- | --- |
+| **Good fit** | Docs, product pages, help centers, admin / SaaS UIs—copy changes infrequently |
+| **Poor fit** | News feeds, social media, live rankings—source text changes often; use an instant translator instead |
 
-### 一、翻译：把页面内容变成可复用的译文
+## How it works
 
-经常访问**同一页面**、且页面文案较少变动时，依赖浏览器或插件的即时翻译往往**每次结果不一致**——同一句话今天一种译法、明天又变一种；AI 译法也未必准确，且多数工具**无法保存或手动修改**你已确认过的译文，改过的内容下次访问便又丢失。
+1. **Collect** — Extract text from the current page or site
+2. **Translate & save** — AI batch or manual review, then persist entries locally
+3. **Reuse** — On return visits, saved translations apply automatically (no re-translation)
 
-LayerAI 在页面内完成「**采集 → 翻译 → 保存**」：从网页提取原文并按站点组织词条，支持 AI 批量翻译与手动精修；词库可约束品牌名、产品名等术语，翻译队列可在后台处理整站批量任务。确认后的译文持久保存在本地（亦可云同步或共享），成为可备份、可协作的翻译资产。
+Hands-on walkthrough: [Your first translation](/journey/first-translation).
 
-### 二、使用：再次访问时自动替换，无需重翻
-
-译文保存后，阅读阶段与翻译阶段分离：你再次打开同一页面时，扩展**自动应用**已保存的译文替换原文，无需重新翻译。可随时开关自动替换，或在浮层中查看、微调单条词条。
-
-这一分离让「一次翻译、永久生效」成为常态——翻译投入发生在需要时，日常使用则像阅读母语页面一样直接。
-
-## 与其它翻译产品的对比
-
-下表从**功能能力**角度对比 LayerAI 与常见的**即时翻译类**工具（如浏览器内置翻译等打开页面即译的扩展）。二者并非替代关系，而是适用场景不同。
-
-| 能力 | LayerAI | 即时翻译类 |
-| --- | --- | --- |
-| 再次访问同一页面时应用已保存译文 | ✓ | — |
-| 保存译文并手动精修 | ✓ | — |
-| 译法稳定、可沉淀为翻译资产 | ✓ | — |
-| 按站点组织与管理词条 | ✓ | — |
-| 词库约束术语译法 | ✓ | 部分支持 |
-| 整站规则批量采集与翻译 | ✓ | — |
-| 后台翻译队列 | ✓ | — |
-| 共享翻译包下载 / 提交 | ✓ | — |
-| 打开页面即可阅读、零配置上手 | 需先完成采集与保存 | ✓ |
-| 适合内容相对固定的站点 | ✓ | 一般 |
-| 适合高频更新的页面 | 原文变更后需补翻 | ✓ |
-
-<Note>
-  **即时翻译类**擅长「打开就看」——新闻、社交媒体、临时浏览等页面随时可读。**LayerAI** 擅长「先翻好、再反复用」——文档、产品页、后台等文案较少变动的站点，一次审校后在内容未变期间持续生效。可按场景搭配使用。
-</Note>
-
-## 核心功能
+## Core features
 
 <CardGroup cols={2}>
-  <Card title="产品功能地图" icon="map" href="/journey/product-map">
-    从安装到共享翻译的完整功能串联与模块导航。
+  <Card title="Page Collection" icon="mouse-pointer" href="/modules/collection">
+    Manual selection, current page, or whole-site rules—skip already translated content.
   </Card>
 
-  <Card title="网页采集" icon="mouse-pointer" href="/modules/collection">
-    提供手动框选、当前页一键、整站规则三种采集方式，并自动跳过已翻译内容。
+  <Card title="Translation Management" icon="globe" href="/modules/translation">
+    Organize entries by site; AI batch translate, edit manually, submit shared packs.
   </Card>
 
-  <Card title="翻译管理" icon="globe" href="/modules/translation">
-    按站点组织词条，支持 AI 批量翻译、手动精修与提交至共享社区。
+  <Card title="Page Replace" icon="repeat" href="/modules/replace">
+    Exact and content-match modes; apply after save and again on return visits.
   </Card>
 
-  <Card title="页面替换" icon="repeat" href="/modules/replace">
-    提供精确替换与内容匹配两种模式，保存后立即生效，再次访问时自动应用。
+  <Card title="Glossary" icon="book-a" href="/modules/glossary">
+    Local and platform terms keep brand and product names consistent in AI output.
   </Card>
 
-  <Card title="词库治理" icon="book-a" href="/modules/glossary">
-    本地与平台词库可在 AI 翻译时约束术语，保持品牌名与产品名译法一致。
+  <Card title="Translation Queue" icon="list-ordered" href="/modules/queue">
+    Background AI batch jobs with progress, retries, and task management.
   </Card>
 
-  <Card title="翻译队列" icon="list-ordered" href="/modules/queue">
-    在后台批量执行 AI 翻译任务，支持进度追踪、失败重试与任务管理。
-  </Card>
-
-  <Card title="数据同步" icon="cloud" href="/modules/sync">
-    支持本地 JSON 导入导出、Layer 云同步、Google Drive 备份及社区共享翻译包。
+  <Card title="Data Sync & Sharing" icon="cloud" href="/modules/sync">
+    Local JSON, Layer cloud, Google Drive; browse and share community packs.
   </Card>
 </CardGroup>
 
-## 支持的浏览器与模型
+## Next steps
 
-LayerAI 基于 Chromium 扩展规范开发，并支持多种 AI 翻译后端：
+<CardGroup cols={3}>
+  <Card title="Install" icon="download" href="/journey/install">
+    Chrome and Firefox stores; Edge / Safari coming soon.
+  </Card>
 
-| 类型 | 说明 |
-| --- | --- |
-| **Chrome / Edge** | 通过 [Chrome 网上应用店](https://chromewebstore.google.com/detail/enpnogogneglhpcdkfppcjnbbjafhikc) 安装 |
-| **Firefox** | 通过 [Firefox 网上应用店](https://addons.mozilla.org/zh-CN/firefox/addon/layerai/) 安装 |
-| **平台模型** | 登录 Layer 账号后可使用官方接入的大模型，如 GPT、Claude、Gemini 等 |
-| **自定义模型** | 支持 OpenAI 兼容 API、Anthropic、Gemini、Ollama 等，详见 [模型配置](/models/overview) |
+  <Card title="First translation" icon="rocket" href="/journey/first-translation">
+    Collect → translate → save → auto-replace.
+  </Card>
 
-## 隐私与数据
+  <Card title="Product map" icon="map" href="/journey/product-map">
+    How modules connect end to end.
+  </Card>
+</CardGroup>
 
-<Note>
-  翻译数据默认存储于浏览器本地，基础能力不依赖账号；扩展不会将用户访问的网页内容用于模型训练。
+<AccordionGroup>
+  <Accordion title="Compared with instant translation">
+    Instant translators re-translate on every page load—best for one-off reading. LayerAI persists reviewed translations so wording stays stable and reusable.
 
-  登录后可选用云同步与共享翻译等协作能力。站点读写权限仅在采集与页面替换时按需申请，用户可在浏览器扩展设置中随时撤销。数据备份可通过 [本地导入导出](/sync/local-import-export) 或 [Google Drive](/sync/google-drive) 配置完成，数据流向由用户自行掌控。
-</Note>
+    | Capability | LayerAI | Instant translation |
+    | --- | --- | --- |
+    | Apply saved translations on return visits | ✓ | — |
+    | Save and manually refine translations | ✓ | — |
+    | Glossary-constrained terms | ✓ | Partial |
+    | Whole-site batch collection / queue | ✓ | — |
+    | Read immediately with zero setup | Needs prior save | ✓ |
+    | Frequently updating pages | Re-collect when source changes | ✓ |
+  </Accordion>
 
-## 适用场景
+  <Accordion title="Browsers and models">
+    | Type | Description |
+    | --- | --- |
+    | **Chrome** | [Chrome Web Store](https://chromewebstore.google.com/detail/enpnogogneglhpcdkfppcjnbbjafhikc) |
+    | **Firefox** | [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/layerai/) |
+    | **Edge / Safari** | Coming soon—see [Install](/journey/install) |
+    | **Platform models** | After sign-in: GPT, Claude, Gemini, and other integrated models |
+    | **Custom models** | OpenAI-compatible APIs, Anthropic, Gemini, Ollama—see [Model configuration](/modules/models) |
+  </Accordion>
 
-LayerAI 适合**页面正文与界面文案更新不频繁**的外文网站——一次翻译、审校后，在内容未变期间持续自动生效。典型场景包括：
+  <Accordion title="Privacy and data">
+    Translation data is stored in the browser locally by default. Core features do not require an account. The extension does not use the pages you visit for model training.
 
-- **文档与教程** — 技术文档、Wiki、API 参考：页面结构稳定，术语与译法一次校对即可反复使用
-- **产品页与帮助中心** — 营销落地页、FAQ、使用手册：整站规则采集与批量 AI 翻译，审校后作为可维护的本地化内容
-- **业务系统界面** — ERP、CRM、管理后台等外语运维界面：菜单与字段文案相对固定，适合一次性翻译、日常自动应用
-- **团队译法协作** — 词库统一品牌与产品术语，通过共享翻译包下载或提交已审校站点译文，避免多人各自为政
-
-<Note>
-  新闻流、社交媒体、实时榜单等**高频更新**的页面，原文变动后已保存的译文可能失效，需重新采集或补翻。这类场景更适合即时翻译工具；LayerAI 的优势在于**内容相对固定**的站点。
-</Note>
+    After sign-in you can opt into cloud sync and shared translations. Site permissions are requested only when needed for collection and replace; you can revoke them in browser extension settings. Backups: [local import/export](/sync/local-import-export) or [Google Drive](/sync/google-drive).
+  </Accordion>
+</AccordionGroup>

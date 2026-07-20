@@ -1,120 +1,119 @@
 ---
-title: 翻译管理
-description: 按站点组织词条，支持搜索、AI 批量翻译与提交共享。
-icon: "Globe"
+title: Translation Management
+description: Organize entries by site, with search, AI batch translation, and community submit.
+icon: "globe"
 ---
 
-翻译管理是 LayerAI 的核心数据模块：按域名聚合词条，支持搜索、批量 AI 翻译、手动精修与提交社区共享。
+Translation management is LayerAI’s core data module: entries are grouped by domain, with search, AI batch translation, manual refinement, and community shared submit.
 
-<Frame caption="翻译管理概览（约 30 秒）">
+<Frame caption="Translation management overview (~30 seconds)">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/translation-overview_zh.mp4" />
 </Frame>
 
-## 站点列表
+## Site list
 
-扩展管理页 → **翻译管理**，按域名分组展示所有站点及翻译进度。
+Options page → **Translation management** shows all sites grouped by domain, with translation progress.
 
-<Frame caption="扩展管理页 · 翻译管理">
-  <img src="/assets/images/ui-tour/1_cn.png" alt="翻译管理主区：站点列表与词条统计" />
+<Frame caption="Options page · Translation management">
+  <img src="/assets/images/ui-tour/1_cn.png" alt="Translation management main area: site list and entry stats" />
 </Frame>
 
 <Tabs>
-  <Tab title="站点卡片信息">
-    域名标识、词条数量、翻译进度、是否启用替换、共享来源标识。
+  <Tab title="Site card info">
+    Domain identifier, entry count, translation progress, whether replace is enabled, and shared-source badge.
   </Tab>
-  <Tab title="常用操作">
-    点击进入站点详情，搜索源文/译文，勾选批量操作。
+  <Tab title="Common actions">
+    Click into site details, search source/target text, select entries for bulk actions.
   </Tab>
 </Tabs>
 
-<Card title="翻译管理（参考）" icon="folder-open" href="/translation/site-list">
-  站点列表字段与站点详情操作说明。
+<Card title="Translation management (reference)" icon="folder-open" href="/translation/site-list">
+  Site list fields and site detail actions.
 </Card>
 
-## 编辑词条
+## Edit entries
 
-在站点详情或网页浮层中编辑单条或多条词条的译文。
+Edit the target text of one or more entries in site details or the on-page overlay.
 
-<Frame caption="当前页的翻译列表面板">
-  <img src="/assets/images/ui-tour/5.gif" alt="翻译列表弹窗：词条列表与 AI 翻译、保存操作" />
+<Frame caption="Translation list panel on the current page">
+  <img src="/assets/images/ui-tour/5.gif" alt="Translation list popup: entry list with AI translate and save actions" />
 </Frame>
 
-<Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
-  批量编辑、启用/禁用与定位信息说明。
+<Card title="Edit entries" icon="pencil" href="/translation/edit-entries">
+  Bulk edit, enable/disable, and locator details.
 </Card>
 
-## 手动翻译
+## Manual translation
 
-不依赖 AI，逐条或批量维护译文，适合术语敏感或 AI 效果不佳的内容。
+Maintain translations one by one or in bulk without AI—best for term-sensitive content or when AI quality is poor.
 
-<Card title="手动翻译工作流" icon="hand" href="/translation/manual-translation">
-  手动添加词条、跨页复用与内容匹配模式配合。
+<Frame caption="Manual translation">
+  <img src="/assets/images/ui-tour/7.gif" alt="Manual translation button" />
+</Frame>
+
+<Card title="Manual translation workflow" icon="hand" href="/translation/manual-translation">
+  Manually add entries, reuse across pages, and work with content-match mode.
 </Card>
 
-## AI 批量翻译
+## AI batch translation
 
-勾选待译条目，由翻译队列在后台依次调用 AI 模型完成翻译。
+Select entries to translate; the translation queue calls AI models in the background in order.
 
-<Frame caption="AI 一键翻译">
-  <img src="/assets/images/ui-tour/6.gif" alt="AI 一键翻译按钮" />
+<Frame caption="AI one-click translate">
+  <img src="/assets/images/ui-tour/6.gif" alt="AI one-click translate button" />
 </Frame>
 <Tip>
-  站点列表与词条列表中均可发起 AI 一键翻译，区别在于词条列表中可以勾选需要翻译的词条，站点列表中会把全部未翻译的词条加入翻译队列。
+  You can start AI one-click translate from both the site list and the entry list. The difference: in the entry list you can select which entries to translate; from the site list, all untranslated entries are added to the translation queue.
 </Tip>
 <Steps>
-  <Step title="选择条目">
-    在弹窗或站点详情中勾选待翻译词条。
+  <Step title="Select entries">
+    Select entries to translate in the popup or site details.
   </Step>
-  <Step title="发起翻译">
-    点击 **AI 一键翻译**，任务加入 [翻译队列](/modules/queue)。
+  <Step title="Start translation">
+    Click **AI one-click translate**; the job is added to the [translation queue](/modules/queue).
   </Step>
-  <Step title="确认结果">
-    队列完成后检查译文，必要时结合 [词库](/modules/glossary) 修正术语。
+  <Step title="Review results">
+    After the queue finishes, check translations and fix terms with the [glossary](/modules/glossary) when needed.
   </Step>
 </Steps>
 
-<Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
-  前置条件、分片并发与错误处理。
+<Card title="AI batch translation" icon="zap" href="/translation/ai-batch">
+  Prerequisites, chunk concurrency, and error handling.
 </Card>
 
-## 手动翻译
-<Frame caption="手动翻译">
-  <img src="/assets/images/ui-tour/7.gif" alt="手动翻译按钮" />
-</Frame>
+## Submit shared translation
 
-## 提交共享翻译
+When a site reaches 100% translation progress and meets quality guidelines, you can submit the whole-site pack to the community.
 
-站点翻译进度达 100% 且质量符合规范时，可将整站翻译包提交至社区。
-
-<Frame caption="提交共享入口（翻译管理 · 站点详情）">
-  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="站点详情中的提交共享按钮与进度提示" />
+<Frame caption="Submit shared entry (Translation management · site details)">
+  <img src="/assets/images/modules/translation/submit-shared_zh.png" alt="Submit shared button and progress hint in site details" />
 </Frame>
 
 <Tabs>
-  <Tab title="提交条件">
-    已登录 Layer 账号；翻译进度 100%；无大量空译文。
+  <Tab title="Submit requirements">
+    Signed in to a Layer account; 100% translation progress; no large number of empty targets.
   </Tab>
-  <Tab title="操作">
-    翻译管理 → 选择站点 → **提交共享** → 确认。
+  <Tab title="How">
+    Translation management → select site → **Submit shared** → confirm.
   </Tab>
-  <Tab title="审核状态">
-    审核中 / 已通过 / 已拒绝，可在共享翻译 → 我的共享查看。
+  <Tab title="Review status">
+    In review / approved / rejected—view under Shared translations → My shares.
   </Tab>
 </Tabs>
 
-<Card title="提交共享翻译（参考）" icon="upload" href="/translation/submit-shared">
-  审核流程与状态说明。
+<Card title="Submit shared translation (reference)" icon="upload" href="/translation/submit-shared">
+  Review flow and status details.
 </Card>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-译文保存后 → [页面替换](/modules/replace) 自动应用；可经 [数据同步](/modules/sync) 备份，或通过 [共享翻译](/modules/shared) 与社区交换整站包。
+After translations are saved → [Page replace](/modules/replace) applies them automatically; back up via [Data sync](/modules/sync), or exchange whole-site packs through [Shared translations](/modules/shared).
 
 <CardGroup cols={2}>
-  <Card title="共享翻译模块" icon="share-2" href="/modules/shared">
-    浏览下载社区翻译包。
+  <Card title="Shared translations module" icon="share-2" href="/modules/shared">
+    Browse and download community translation packs.
   </Card>
-  <Card title="第一个翻译流程" icon="sparkles" href="/journey/first-translation">
-    从采集到保存的完整演示。
+  <Card title="Your First Translation" icon="sparkles" href="/journey/first-translation">
+    Full demo from collection to save.
   </Card>
 </CardGroup>

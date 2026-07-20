@@ -1,94 +1,94 @@
 ---
-title: 敏感词脱敏
-description: 发往 AI 前按正则规则掩码敏感信息。
+title: Sensitive data masking
+description: Mask sensitive information with regex rules before sending content to AI.
 icon: "shield"
 ---
 
 <Note>
-  建议先阅读 [账号与设置模块概览](/modules/account-settings)，再查看本页细节。
+  Read the [Account & settings module overview](/modules/account-settings) first, then review the details on this page.
 </Note>
 
-开发者配置 → **敏感词脱敏**。
+Developer settings → **Sensitive data masking**.
 
-## 作用
+## Purpose
 
-在调用 AI 翻译前，对匹配正则的文本进行掩码（如手机号、邮箱），降低发送到第三方模型的泄露风险。
+Before calling AI translation, mask text that matches configured regex rules (for example phone numbers or email addresses) to reduce the risk of leaking data to third-party models.
 
-## 配置
+## Configuration
 
-- **开关** — 启用 / 关闭
-- **规则列表** — 每行一条正则，可选规则名称
+- **Toggle** — Enable / disable
+- **Rule list** — One regex per line, with an optional rule name
 
-## 示例
+## Examples
 
 ```
-手机号|\d{11}
-邮箱|[\w.-]+@[\w.-]+\.\w+
+Phone|\d{11}
+Email|[\w.-]+@[\w.-]+\.\w+
 ```
 
-## 注意
+## Notes
 
-- 脱敏仅影响 **发送给 AI 的内容**，本地存储仍为原文（除非翻译结果本身改变）
-- 复杂正则可能影响性能，请谨慎添加
+- Masking only affects **content sent to AI**; local storage still keeps the original text (unless the translation result itself changes it)
+- Complex regex can affect performance; add rules carefully
 
-## 恢复默认
+## Restore defaults
 
-可一键恢复内置规则集。
+You can restore the built-in rule set in one click.
 
-## 本模块其他参考
+## Other references in this module
 
 <CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
+  <Card title="Sign in" icon="user" href="/account/login">
+    Sign in
   </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    Plans
   </Card>
-  <Card title="额度与配额" icon="gauge" href="/account/quotas">
-    额度与配额
+  <Card title="Quotas" icon="gauge" href="/account/quotas">
+    Quotas
   </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
+  <Card title="Basic settings" icon="settings" href="/settings/basic">
+    Basic settings
   </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
+  <Card title="Shared settings" icon="share-2" href="/settings/shared-settings">
+    Shared settings
   </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
+  <Card title="Developer settings" icon="code" href="/advanced/developer">
+    Developer settings
   </Card>
-  <Card title="受保护标签" icon="shield" href="/advanced/protected-tags">
-    受保护标签
+  <Card title="Protected tags" icon="shield" href="/advanced/protected-tags">
+    Protected tags
   </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Account & settings (module overview)" icon="layout-grid" href="/modules/account-settings">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
+## Other references in this module
 
 <CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
+  <Card title="Sign in" icon="user" href="/account/login">
+    Sign in
   </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    Plans
   </Card>
-  <Card title="额度与配额" icon="gauge" href="/account/quotas">
-    额度与配额
+  <Card title="Quotas" icon="gauge" href="/account/quotas">
+    Quotas
   </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
+  <Card title="Basic settings" icon="settings" href="/settings/basic">
+    Basic settings
   </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
+  <Card title="Shared settings" icon="share-2" href="/settings/shared-settings">
+    Shared settings
   </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
+  <Card title="Developer settings" icon="code" href="/advanced/developer">
+    Developer settings
   </Card>
-  <Card title="受保护标签" icon="shield" href="/advanced/protected-tags">
-    受保护标签
+  <Card title="Protected tags" icon="shield" href="/advanced/protected-tags">
+    Protected tags
   </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Account & settings (module overview)" icon="layout-grid" href="/modules/account-settings">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>

@@ -2,10 +2,10 @@ export const BrowserInstallButton = ({
   href,
   icon,
   name,
-  storeLabel = "应用商店",
+  storeLabel = "Web Store",
   comingSoon = false,
 }) => {
-  const label = comingSoon ? "上架中" : storeLabel;
+  const label = comingSoon ? "Coming soon" : storeLabel;
   const className = comingSoon
     ? "inline-flex cursor-not-allowed items-center gap-2.5 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-zinc-400 no-underline dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-500"
     : "inline-flex items-center gap-2.5 rounded-full border border-zinc-300 bg-white px-4 py-2 text-zinc-900 no-underline transition hover:border-zinc-400 hover:bg-zinc-50 dark:border-zinc-500 dark:bg-black dark:text-white dark:hover:border-zinc-400 dark:hover:bg-zinc-950";
@@ -26,7 +26,7 @@ export const BrowserInstallButton = ({
 
   if (comingSoon) {
     return (
-      <span className={className} aria-disabled="true" title="上架中">
+      <span className={className} aria-disabled="true" title="Coming soon">
         {content}
       </span>
     );

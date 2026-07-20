@@ -1,17 +1,17 @@
 ---
-title: 导出数据格式
-description: 本地 JSON 备份的主要字段说明。
+title: Export data format
+description: Main fields in a local JSON backup.
 icon: "braces"
 ---
 
-## 导出文件结构
+## Export file structure
 
-本地导出的 JSON 通常包含：
+Local export JSON typically includes:
 
 ```json
 {
   "version": "1.x",
-  "exportTime": "ISO-8601 时间戳",
+  "exportTime": "ISO-8601 timestamp",
   "translationGroups": [],
   "aiConfig": {},
   "aiTranslateRuntimeConfig": {},
@@ -22,41 +22,41 @@ icon: "braces"
 
 ## translationGroups
 
-每个站点对象：
+Each site object:
 
-| 字段 | 说明 |
+| Field | Description |
 | --- | --- |
-| url | 站点域名标识 |
-| enabled | 是否启用替换 |
-| replacementMode | `exact` 或 `content_match` |
-| items | 词条数组 |
-| sharedSourceId | 来自共享包的 ID（可选） |
+| url | Site domain identifier |
+| enabled | Whether replacement is enabled |
+| replacementMode | `exact` or `content_match` |
+| items | Array of entries |
+| sharedSourceId | ID from a shared pack (optional) |
 
-## items 词条
+## items entries
 
-| 字段 | 说明 |
+| Field | Description |
 | --- | --- |
-| id | 唯一 ID |
-| source | 原文 |
-| target | `{ "zh-CN": "译文" }` 形式 |
+| id | Unique ID |
+| source | Source text |
+| target | Shape of `{ "zh-CN": "translation" }` |
 | locator | `{ "xpaths": ["..."] }` |
-| enabled | 是否启用 |
-| variablePattern | 占位符模式（如有） |
+| enabled | Whether enabled |
+| variablePattern | Placeholder pattern (if any) |
 
-## 占位符
+## Placeholders
 
-AI 翻译保留格式：
+AI translation preserves this format:
 
 ```
-{{@标识符#序号|原文}}
+{{@identifier#index|source text}}
 ```
 
-输出时仅翻译竖线 `|` 后的文本，其余结构不变。
+On output, only the text after the pipe `|` is translated; the rest of the structure stays unchanged.
 
-## 词库导出
+## Glossary export
 
-词库可单独导出，结构含 `categories` 数组，每类含 `entries` 列表。详见 [本地词库](/glossary/local-glossary)。
+Glossaries can be exported separately. The structure includes a `categories` array, and each category contains an `entries` list. See [Local glossary](/glossary/local-glossary).
 
 <Warning>
-  导出文件可能包含 API Key，分享前请脱敏。
+  Export files may contain API Keys. Redact them before sharing.
 </Warning>

@@ -1,87 +1,58 @@
 ---
-title: 核心概念
-description: LayerAI 的产品理念、数据模型与关键术语。
+title: Core Concepts
+description: LayerAI’s product philosophy, data model, and key terminology.
 icon: "lightbulb"
 ---
 
-本文介绍 LayerAI 的产品设计理念、核心数据模型及关键术语，便于理解各模块之间的协作关系。
+This page covers LayerAI’s design model and key terms. For a hands-on walkthrough, see [Your first translation](/journey/first-translation).
 
-## 持久化译文
+## Persistent translations
 
-LayerAI 按页面采集原文并保存对应译文。在**页面内容未变**的前提下：
+LayerAI collects source text and saves confirmed translations. When **page content has not changed**:
 
-- 已翻译内容**无需重复翻译**，可节省纠错与重翻时间
-- 再次打开同一页面时，扩展自动应用已保存的译文
-- 译文默认保存在浏览器本地，可随时通过 [导出 JSON](/sync/local-import-export) 备份，或在其他设备恢复
+- Already translated content does not need re-translation
+- Return visits auto-apply saved translations (with auto-replace on)
+- Data is stored locally by default; back up via [export JSON](/sync/local-import-export)
 
-登录 Layer 账号后，Pro / Max 用户还可使用 [云同步](/sync/layer-cloud) 与 [共享翻译](/shared/overview)。
+After signing in, Pro / Max users can also use [cloud sync](/sync/layer-cloud) and [shared translations](/modules/shared).
 
-## 一次翻译，永久生效
+## Translate once, reuse while unchanged
 
-LayerAI 把外文阅读拆成两段：**先在网页里把译稿写好并存档，之后每次打开同一页面，扩展自动把原文换成你已确认的译文**——不必像即时翻译那样，每次访问都重新翻译一遍。
+LayerAI splits foreign-language reading into two stages:
 
-下面以 [本文档 · 核心概念](/introduction/concepts) 为例说明完整过程。
+1. **Translate** — Collect, translate, review, and save on the page
+2. **Reuse** — On later visits, apply saved translations automatically—unlike instant translation, which re-translates every load
 
-### 第一次访问：完成翻译
+When source text changes, re-collect or fill gaps. Day-to-day reading should feel like a native-language page.
 
-<Steps>
-  <Step title="打开目标页面">
-    打开 [本文档 · 核心概念](/introduction/concepts)。页面显示原文，扩展尚未介入。
-  </Step>
-  <Step title="采集页面文本">
-    点击扩展图标 → **一键采集当前页**（或框选部分段落）。原文被提取到翻译列表，并按该站点域名归档。
-  </Step>
-  <Step title="翻译并校对">
-    勾选待翻条目 → **AI 一键翻译**；若某句术语不准，可在列表里**手动修改**，必要时借助 [词库](/glossary/overview) 约束品牌名等译法。
-  </Step>
-  <Step title="保存译文">
-    确认无误后点击 **保存**。当前页原文会**立即替换**为译文，同时写入浏览器本地——这就是你的「翻译资产」，可备份、可同步。
-  </Step>
-</Steps>
+## Data model
 
-### 之后每次访问：直接使用
+### Site (Translation Group)
 
-<Steps>
-  <Step title="再次打开同一页面">
-    刷新、关标签后再开，或过几天回访同一篇文章——只要开启 **自动替换**，扩展会读取本地已保存的译文。
-  </Step>
-  <Step title="自动应用，无需重翻">
-    页面上对应原文被替换为你上次确认过的译文，**无需重新翻译**，译法也不会随每次即时翻译而漂移。若个别句子需微调，仍可在翻译管理中找到该词条编辑后重新保存。
-  </Step>
-</Steps>
+Entries are aggregated by **domain**. For example, all entries under `docs.layerai.yun` belong to the same site.
 
-<Tip>
-  **翻译**通常只做一次（或内容更新时再补翻）；**使用**则是你日常阅读时的常态——像读母语页面一样打开即可。
-</Tip>
+### Entry (Translation Item)
 
-## 数据模型
+| Field | Description |
+| --- | --- |
+| **Source** | Text collected from the page |
+| **Target** | Stored per language, e.g. `{ "zh-CN": "Queue" }` |
+| **Locator** | DOM location (such as XPath) for exact replace |
+| **Enabled** | Disable an individual translation without deleting it |
 
-### 站点（Translation Group）
+### Glossary
 
-LayerAI 按**域名**聚合翻译数据，例如 `docs.layerai.yun` 下的所有词条属于同一站点配置。
+Term categories and entries that constrain AI output. See [Glossary](/modules/glossary).
 
-### 词条（Translation Item）
-
-每条词条包含以下字段：
-
-- **原文（source）** — 页面上采集到的文本
-- **译文（target）** — 按目标语言存储，如 `{ "zh-CN": "队列" }`
-- **定位（locator）** — XPath 等 DOM 定位信息，用于精确替换
-- **启用状态** — 可单独禁用某条译文
-
-### 词库（Glossary）
-
-词库由术语分类与条目组成，在翻译管理中可首先使用词条翻译，再使用其它方式翻译。详见 [词库概述](/glossary/overview)。
-
-## 替换模式
+## Replace modes
 
 <AccordionGroup>
-  <Accordion title="精确替换（exact）">
-    根据采集时的 DOM 定位替换文本，适用于大多数网页场景。
+  <Accordion title="Exact replace (exact)">
+    Uses the DOM locator captured at collection time. Suitable for most pages.
   </Accordion>
-  <Accordion title="内容匹配替换（content_match）">
-    按原文内容在页面中查找并替换，适用于跨页面复用相同译文，或手动维护的通用词条。
+  <Accordion title="Content-match replace (content_match)">
+    Finds and replaces by source text. Useful for reuse across pages or manually maintained general entries.
   </Accordion>
 </AccordionGroup>
 
-详见 [替换模式](/replace/modes)。
+See [Replace modes](/replace/modes).

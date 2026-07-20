@@ -1,66 +1,43 @@
 ---
-title: 采集当前网站
-description: 从当前页发现同域链接并批量采集。
+title: Collect current site
+description: Discover same-domain links from the current page and collect them in batch.
 icon: "globe"
 ---
 
 <Note>
-  建议先阅读 [网页采集模块概览](/modules/collection)，再查看本页细节。
+  We recommend reading the [Page collection module overview](/modules/collection) first, then returning here for details.
 </Note>
 
-## 操作步骤
+## Steps
 
-扩展弹窗 → **一键采集当前网站**。
+Extension popup → **Collect current site**.
 
-扩展会从当前页面提取**同域链接**，依次打开并采集各页面的可翻译文本。
+The extension extracts **same-domain links** from the current page, then opens and collects translatable text from each page in turn.
 
-## 适用场景
+## When to use it
 
-- 产品文档站、帮助中心、营销站点多页翻译
-- 需要一次性建立整站翻译资产
+- Multi-page product docs, help centers, and marketing sites
+- Building a full-site translation asset in one pass
 
-## 注意事项
+## Notes
 
-- 大规模整站采集耗时较长，建议配合 [翻译队列](/queue/overview) 批量 AI 翻译
-- 动态 SPA 站点可能需要分多次采集或配合手动采集补漏
-- 详见 [采集规则](/collection/rules)
+- Large site-wide jobs take longer; pair them with the [translation queue](/modules/queue) for batch AI translation
+- Dynamic SPAs may need multiple passes or manual collection to fill gaps
+- See also [Collection rules](/collection/rules)
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
-  </Card>
-  <Card title="手动采集" icon="crosshair" href="/collection/manual">
-    手动采集
-  </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
-  </Card>
-  <Card title="采集规则与跳过逻辑" icon="file-text" href="/collection/rules">
-    采集规则与跳过逻辑
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
+  <Card title="Manual collection" icon="crosshair" href="/collection/manual">
+    Select elements on the page to add text for translation.
   </Card>
-  <Card title="手动采集" icon="crosshair" href="/collection/manual">
-    手动采集
+  <Card title="Collect current page" icon="file-text" href="/collection/current-page">
+    One-click capture of visible text on the current page.
   </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
+  <Card title="Collection rules and skip logic" icon="file-text" href="/collection/rules">
+    What gets collected, skipped, or specially handled.
   </Card>
-  <Card title="采集规则与跳过逻辑" icon="file-text" href="/collection/rules">
-    采集规则与跳过逻辑
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Page collection (module overview)" icon="layout-grid" href="/modules/collection">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

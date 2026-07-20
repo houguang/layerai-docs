@@ -1,22 +1,22 @@
 ---
-title: 受保护 HTML 标签
-description: 采集时保持不被拆分的内联标签列表。
+title: Protected HTML tags
+description: Inline tags that stay unsplit during collection.
 icon: "code"
 ---
 
 <Note>
-  建议先阅读 [账号与设置模块概览](/modules/account-settings)，再查看本页细节。
+  Read the [Account & settings module overview](/modules/account-settings) first, then review the details on this page.
 </Note>
 
-开发者配置 → **受保护标签**。
+Developer settings → **Protected tags**.
 
-## 作用
+## Purpose
 
-采集文本时，某些内联标签（如 `code`、`kbd`）内的内容应与外层一起处理，避免 DOM 结构被拆碎导致替换失败。
+When collecting text, content inside certain inline tags (such as `code` or `kbd`) should be handled together with the surrounding text so the DOM structure is not broken in a way that causes replacement to fail.
 
-## 配置格式
+## Configuration format
 
-每行一个标签名（小写），例如：
+One tag name per line (lowercase), for example:
 
 ```
 code
@@ -24,68 +24,68 @@ kbd
 span
 ```
 
-## 默认值
+## Defaults
 
-扩展内置常用内联标签列表，一般无需修改。仅当特殊站点结构异常时调整。
+The extension ships with a list of common inline tags. You usually do not need to change it. Adjust only when a site has an unusual structure.
 
-## 恢复默认
+## Restore defaults
 
-点击 **恢复默认值** 还原出厂列表。
+Click **Restore defaults** to reset to the factory list.
 
-## 本模块其他参考
+## Other references in this module
 
 <CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
+  <Card title="Sign in" icon="user" href="/account/login">
+    Sign in
   </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    Plans
   </Card>
-  <Card title="额度与配额" icon="gauge" href="/account/quotas">
-    额度与配额
+  <Card title="Quotas" icon="gauge" href="/account/quotas">
+    Quotas
   </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
+  <Card title="Basic settings" icon="settings" href="/settings/basic">
+    Basic settings
   </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
+  <Card title="Shared settings" icon="share-2" href="/settings/shared-settings">
+    Shared settings
   </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
+  <Card title="Developer settings" icon="code" href="/advanced/developer">
+    Developer settings
   </Card>
-  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
-    敏感词脱敏
+  <Card title="Sensitive data masking" icon="eye-off" href="/advanced/sensitive-mask">
+    Sensitive data masking
   </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Account & settings (module overview)" icon="layout-grid" href="/modules/account-settings">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
+## Other references in this module
 
 <CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
+  <Card title="Sign in" icon="user" href="/account/login">
+    Sign in
   </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    Plans
   </Card>
-  <Card title="额度与配额" icon="gauge" href="/account/quotas">
-    额度与配额
+  <Card title="Quotas" icon="gauge" href="/account/quotas">
+    Quotas
   </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
+  <Card title="Basic settings" icon="settings" href="/settings/basic">
+    Basic settings
   </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
+  <Card title="Shared settings" icon="share-2" href="/settings/shared-settings">
+    Shared settings
   </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
+  <Card title="Developer settings" icon="code" href="/advanced/developer">
+    Developer settings
   </Card>
-  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
-    敏感词脱敏
+  <Card title="Sensitive data masking" icon="eye-off" href="/advanced/sensitive-mask">
+    Sensitive data masking
   </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Account & settings (module overview)" icon="layout-grid" href="/modules/account-settings">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>

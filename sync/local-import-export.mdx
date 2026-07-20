@@ -1,58 +1,45 @@
 ---
-title: 本地导入导出
-description: JSON 备份翻译数据、配置与词库。
+title: Local import and export
+description: Back up translation data, settings, and glossaries as JSON.
 icon: "hard-drive"
 ---
 
 <Note>
-  建议先阅读 [数据同步模块概览](/modules/sync)，再查看本页细节。
+  We recommend reading the [Data sync module overview](/modules/sync) first, then returning here for details.
 </Note>
 
-本地导入导出允许用户将翻译数据、AI 配置与词库以 JSON 格式备份或迁移，不依赖云端服务。入口：扩展管理页 → **导入/导出**。
+Local import and export lets you back up or migrate translation data, AI configuration, and glossaries as JSON without relying on cloud services. Entry point: extension management page → **Import / Export**.
 
-## 导出
+## Export
 
-可将当前 **翻译站点、AI 配置、自定义模型、提示词、词库** 等导出为 JSON 文件，用于：
+You can export current **translation sites, AI configuration, custom models, prompts, glossaries**, and more as a JSON file for:
 
-- 定期备份
-- 迁移到其他浏览器 / 设备
-- 团队内分享配置（注意脱敏 API Key）
+- Periodic backups
+- Migrating to another browser or device
+- Sharing configuration within a team (redact API keys first)
 
-## 导入
+## Import
 
-选择 JSON 文件导入，行为如下：
+Select a JSON file to import. Behavior:
 
-- 与现有数据 **合并**
-- 域名冲突时 **保留导入版本** 的站点规则
+- **Merge** with existing data
+- On domain conflicts, **keep the imported version** of site rules
 
-## 分项导入
+## Partial import
 
-支持仅导入翻译、仅配置或仅词库（以扩展管理页实际入口为准）。
+You can import only translations, only configuration, or only glossaries (follow the actual entry points on the extension management page).
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
-    Layer 云同步
+  <Card title="Layer Cloud sync" icon="cloud-upload" href="/sync/layer-cloud">
+    Layer Cloud sync
   </Card>
-  <Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
-    Google Drive 备份
+  <Card title="Google Drive backup" icon="hard-drive" href="/sync/google-drive">
+    Google Drive backup
   </Card>
-  <Card title="数据同步（模块概览）" icon="layout-grid" href="/modules/sync">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Data sync (module overview)" icon="layout-grid" href="/modules/sync">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
-    Layer 云同步
-  </Card>
-  <Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
-    Google Drive 备份
-  </Card>
-  <Card title="数据同步（模块概览）" icon="layout-grid" href="/modules/sync">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>

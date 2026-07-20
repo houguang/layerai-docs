@@ -1,25 +1,32 @@
 ---
 name: layer-ai
-description: LayerAI 浏览器扩展使用文档（简体中文）。用于安装配置、网页采集、AI 翻译、词库治理、云同步与共享翻译协作。
+description: LayerAI browser extension documentation (English). Covers install and setup, page collection, AI translation, glossary governance, cloud sync, and shared translation collaboration.
 ---
 
-# LayerAI 文档技能
+# LayerAI Docs Skill
 
-当用户询问 LayerAI / Local Layer 扩展的安装、采集、翻译、模型、词库、同步或共享翻译时，优先查阅本仓库 MDX 文档。
+When users ask about installing, collecting, translating, models, glossaries, sync, or shared translations for the LayerAI / Local Layer extension, consult the MDX docs in this repository first.
 
-## 语言与路径
+## Language and paths
 
-- 源文档：`docs/` → 线上 `/...`
-- 其它语言可通过 LayerAI 扩展对文档站点自行翻译，仓库内不维护英文等多语言副本
+- Source docs: `docs/` → live site `/...`
+- Other languages can be produced by translating the docs site with the LayerAI extension; this repository does not maintain separate multilingual copies
+- Screenshots and demo videos are often Chinese UI (`_zh` / `_cn`); English docs are the source of truth for wording
 
-## 关键路径
+## Navigation (docs.json)
 
-- 快速上手：`journey/first-translation.mdx`
-- 产品地图：`journey/product-map.mdx`
-- 采集：`collection/overview.mdx`
-- 模型：`models/overview.mdx`
-- 故障排查：`troubleshooting/index.mdx`
+- **Getting started** — introduction, concepts, install, first translation, UI tour, product map
+- **Features** — nested hubs under `modules/*` plus reference pages
+- **Help** — troubleshooting and appendix
 
-## 产品定位
+## Key paths
 
-面向**页面内容相对固定**的外文网站：一次翻译，在内容未变期间持续自动生效。
+- Introduction: `introduction.mdx`
+- Quick start: `journey/first-translation.mdx`
+- Product map: `journey/product-map.mdx`
+- Module hubs: `modules/{collection,translation,replace,glossary,models,queue,sync,shared,account-settings}.mdx`
+- Troubleshooting: `troubleshooting/index.mdx`
+
+## Product positioning
+
+Built for **foreign-language sites whose page content is relatively stable**: translate once, then reuse automatically while content has not changed.

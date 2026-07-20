@@ -1,56 +1,42 @@
 ---
-title: 自动替换
-description: 控制是否在页面上显示已保存的译文。
+title: Auto-replace
+description: Control whether saved translations are shown on the page.
 icon: "toggle-right"
 ---
 
 <Note>
-  建议先阅读 [页面替换模块概览](/modules/replace)，再查看本页细节。
+  We recommend reading the [Page replacement module overview](/modules/replace) first, then returning here for details.
 </Note>
 
-自动替换功能控制 LayerAI 是否在访问页面时用已保存的译文替换原文显示。
+Auto-replace controls whether LayerAI replaces original text with saved translations when you visit a page.
 
-## 开关位置
+## Where to toggle
 
-扩展弹窗 → **自动替换**。
+Extension popup → **Auto-replace**.
 
-## 行为
+## Behavior
 
-| 状态 | 效果 |
+| State | Effect |
 | --- | --- |
-| **开启** | 访问页面时用译文替换原文（按当前替换模式） |
-| **关闭** | 仅保存数据，页面仍显示原文 |
+| **On** | On visit, replace source text with translations (per the current replacement mode) |
+| **Off** | Data is kept, but the page still shows the original text |
 
-关闭自动替换适用于调试译文或临时查看原文的场景。
+Turn auto-replace off when debugging translations or temporarily viewing the original page.
 
-## 站点级控制
+## Per-site control
 
-在 **翻译管理** 中亦可按站点启用 / 禁用整站替换。
+In **Translation management**, you can also enable or disable replacement for an entire site.
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="替换模式" icon="git-compare" href="/replace/modes">
-    替换模式
-  </Card>
-  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
-    翻译列表弹窗
-  </Card>
-  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="替换模式" icon="git-compare" href="/replace/modes">
-    替换模式
+  <Card title="Replacement modes" icon="git-compare" href="/replace/modes">
+    Exact vs content-match replacement and when to use each.
   </Card>
-  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
-    翻译列表弹窗
+  <Card title="Translation list modal" icon="panel-right" href="/replace/page-modal">
+    On-page overlay to view, edit, AI-translate, and save.
   </Card>
-  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Page replacement (module overview)" icon="layout-grid" href="/modules/replace">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

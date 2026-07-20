@@ -1,45 +1,95 @@
 ---
-title: 第一个翻译流程
-description: 端到端演示采集、AI 翻译、保存与自动替换的完整流程。
+title: Your First Translation
+description: An end-to-end walkthrough of collect, AI translate, save, and auto-replace.
 icon: "sparkles"
 ---
 
-下文演示 LayerAI 最常用的端到端翻译流程：从网页采集文本，翻译后保存，并在页面上自动替换显示。
+This page walks through LayerAI’s most common flow: collect text from a page, translate and save it, then auto-replace on return visits.
 
 <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/journey/first-translation_zh.mp4" />
 
-## 前置条件
+## Prerequisites
 
-- 已完成 [扩展安装](/journey/install)
-- 已在 [模型配置](/modules/models) 中选择默认模型并完成 API Key 配置（若使用自定义模型）
+- You have completed [extension installation](/journey/install)
+- You have selected a default model in [Model configuration](/modules/models) (and an API key if using a custom model)
 
-## 常见问题
+## First visit: translate and save
+
+Use any stable docs page (for example [Core Concepts](/introduction/concepts) on this site).
+
+<Steps>
+  <Step title="Open the target page">
+    Open the page you want to translate. The extension has not changed the page yet.
+
+    <Frame>
+      <img src="/assets/images/journey/step-open-page_zh.png" alt="Target page before collection" />
+    </Frame>
+  </Step>
+  <Step title="Collect page text">
+    Click the extension icon → **Collect current page** (or use manual collection for a few elements). Source text is extracted into the translation list under that site’s domain.
+  </Step>
+  <Step title="Translate and review">
+    Select entries → **AI one-click translate**. Edit wrong terms in the list; use the [glossary](/modules/glossary) when brand or product names need constraints.
+
+    <Frame>
+      <img src="/assets/images/journey/step-ai-translate_zh.png" alt="AI one-click translate in the translation list" />
+    </Frame>
+  </Step>
+  <Step title="Save translations">
+    Click **Save**. The page is replaced with your translations immediately, and entries are stored locally in the browser.
+
+    <Frame>
+      <img src="/assets/images/journey/step-save-replace_zh.png" alt="Page after save with translations applied" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Later visits: reuse automatically
+
+<Steps>
+  <Step title="Open the same page again">
+    Refresh, reopen the tab, or return days later. Keep **auto-replace** on.
+  </Step>
+  <Step title="Confirm auto-replace">
+    Matching source text is replaced with your last confirmed translations—no re-translation. Edit an entry in translation management if a sentence needs a tweak.
+
+    <Frame>
+      <img src="/assets/images/journey/step-refresh-verify_zh.png" alt="Same page after refresh with saved translations applied" />
+    </Frame>
+  </Step>
+</Steps>
+
+<Tip>
+  Translate when content is new or changed; everyday reading is reuse. See [Core Concepts](/introduction/concepts) for the data model behind this flow.
+</Tip>
+
+## FAQ
 
 <AccordionGroup>
-  <Accordion title="AI 翻译按钮灰色或报错">
-    检查 [模型配置](/modules/models) 是否完整，参见 [AI 错误排查](/troubleshooting/ai-errors)。
+  <Accordion title="AI translate button is grayed out or errors">
+    Check that [Model configuration](/modules/models) is complete; see [AI error troubleshooting](/troubleshooting/ai-errors).
   </Accordion>
-  <Accordion title="保存后页面没有变化">
-    确认 **自动替换** 已开启，且该词条未被禁用。
+  <Accordion title="Page does not change after save">
+    Confirm **auto-replace** is on and the entry is not disabled. See [Page replace](/modules/replace).
   </Accordion>
-  <Accordion title="想翻译整站而不只是当前页">
-    使用 [一键采集当前网站](/collection/current-site)。
+  <Accordion title="I want to translate the whole site, not just the current page">
+    Use [Collect current site](/collection/current-site), then process jobs in the [translation queue](/modules/queue).
   </Accordion>
 </AccordionGroup>
 
-## 继续探索
+## Explore further
 
 <CardGroup cols={2}>
-  <Card title="产品功能地图" icon="map" href="/journey/product-map">
-    了解各模块如何串联。
+  <Card title="Product Map" icon="map" href="/journey/product-map">
+    How modules connect end to end.
   </Card>
-  <Card title="网页采集" icon="mouse-pointer" href="/modules/collection">
-    三种采集方式详解。
+  <Card title="Page Collection" icon="mouse-pointer" href="/modules/collection">
+    Manual, current-page, and whole-site collection.
   </Card>
-  <Card title="翻译管理" icon="language" href="/modules/translation">
-    站点列表与批量操作。
+  <Card title="Translation Management" icon="language" href="/modules/translation">
+    Site list, AI batch, and manual edit.
   </Card>
-  <Card title="页面替换" icon="repeat" href="/modules/replace">
-    自动替换与替换模式。
+  <Card title="Page Replace" icon="repeat" href="/modules/replace">
+    Auto-replace and replace modes.
   </Card>
 </CardGroup>

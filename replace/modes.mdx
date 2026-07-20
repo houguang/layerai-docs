@@ -1,63 +1,49 @@
 ---
-title: 替换模式
-description: 精确替换与内容匹配替换的区别与选用。
+title: Replacement modes
+description: Exact vs content-match replacement—differences and when to use each.
 icon: "git-compare"
 ---
 
 <Note>
-  建议先阅读 [页面替换模块概览](/modules/replace)，再查看本页细节。
+  We recommend reading the [Page replacement module overview](/modules/replace) first, then returning here for details.
 </Note>
 
-LayerAI 提供两种页面替换模式，用于在不同场景下将已保存的译文应用到网页显示。切换入口：扩展弹窗 → **替换模式**。
+LayerAI provides two page replacement modes for applying saved translations on the page. Switch them from: extension popup → **Replacement mode**.
 
-## 精确替换（Exact）
+## Exact replacement
 
-- 使用采集时的 **DOM 定位（XPath）** 替换文本
-- 适用于通过采集得到的词条
-- **手动添加**的词条在此模式下不可用
+- Replaces text using the **DOM location (XPath)** captured at collection time
+- Works with entries obtained through collection
+- **Manually added** entries are not available in this mode
 
-## 内容匹配替换（Content Match）
+## Content-match replacement
 
-- 在页面 DOM 中搜索与 **原文相同** 的文本节点并替换
-- 适用于跨页面复用相同译文
-- 支持 [手动添加翻译](/translation/edit-entries)
+- Searches the page DOM for text nodes that **match the source** and replaces them
+- Good for reusing the same translation across pages
+- Supports [manually added translations](/translation/edit-entries)
 
-## 如何选择
+## How to choose
 
-| 场景 | 推荐模式 |
+| Scenario | Recommended mode |
 | --- | --- |
-| 常规网页本地化 | 精确替换 |
-| 同一文案出现在多个页面 | 内容匹配 |
-| 大量手动维护通用词 | 内容匹配 |
+| Typical page localization | Exact |
+| Same copy appears on many pages | Content match |
+| Large sets of hand-maintained shared phrases | Content match |
 
 <Tip>
-  两种模式可随时切换；已保存的词条数据不受影响。
+  You can switch modes at any time; saved entry data is not affected.
 </Tip>
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="自动替换" icon="toggle-right" href="/replace/auto-replace">
-    自动替换
+  <Card title="Auto-replace" icon="toggle-right" href="/replace/auto-replace">
+    Control whether saved translations are shown on the page.
   </Card>
-  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
-    翻译列表弹窗
+  <Card title="Translation list modal" icon="panel-right" href="/replace/page-modal">
+    On-page overlay to view, edit, AI-translate, and save.
   </Card>
-  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="自动替换" icon="toggle-right" href="/replace/auto-replace">
-    自动替换
-  </Card>
-  <Card title="翻译列表弹窗" icon="panel-right" href="/replace/page-modal">
-    翻译列表弹窗
-  </Card>
-  <Card title="页面替换（模块概览）" icon="layout-grid" href="/modules/replace">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Page replacement (module overview)" icon="layout-grid" href="/modules/replace">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

@@ -1,61 +1,48 @@
 ---
-title: 词库
-description: 本地与平台术语管理，在 AI 翻译时约束品牌名与产品名译法。
+title: Glossary
+description: Manage local and platform terms to constrain brand and product name translations during AI translation.
 icon: "book-a"
 ---
 
-词库用于维护术语分类与条目，AI 翻译时优先匹配词库译法，保持整站术语一致。
+The glossary constrains how terms are translated during AI translation—brand names and specialized vocabulary stay consistent. Entry point: options page → **Glossary**. Glossary matches take priority; unmatched content is AI-translated afterward.
 
-<Frame caption="词库概览">
-  <img src="/assets/images/modules/3.png" alt="词库概览" />
+<Frame caption="Glossary overview">
+  <img src="/assets/images/modules/3.png" alt="Glossary overview" />
 </Frame>
 
-## 词库作用
+| Type | Description |
+| --- | --- |
+| **Local glossary** | Categories and entries you create, stored in the browser |
+| **Platform glossary** | Public terminology packs from Layer; browse and reference them |
 
-<Tabs>
-  <Tab title="术语约束">
-    品牌名、产品名、专有名词在 AI 翻译时按词库译法输出。
-  </Tab>
-  <Tab title="协作一致">
-    团队共用平台词库，避免同一术语多种译法。
-  </Tab>
-  <Tab title="翻译顺序">
-    可先词库匹配，再 AI 翻译未匹配内容。
-  </Tab>
-</Tabs>
+## Local glossary
 
-<Card title="词库概述（参考）" icon="book-open" href="/glossary/overview">
-  数据模型与在翻译流程中的位置。
+Maintain personal or project-level terms on the options page—no sign-in required.
+
+<Card title="Local glossary" icon="hard-drive" href="/glossary/local-glossary">
+  Create categories, add entries, and import/export.
 </Card>
 
-## 本地词库
+## Platform glossary
 
-在扩展管理页维护个人或项目级术语，无需登录即可使用。
+After sign-in, use public terminology provided by the platform, or share glossaries with your team.
 
-<Card title="本地词库" icon="hard-drive" href="/glossary/local-glossary">
-  创建分类、添加条目与导入导出。
+<Card title="Platform glossary" icon="cloud" href="/glossary/platform-glossary">
+  Browse, subscribe to, and use platform terms.
 </Card>
 
-## 平台词库
+## Glossary sync
 
-登录后可使用平台提供的公共术语库，或与团队共享词库。
+Pro / Max users can sync glossary data via Layer cloud.
 
-<Card title="平台词库" icon="cloud" href="/glossary/platform-glossary">
-  浏览、订阅与使用平台术语。
+<Card title="Glossary sync" icon="refresh-cw" href="/glossary/sync">
+  Cross-device sync and conflict handling.
 </Card>
 
-## 词库同步
+## How it connects to other modules
 
-Pro / Max 用户可通过 Layer 云同步词库数据。
+Maintain the glossary before starting AI batch translation in [Translation management](/modules/translation) to improve term consistency; glossary data is backed up with [Data sync](/modules/sync).
 
-<Card title="词库同步" icon="refresh-cw" href="/glossary/sync">
-  跨设备同步与冲突处理。
-</Card>
-
-## 与其他模块的衔接
-
-在 [翻译管理](/modules/translation) 发起 AI 批量翻译前维护词库，可显著提升术语一致性；词库数据随 [数据同步](/modules/sync) 备份。
-
-<Card title="AI 批量翻译" icon="zap" href="/modules/translation">
-  结合词库进行批量 AI 翻译。
+<Card title="AI batch translation" icon="zap" href="/modules/translation">
+  Run batch AI translation with the glossary.
 </Card>

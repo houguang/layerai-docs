@@ -1,74 +1,52 @@
 ---
-title: 提示词配置
-description: System / User 提示词模板与占位符规则。
+title: Prompt configuration
+description: System / User prompt templates and placeholder rules.
 icon: "message-square"
 ---
 
 <Note>
-  建议先阅读 [模型配置模块概览](/modules/models)，再查看本页细节。
+  We recommend reading the [Models module overview](/modules/models) first, then returning here for details.
 </Note>
 
-模型配置 → **提示词**。
+Model configuration → **Prompts**.
 
-## 结构
+## Structure
 
-- **System Prompt** — 定义翻译引擎角色与输出格式（JSON）
-- **User Prompt** — 用户侧指令，通常包含目标语言占位符
+- **System Prompt** — Defines the translation engine role and output format (JSON)
+- **User Prompt** — User-side instructions, typically including a target-language placeholder
 
-## 默认行为
+## Default behavior
 
-内置提示词要求模型：
+Built-in prompts instruct the model to:
 
-- 仅输出 JSON，key 与输入一一对应
-- 保留 `{{@标识符#序号|原文}}` 占位符结构
-- 地址、ID、品牌名等识别性内容保持原样
+- Output JSON only, with keys matching the input one-to-one
+- Preserve the `{{@identifier#index|source}}` placeholder structure
+- Leave identifying content such as addresses, IDs, and brand names unchanged
 
-## 自定义建议
+## Customization tips
 
-- 增加行业语气说明（正式 / 口语）
-- 添加「必须使用词库术语」类约束（配合 [词库](/glossary/overview)）
-- 避免破坏 JSON 输出格式，否则解析失败
+- Add tone guidance for your domain (formal / conversational)
+- Add constraints such as “must use glossary terms” (with [Glossary](/modules/glossary))
+- Avoid breaking the JSON output format, or parsing will fail
 
-## 手动翻译
+## Manual translation
 
-[手动翻译](/translation/manual-translation) 工作流会复制当前提示词与分片 JSON。
+The [manual translation](/translation/manual-translation) workflow copies the current prompts and batched JSON.
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="模型配置概述" icon="cpu" href="/models/overview">
-    模型配置概述
+  <Card title="Platform models" icon="sparkles" href="/models/platform-models">
+    Platform models
   </Card>
-  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
-    平台模型
+  <Card title="Custom models" icon="plug" href="/models/custom-models">
+    Custom models
   </Card>
-  <Card title="自定义模型" icon="plug" href="/models/custom-models">
-    自定义模型
+  <Card title="Runtime configuration" icon="gauge" href="/models/runtime-config">
+    Runtime configuration
   </Card>
-  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
-    运行时配置
-  </Card>
-  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Models (module overview)" icon="layout-grid" href="/modules/models">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="模型配置概述" icon="cpu" href="/models/overview">
-    模型配置概述
-  </Card>
-  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
-    平台模型
-  </Card>
-  <Card title="自定义模型" icon="plug" href="/models/custom-models">
-    自定义模型
-  </Card>
-  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
-    运行时配置
-  </Card>
-  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>

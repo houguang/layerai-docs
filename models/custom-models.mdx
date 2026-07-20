@@ -1,83 +1,61 @@
 ---
-title: 自定义模型
-description: 接入 OpenAI 兼容、Anthropic、Gemini、Ollama 等服务。
+title: Custom models
+description: Connect OpenAI-compatible, Anthropic, Gemini, Ollama, and similar providers.
 icon: "plug"
 ---
 
 <Note>
-  建议先阅读 [模型配置模块概览](/modules/models)，再查看本页细节。
+  We recommend reading the [Models module overview](/modules/models) first, then returning here for details.
 </Note>
 
-## 支持的平台
+## Supported platforms
 
-| 平台 | 说明 |
+| Platform | Description |
 | --- | --- |
-| **OpenAI 兼容** | OpenAI、Azure、各类中转 API |
-| **Anthropic** | Claude 系列 |
+| **OpenAI-compatible** | OpenAI, Azure, and various relay APIs |
+| **Anthropic** | Claude family |
 | **Gemini** | Google Gemini API |
-| **Ollama** | 本地运行的开源模型 |
+| **Ollama** | Open-source models running locally |
 
-## 配置步骤
+## Setup steps
 
 <Steps>
-  <Step title="添加自定义模型">
-    模型配置 → 添加模型 → 填写名称、平台、模型 ID
+  <Step title="Add a custom model">
+    Model configuration → Add model → enter name, platform, and model ID
   </Step>
-  <Step title="填写凭据">
-    API Key、Endpoint（Ollama 填本地地址如 `http://127.0.0.1:11434`）
+  <Step title="Enter credentials">
+    API key and endpoint (for Ollama, use a local address such as `http://127.0.0.1:11434`)
   </Step>
-  <Step title="设为默认">
-    在默认模型下拉框中选择该模型
+  <Step title="Set as default">
+    Select the model in the default model dropdown
   </Step>
-  <Step title="测试翻译">
-    在任意页面发起小规模 AI 翻译验证
+  <Step title="Test translation">
+    Run a small AI translation on any page to verify
   </Step>
 </Steps>
 
 <Warning>
-  API Key 保存在浏览器本地，请勿在公共设备上配置生产密钥。
+  API keys are stored locally in the browser. Do not configure production keys on shared devices.
 </Warning>
 
-## Ollama 本地部署
+## Local Ollama deployment
 
-确保 Ollama 服务已启动且浏览器可访问对应端口。CORS 或 Mixed Content 问题参见 [故障排查](/troubleshooting/ai-errors)。
+Make sure the Ollama service is running and reachable from the browser on the configured port. For CORS or Mixed Content issues, see [Troubleshooting](/troubleshooting/ai-errors).
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="模型配置概述" icon="cpu" href="/models/overview">
-    模型配置概述
+  <Card title="Platform models" icon="sparkles" href="/models/platform-models">
+    Platform models
   </Card>
-  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
-    平台模型
+  <Card title="Translation prompts" icon="message-square" href="/models/prompts">
+    Translation prompts
   </Card>
-  <Card title="翻译提示词" icon="message-square" href="/models/prompts">
-    翻译提示词
+  <Card title="Runtime configuration" icon="gauge" href="/models/runtime-config">
+    Runtime configuration
   </Card>
-  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
-    运行时配置
-  </Card>
-  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Models (module overview)" icon="layout-grid" href="/modules/models">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="模型配置概述" icon="cpu" href="/models/overview">
-    模型配置概述
-  </Card>
-  <Card title="平台模型" icon="sparkles" href="/models/platform-models">
-    平台模型
-  </Card>
-  <Card title="翻译提示词" icon="message-square" href="/models/prompts">
-    翻译提示词
-  </Card>
-  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
-    运行时配置
-  </Card>
-  <Card title="模型配置（模块概览）" icon="layout-grid" href="/modules/models">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>

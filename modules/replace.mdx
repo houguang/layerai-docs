@@ -1,63 +1,63 @@
 ---
-title: 页面替换
-description: 控制是否在页面上显示已保存译文，支持精确与内容匹配两种模式。
+title: Page Replace
+description: Control whether saved translations appear on the page, with exact and content-match modes.
 icon: "repeat"
 ---
 
-页面替换是 LayerAI「一次翻译、永久生效」的关键：保存后的译文在再次访问时自动替换原文，无需重新翻译。
+Page replace is the key to LayerAI’s “translate once, reuse while unchanged”: saved translations automatically replace source text on return visits—no re-translation.
 
-<Frame caption="页面替换概览（约 20 秒）">
+<Frame caption="Page replace overview (~20 seconds)">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/replace-overview_zh.mp4" />
 </Frame>
 
-## 自动替换
+## Auto-replace
 
-控制是否在访问页面时用已保存译文替换原文显示。
+Controls whether saved translations replace source text when you visit a page.
 
-<Frame caption="弹窗 · 自动替换开关">
-  <img src="/assets/images/ui-tour/2_cn.png" alt="浏览器弹窗中的自动替换开关" />
+<Frame caption="Popup · Auto-replace toggle">
+  <img src="/assets/images/ui-tour/2_cn.png" alt="Auto-replace toggle in the browser popup" />
 </Frame>
 
 <Tabs>
-  <Tab title="开启">
-    访问页面时按当前替换模式应用译文，日常阅读的主要状态。
+  <Tab title="On">
+    Apply translations using the current replace mode when visiting pages—the main state for daily reading.
   </Tab>
-  <Tab title="关闭">
-    仅保存数据，页面仍显示原文，适合调试或临时查看原文。
+  <Tab title="Off">
+    Data stays saved, but the page still shows source text—useful for debugging or temporarily viewing the original.
   </Tab>
-  <Tab title="站点级">
-    翻译管理中亦可按站点启用/禁用整站替换。
+  <Tab title="Per site">
+    You can also enable/disable whole-site replace per site in translation management.
   </Tab>
 </Tabs>
 
-<Card title="自动替换（参考）" icon="toggle-right" href="/replace/auto-replace">
-  开关位置与行为说明。
+<Card title="Auto-replace (reference)" icon="toggle-right" href="/replace/auto-replace">
+  Toggle locations and behavior details.
 </Card>
 
-## 替换模式
+## Replace modes
 
 <Steps>
-  <Step title="精确替换（默认）">
-    根据采集时的 DOM 定位替换文本，适用于大多数自动采集的词条。
+  <Step title="Exact replace (default)">
+    Replaces text using the DOM locator from collection time. Suitable for most auto-collected entries.
   </Step>
-  <Step title="内容匹配替换">
-    按原文内容在页面中查找并替换，适用于跨页复用或手动维护的通用词条。
+  <Step title="Content-match replace">
+    Finds and replaces by source content on the page. Suitable for reuse across pages or manually maintained general entries.
   </Step>
 </Steps>
 
-<Card title="替换模式详解" icon="git-compare" href="/replace/modes">
-  两种模式的适用场景与限制。
+<Card title="Replace modes in detail" icon="git-compare" href="/replace/modes">
+  When to use each mode and their limitations.
 </Card>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-[网页采集](/modules/collection) 与 [翻译管理](/modules/translation) 产出译文后，本模块负责在阅读阶段自动应用；关闭自动替换不影响已保存的数据。
+After [Page collection](/modules/collection) and [Translation management](/modules/translation) produce translations, this module applies them during reading. Turning off auto-replace does not affect saved data.
 
 <CardGroup cols={2}>
-  <Card title="核心概念" icon="lightbulb" href="/introduction/concepts">
-    「一次翻译，永久生效」的产品理念。
+  <Card title="Core Concepts" icon="lightbulb" href="/introduction/concepts">
+    The “translate once, reuse while unchanged” product idea.
   </Card>
-  <Card title="第一个翻译流程" icon="sparkles" href="/journey/first-translation">
-    保存后刷新验证自动替换。
+  <Card title="Your First Translation" icon="sparkles" href="/journey/first-translation">
+    Save, then refresh to verify auto-replace.
   </Card>
 </CardGroup>

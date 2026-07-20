@@ -1,55 +1,55 @@
 ---
-title: 界面导览
+title: UI Tour
 icon: "layout-dashboard"
 ---
 
-LayerAI 通过**浏览器弹窗**、**扩展管理页**与**网页内浮层**三种界面承载不同粒度的操作：
-1. 弹窗负责当前站点的快捷开关与采集入口，
-2. 扩展管理页负责批量管理与全局配置；
-3. 网页浮层则承载单页内的翻译编辑。
+LayerAI surfaces different levels of action through three interfaces: the **browser popup**, the **extension options page**, and the **on-page overlay**:
+1. The popup handles quick toggles and collection entry points for the current site;
+2. The options page handles bulk management and global configuration;
+3. The on-page overlay handles in-page translation editing.
 
-## 三种界面如何分工
+## How the three interfaces divide work
 
-| 界面 | 入口 | 适合做什么 |
+| Interface | Entry | Best for |
 | --- | --- | --- |
-| **浏览器弹窗** | 点击工具栏 LayerAI 图标 | 查看当前站点状态、开关自动替换、快速采集、切换替换模式 |
-| **扩展管理页** | 弹窗底部「管理」，或右键扩展 → **选项** | 按站点管理词条、队列、词库、模型、同步与全局设置 |
-| **网页浮层** | 页面边缘按钮 / 翻译列表 | 在当前页框选采集、编辑词条、AI 翻译与保存 |
+| **Browser popup** | Click the LayerAI toolbar icon | Current site status, auto-replace toggle, quick collect, replace mode |
+| **Extension options page** | “Manage” at the bottom of the popup, or right-click the extension → **Options** | Per-site entries, queue, glossary, models, sync, and global settings |
+| **On-page overlay** | Edge button / translation list on the page | Select to collect, edit entries, AI translate, and save on the current page |
 
-日常阅读阶段主要依赖**自动替换**；需要改译法或补翻时，优先使用网页浮层，批量任务则进入扩展管理页。
+Day-to-day reading mainly relies on **auto-replace**. When you need to revise wording or fill gaps, prefer the on-page overlay; for bulk work, open the options page.
 
-## 浏览器弹窗
+## Browser popup
 
-点击工具栏中的 LayerAI 图标可打开弹窗。弹窗始终针对**当前标签页所在站点**展示状态与操作。
+Click the LayerAI icon in the toolbar to open the popup. It always shows status and actions for the **site of the current tab**.
 
-<Frame caption="浏览器弹窗全貌（点击工具栏 LayerAI 图标）">
-  <img src="/assets/images/ui-tour/2_cn.png" noZoom alt="浏览器弹窗全貌：顶栏账号区、当前站点与自动替换、采集功能、替换模式及底部管理入口" />
+<Frame caption="Browser popup overview (click the LayerAI toolbar icon)">
+  <img src="/assets/images/ui-tour/2_cn.png" noZoom alt="Browser popup overview: top account area, current site and auto-replace, collection actions, replace mode, and bottom manage entry" />
 </Frame>
 
-## 扩展管理页
+## Extension options page
 
-扩展管理页集中承载批量编辑词条、翻译队列、词库与模型配置等全局管理功能。
+The options page centralizes bulk entry editing, the translation queue, glossary and model configuration, and other global management features.
 
-<Frame caption="扩展管理页概览（侧边栏 + 翻译管理主区）">
-  ![扩展管理页概览：左侧导航与右侧翻译管理内容区](/assets/images/ui-tour/1_cn.png)
+<Frame caption="Options page overview (sidebar + translation management main area)">
+  ![Options page overview: left navigation and right translation management content](/assets/images/ui-tour/1_cn.png)
 </Frame>
 
-## 网页内浮层
+## On-page overlay
 
-访问已启用扩展的网页时，LayerAI 会在页面内注入交互元素。这些浮层与弹窗、扩展管理页配合：**在弹窗或扩展管理页发起采集后，编辑与保存通常在浮层中完成**。
+When you visit a page where the extension is enabled, LayerAI injects interactive elements into the page. These overlays work with the popup and options page: **after you start collection from the popup or options page, editing and saving usually happen in the overlay**.
 
-### 手动采集
+### Manual collection
 
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/ui-tour/manual-collection_zh.mp4" />
 
-### 共享翻译提示
+### Shared translation prompts
 
-<Frame caption="发现可下载共享包时的提示（弹窗或角标）">
-  ![网页内浮层：共享翻译发现提示](/assets/images/ui-tour/2_1_cn.png)
+<Frame caption="Prompt when a downloadable shared pack is available (popup or badge)">
+  ![On-page overlay: shared translation discovery prompt](/assets/images/ui-tour/2_1_cn.png)
 </Frame>
 
-- 当当前站点存在匹配的社区共享包时，按 [基础配置](/settings/basic) 中的策略显示提示
+- When a matching community shared pack exists for the current site, prompts follow the policy in [Basic settings](/settings/basic)
 
 <Tip>
-  **扩展管理页**管全局与批量，**网页浮层**管当前页——大多数「打开页面 → 采集 → 翻译 → 保存」流程在浮层中即可完成。
+  The **options page** handles global and bulk work; the **on-page overlay** handles the current page—most “open page → collect → translate → save” flows can be completed in the overlay alone.
 </Tip>

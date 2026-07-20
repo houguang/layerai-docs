@@ -1,69 +1,69 @@
 ---
-title: 数据同步
-description: 本地 JSON 导入导出、Layer 云同步与 Google Drive 备份。
+title: Data Sync
+description: Local JSON import/export, Layer cloud sync, and Google Drive backup.
 icon: "cloud"
 ---
 
-数据同步保障翻译资产可备份、可迁移、可跨设备使用。
+Data sync keeps translation assets backed up, portable, and usable across devices.
 
-<Frame caption="数据同步概览（约 25 秒）">
-  <img src="/assets/images/modules/5.png" alt="数据同步概览" />
+<Frame caption="Data sync overview (~25 seconds)">
+  <img src="/assets/images/modules/5.png" alt="Data sync overview" />
 </Frame>
 
-## 同步方式对比
+## Sync method comparison
 
-| 方式 | 是否需要登录 | 适用场景 |
+| Method | Sign-in required | Best for |
 | --- | --- | --- |
-| **本地导入导出** | 否 | 手动备份、迁移、版本归档 |
-| **Layer 云同步** | 是（Pro / Max） | 多设备自动同步翻译与配置 |
-| **Google Drive** | 否（需授权） | 个人云盘定时备份 JSON |
+| **Local import/export** | No | Manual backup, migration, version archives |
+| **Layer cloud sync** | Yes (Pro / Max) | Automatic multi-device sync of translations and settings |
+| **Google Drive** | No (authorization required) | Scheduled personal cloud JSON backups |
 
-<Card title="数据同步入口（参考）" icon="cloud" href="/sync/local-import-export">
-  扩展管理页 → 数据同步。
+<Card title="Data sync entry (reference)" icon="cloud" href="/sync/local-import-export">
+  Options page → Data sync.
 </Card>
 
-## 本地导入导出
+## Local import/export
 
-将翻译、词库、配置导出为 JSON 文件，或从备份恢复。
+Export translations, glossaries, and settings as JSON, or restore from a backup.
 
 <Steps>
-  <Step title="导出">
-    点击导出即可自动保存 JSON 到本地。
+  <Step title="Export">
+    Click export to save JSON locally automatically.
   </Step>
-  <Step title="导入">
-    选择备份文件，合并或覆盖导入（注意冲突策略）。
+  <Step title="Import">
+    Choose a backup file and merge or overwrite (mind conflict strategy).
   </Step>
 </Steps>
 
-<Card title="本地导入导出" icon="file" href="/sync/local-import-export">
-  文件格式与导入冲突处理。
+<Card title="Local import/export" icon="file" href="/sync/local-import-export">
+  File format and import conflict handling.
 </Card>
 
-## Layer 云同步
+## Layer cloud sync
 
-Pro / Max 用户登录后，翻译数据与配置可自动同步至 Layer 云端。
+After Pro / Max users sign in, translation data and settings can sync automatically to Layer cloud.
 
-<Card title="Layer 云同步" icon="cloud-upload" href="/sync/layer-cloud">
-  同步范围、触发时机与冲突解决。
+<Card title="Layer cloud sync" icon="cloud-upload" href="/sync/layer-cloud">
+  Sync scope, trigger timing, and conflict resolution.
 </Card>
 
-## Google Drive 备份
+## Google Drive backup
 
-授权 Google 账号后，可备份至 Drive。
+After authorizing a Google account, you can back up to Drive.
 
-<Card title="Google Drive 备份" icon="hard-drive" href="/sync/google-drive">
-  授权、备份计划与恢复流程。
+<Card title="Google Drive backup" icon="hard-drive" href="/sync/google-drive">
+  Authorization, backup schedule, and restore flow.
 </Card>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-同步的数据包括 [翻译管理](/modules/translation) 词条、[词库](/modules/glossary) 与部分配置；[共享翻译](/modules/shared) 则是与社区交换整站包的另一条协作路径。
+Synced data includes [Translation management](/modules/translation) entries, [glossary](/modules/glossary), and some settings. [Shared translations](/modules/shared) is a separate collaboration path for exchanging whole-site packs with the community.
 
 <CardGroup cols={2}>
-  <Card title="共享翻译" icon="share-2" href="/modules/shared">
-    浏览下载社区翻译包。
+  <Card title="Shared Translations" icon="share-2" href="/modules/shared">
+    Browse and download community translation packs.
   </Card>
-  <Card title="同步错误排查" icon="circle-help" href="/troubleshooting/sync-errors">
-    云同步失败时的排查指引。
+  <Card title="Sync error troubleshooting" icon="circle-help" href="/troubleshooting/sync-errors">
+    Guidance when cloud sync fails.
   </Card>
 </CardGroup>

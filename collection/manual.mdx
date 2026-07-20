@@ -1,69 +1,46 @@
 ---
-title: 手动采集
-description: 在页面上框选元素，精确添加待翻译文本。
+title: Manual collection
+description: Select elements on the page to precisely add text for translation.
 icon: "crosshair"
 ---
 
 <Note>
-  建议先阅读 [网页采集模块概览](/modules/collection)，再查看本页细节。
+  We recommend reading the [Page collection module overview](/modules/collection) first, then returning here for details.
 </Note>
 
-手动采集允许用户在页面上逐元素框选待翻译文本，适用于自动采集无法精确定位的场景。
+Manual collection lets you select elements one by one on the page to add text for translation. Use it when automatic collection cannot target the content you need.
 
-## 如何开始
+## How to start
 
-1. 打开目标网页
-2. 点击页面边缘 **手动采集** 悬浮按钮
-3. 鼠标悬停高亮元素，点击选中
-4. 选中内容加入翻译列表
-5. 按住 <code>ALT</code> 键可临时禁用采集来执行页面原始的操作。比如有些页面中的菜单需要点击后才能显示，这种情况下就可以按住 <code>ALT</code> 键来临时禁用采集，点击菜单后松开 <code>ALT</code> 键即可恢复采集。
+1. Open the target web page.
+2. Click the **Manual collection** floating button at the page edge.
+3. Hover to highlight an element, then click to select it.
+4. Selected content is added to the translation list.
+5. Hold <code>ALT</code> to temporarily disable collection and use the page’s original interactions. For example, if a menu only appears after a click, hold <code>ALT</code>, open the menu, then release <code>ALT</code> to resume collection.
 
-## 适用场景
+## When to use it
 
-- 页面结构复杂，自动采集会带入多余内容
-- 仅需翻译导航、按钮等少量 UI 文案
-- 动态加载区域需要人工确认
+- Complex layouts where auto-collection picks up too much noise
+- Only a few UI strings (nav, buttons) need translation
+- Dynamically loaded regions that need human confirmation
 
-## 提示
+## Tip
 
-手动采集的词条带有 DOM 定位信息，适用于 [精确替换](/replace/modes) 模式。
+Entries from manual collection include DOM location data and work well with [Exact replacement](/replace/modes).
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
-  </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
-  </Card>
-  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
-    采集当前网站
-  </Card>
-  <Card title="采集规则与跳过逻辑" icon="file-text" href="/collection/rules">
-    采集规则与跳过逻辑
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="采集方式总览" icon="layers" href="/collection/overview">
-    采集方式总览
+  <Card title="Collect current page" icon="file-text" href="/collection/current-page">
+    One-click capture of visible text on the current page.
   </Card>
-  <Card title="采集当前页面" icon="file-text" href="/collection/current-page">
-    采集当前页面
+  <Card title="Collect current site" icon="globe" href="/collection/current-site">
+    Discover same-domain links and collect pages in batch.
   </Card>
-  <Card title="采集当前网站" icon="globe" href="/collection/current-site">
-    采集当前网站
+  <Card title="Collection rules and skip logic" icon="file-text" href="/collection/rules">
+    What gets collected, skipped, or specially handled.
   </Card>
-  <Card title="采集规则与跳过逻辑" icon="file-text" href="/collection/rules">
-    采集规则与跳过逻辑
-  </Card>
-  <Card title="网页采集（模块概览）" icon="layout-grid" href="/modules/collection">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Page collection (module overview)" icon="layout-grid" href="/modules/collection">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

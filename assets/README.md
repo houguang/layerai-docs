@@ -1,15 +1,15 @@
-# 静态资源
+# Static assets
 
-文档站引用的图片、视频、Logo、Favicon 与 MDX 组件片段均放在此目录。
+Images, videos, logos, favicons, and MDX component snippets used by the docs site all live in this directory.
 
 ```
 assets/
 ├── favicon.ico
 ├── logo/
-├── images/          # 截图
-├── videos/          # 演示视频
-├── snippets/        # 可 import 的 JSX 组件
-└── templates/       # Hub 页 MDX 模板（维护用，非导航页）
+├── images/          # Screenshots
+├── videos/          # Demo videos
+├── snippets/        # Importable JSX components
+└── templates/       # Hub-page MDX templates (for maintainers; not nav pages)
 ```
 
-站内引用路径以 `/assets/` 为前缀，例如 `/assets/images/ui-tour/1_cn.png`。
+In-site asset paths are prefixed with `/assets/`, for example `/assets/images/ui-tour/1_cn.png`.

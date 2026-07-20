@@ -1,78 +1,78 @@
 ---
-title: 产品功能地图
-description: 从安装到共享翻译的完整功能串联与模块导航。
+title: Product Map
+description: Full feature flow from install to shared translations, with module navigation.
 icon: "map"
 ---
 
-LayerAI 将外文阅读拆成「先翻译、后使用」两阶段。下图展示各模块如何串联，点击卡片进入对应模块概览。
+LayerAI splits foreign-language reading into two stages: “translate first, then reuse while unchanged.” The diagram below shows how modules connect—click a card to open that module hub.
 
 ```mermaid
 flowchart LR
-  install[安装扩展] --> settings[基础设置]
-  settings --> models[配置模型]
-  models --> collect[网页采集]
-  collect --> translate[翻译管理]
-  translate --> replace[页面替换]
-  replace --> use[日常阅读]
-  translate --> glossary[词库约束]
-  translate --> queue[翻译队列]
-  translate --> sync[数据同步]
-  sync --> shared[共享翻译]
+  install[Install extension] --> settings[Basic settings]
+  settings --> models[Configure models]
+  models --> collect[Page collection]
+  collect --> translate[Translation management]
+  translate --> replace[Page replace]
+  replace --> use[Daily reading]
+  translate --> glossary[Glossary constraints]
+  translate --> queue[Translation queue]
+  translate --> sync[Data sync]
+  sync --> shared[Shared translations]
 ```
 
-## 入门路径
+## Getting started path
 
 <CardGroup cols={2}>
-  <Card title="安装扩展" icon="download" href="/journey/install">
-    从应用商店或本地包安装 LayerAI。
+  <Card title="Install the Extension" icon="download" href="/journey/install">
+    Install LayerAI from the Chrome or Firefox store.
   </Card>
-  <Card title="基础设置" icon="settings" href="/journey/basic-settings">
-    配置界面语言、目标语言与主题。
+  <Card title="Basic Settings" icon="settings" href="/journey/basic-settings">
+    Configure UI language, target language, and theme.
   </Card>
-  <Card title="配置模型" icon="cpu" href="/modules/models">
-    选择平台模型或自定义 API，完成 AI 翻译前置配置。
+  <Card title="Configure Models" icon="cpu" href="/modules/models">
+    Choose a platform model or custom API to enable AI translation.
   </Card>
-  <Card title="第一个翻译流程" icon="sparkles" href="/journey/first-translation">
-    端到端演示采集 → 翻译 → 保存 → 自动替换。
+  <Card title="Your First Translation" icon="sparkles" href="/journey/first-translation">
+    End-to-end demo: collect → translate → save → auto-replace.
   </Card>
 </CardGroup>
 
-## 功能模块
+## Features
 
 <CardGroup cols={3}>
-  <Card title="网页采集" icon="mouse-pointer" href="/modules/collection">
-    手动框选、当前页、整站三种采集方式。
+  <Card title="Page Collection" icon="mouse-pointer" href="/modules/collection">
+    Manual selection, current page, and whole-site collection.
   </Card>
-  <Card title="翻译管理" icon="language" href="/modules/translation">
-    按站点管理词条，AI 批量翻译与提交共享。
+  <Card title="Translation Management" icon="language" href="/modules/translation">
+    Manage entries by site; AI batch translate and submit to share.
   </Card>
-  <Card title="页面替换" icon="repeat" href="/modules/replace">
-    自动替换开关与精确 / 内容匹配两种模式。
+  <Card title="Page Replace" icon="repeat" href="/modules/replace">
+    Auto-replace toggle and exact / content-match modes.
   </Card>
-  <Card title="词库" icon="book-a" href="/modules/glossary">
-    本地与平台术语，约束 AI 译法一致性。
+  <Card title="Glossary" icon="book-a" href="/modules/glossary">
+    Local and platform terms to keep AI translations consistent.
   </Card>
-  <Card title="翻译队列" icon="list-ordered" href="/modules/queue">
-    后台批量 AI 任务，进度追踪与失败重试。
+  <Card title="Translation Queue" icon="list-ordered" href="/modules/queue">
+    Background AI batch jobs with progress tracking and retries.
   </Card>
-  <Card title="数据同步" icon="cloud" href="/modules/sync">
-    本地 JSON、Layer 云、Google Drive 备份。
+  <Card title="Data Sync" icon="cloud" href="/modules/sync">
+    Local JSON, Layer cloud, and Google Drive backups.
   </Card>
-  <Card title="共享翻译" icon="share-2" href="/modules/shared">
-    浏览下载社区翻译包，提交整站译文。
+  <Card title="Shared Translations" icon="share-2" href="/modules/shared">
+    Browse and download community packs; submit whole-site translations.
   </Card>
-  <Card title="账号与设置" icon="credit-card" href="/modules/account-settings">
-    订阅套餐、基础配置与高级开发者选项。
+  <Card title="Account & Settings" icon="credit-card" href="/modules/account-settings">
+    Plans, basic settings, and advanced developer options.
   </Card>
 </CardGroup>
 
-## 典型工作流
+## Typical workflows
 
-1. **首次翻译某站点** — [网页采集](/modules/collection) → [翻译管理](/modules/translation) → [页面替换](/modules/replace)
-2. **术语一致性** — 在 [词库](/modules/glossary) 维护术语，AI 翻译时自动约束
-3. **整站批量** — [整站采集](/collection/current-site) → [翻译队列](/modules/queue) 后台处理
-4. **协作与备份** — [数据同步](/modules/sync) 跨设备，[共享翻译](/modules/shared) 与社区交换整站包
+1. **First translation for a site** — [Page collection](/modules/collection) → [Translation management](/modules/translation) → [Page replace](/modules/replace)
+2. **Terminology consistency** — Maintain terms in the [glossary](/modules/glossary); AI translation applies them automatically
+3. **Whole-site batch** — [Whole-site collection](/collection/current-site) → process in the [translation queue](/modules/queue)
+4. **Collaboration and backup** — [Data sync](/modules/sync) across devices; [shared translations](/modules/shared) to exchange whole-site packs with the community
 
 <Tip>
-  建议先完成 [第一个翻译流程](/journey/first-translation) 实操，再按需深入各模块 Hub 与参考手册。
+  Complete [Your first translation](/journey/first-translation) hands-on first, then dive into each module hub and reference as needed.
 </Tip>

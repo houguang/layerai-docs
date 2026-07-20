@@ -1,18 +1,22 @@
-# 媒体资产目录
+# Media assets
 
-本目录存放文档引用的截图，按模块组织。
+This directory stores screenshots and related images referenced by the docs.
 
-## 命名规范
+## Locale note
 
-- 路径：`assets/images/{journey|modules|ui-tour}/{feature}_zh.png`
-- alt 文本：写清 UI 区域与操作上下文
+Demo videos and many screenshots currently show the **Chinese UI** (`*_zh` / `*_cn` suffixes). The docs body is English; replace with English-locale captures when available. Prefer `_zh` for new assets; existing `_cn` files remain valid.
 
-## 子目录
+## Naming conventions
 
-| 目录 | 用途 |
+- Path: `assets/images/{journey|modules|ui-tour}/{feature}_zh.png` (or `_cn` for legacy)
+- Alt text: Describe the UI area and the action context clearly
+
+## Subdirectories
+
+| Directory | Purpose |
 | --- | --- |
-| `ui-tour/` | 界面导览截图 |
-| `journey/` | 入门串联步骤截图 |
-| `modules/` | 各功能模块 Hub 页截图 |
+| `ui-tour/` | UI tour screenshots |
+| `journey/` | Getting-started flow screenshots |
+| `modules/` | Screenshots for each feature module hub page |
 
-运行 `python scripts/generate-media-placeholders.py` 可生成占位截图（正式截图请替换同名文件）。
+Run `python scripts/generate-media-placeholders.py` to generate placeholder screenshots (replace same-named files with final screenshots).

@@ -1,68 +1,63 @@
 ---
-title: 翻译队列
-description: 后台批量执行 AI 翻译任务，支持进度追踪与失败重试。
+title: Translation Queue
+description: Run AI translation jobs in the background with progress tracking and failure retries.
 icon: "list-ordered"
 ---
 
-翻译队列承接 AI 批量翻译任务，在后台按配置分片、并发调用模型，避免阻塞当前页面操作。
+The translation queue handles AI batch translation jobs. It chunks work and calls models concurrently in the background so large batches do not block page interaction.
 
-<Frame caption="翻译队列概览（约 20 秒）">
+<Frame caption="Translation queue overview (~20 seconds)">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/modules/queue-overview_zh.mp4" />
 </Frame>
 
-## 队列概览
+## Purpose
 
-扩展管理页 → **翻译队列**，查看进行中和已完成的批量任务。
+Put many pending entries into a background queue and process them with configured **chunking, concurrency, and retries**. Entry point: options page → **Translation queue**.
 
-<Frame caption="扩展管理页 · 翻译队列">
-  <img src="/assets/images/ui-tour/1_cn.png" alt="翻译队列入口与任务列表区域" />
-</Frame>
+## Job sources
 
-<Tabs>
-  <Tab title="任务状态">
-    排队中、进行中、已完成、部分失败、已取消。
-  </Tab>
-  <Tab title="典型来源">
-    翻译列表 **AI 一键翻译**、翻译管理站点详情批量翻译。
-  </Tab>
-  <Tab title="完成后的结果">
-    译文写回对应词条，可在站点详情或浮层中查看。
-  </Tab>
-</Tabs>
+- **AI one-click translate** from Translation management or the on-page list
+- Batch translation after whole-site collection
 
-<Card title="队列概览（参考）" icon="list" href="/queue/overview">
-  队列机制与任务生命周期。
-</Card>
+## Job status
 
-## 任务管理
+| Status | Meaning |
+| --- | --- |
+| Queued | Waiting to run |
+| Running | Calling the model |
+| Completed | Fully or partially successful |
+| Failed | Can be retried manually or automatically |
+| Cancelled | Stopped by the user |
 
-查看任务详情、失败条目、重试或取消任务。
+## Task management
+
+View task details, failed items, retry, or cancel.
 
 <Steps>
-  <Step title="查看进度">
-    在队列列表中查看当前任务进度与预计剩余条目。
+  <Step title="Check progress">
+    In the queue list, view current progress and remaining entries.
   </Step>
-  <Step title="处理失败">
-    展开失败详情，根据 [AI 错误排查](/troubleshooting/ai-errors) 修正配置后重试。
+  <Step title="Handle failures">
+    Expand failure details; fix configuration using [AI error troubleshooting](/troubleshooting/ai-errors), then retry.
   </Step>
-  <Step title="取消任务">
-    进行中的任务可取消，已完成条目仍会保留。
+  <Step title="Cancel a task">
+    In-progress tasks can be canceled; completed entries are still kept.
   </Step>
 </Steps>
 
-<Card title="队列任务管理" icon="settings-2" href="/queue/task-management">
-  重试、取消与并发配置关联说明。
+<Card title="Queue task management" icon="settings-2" href="/queue/task-management">
+  Retry, cancel, and how concurrency settings relate.
 </Card>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-队列依赖 [模型配置](/modules/models) 中的默认模型与 [运行时配置](/models/runtime-config)；整站 [网页采集](/modules/collection) 后大批量翻译时建议使用队列而非逐条等待。
+The queue depends on the default model and [runtime config](/models/runtime-config) in [Model configuration](/modules/models). After large [page collection](/modules/collection) jobs, prefer the queue over waiting entry by entry.
 
 <CardGroup cols={2}>
-  <Card title="AI 批量翻译" icon="zap" href="/modules/translation">
-    如何发起批量 AI 翻译任务。
+  <Card title="AI batch translation" icon="zap" href="/translation/ai-batch">
+    How to start AI batch jobs.
   </Card>
-  <Card title="模型配置" icon="cpu" href="/modules/models">
-    配置 AI 后端与并发参数。
+  <Card title="Model Configuration" icon="cpu" href="/modules/models">
+    Configure the AI backend and concurrency.
   </Card>
 </CardGroup>

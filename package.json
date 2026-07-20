@@ -2,7 +2,7 @@
   "name": "layerai-docs",
   "private": true,
   "version": "0.1.0",
-  "description": "LayerAI 浏览器扩展使用文档",
+  "description": "LayerAI browser extension documentation",
   "scripts": {
     "dev": "mint dev",
     "validate": "mint validate",

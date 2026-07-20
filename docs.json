@@ -44,6 +44,26 @@
       "destination": "/journey/first-translation"
     },
     {
+      "source": "/collection/overview",
+      "destination": "/modules/collection"
+    },
+    {
+      "source": "/glossary/overview",
+      "destination": "/modules/glossary"
+    },
+    {
+      "source": "/models/overview",
+      "destination": "/modules/models"
+    },
+    {
+      "source": "/shared/overview",
+      "destination": "/modules/shared"
+    },
+    {
+      "source": "/queue/overview",
+      "destination": "/modules/queue"
+    },
+    {
       "source": "/images/:path*",
       "destination": "/assets/images/:path*"
     },
@@ -68,143 +88,130 @@
     "options": ["copy", "view", "chatgpt", "claude", "cursor", "mcp"]
   },
   "navigation": {
-    "description": "LayerAI 浏览器扩展官方文档：网页采集、AI 翻译、词库治理、数据同步与共享协作。",
+    "description": "Official LayerAI browser extension docs: page collection, AI translation, glossary governance, data sync, and shared collaboration.",
     "seo": {
       "metatags": {
-        "og:site_name": "LayerAI 使用文档",
-        "og:url": "https://layerai.yun"
+        "og:site_name": "LayerAI Docs",
+        "og:url": "https://docs.layerai.yun"
       }
     },
     "tabs": [
       {
-        "tab": "文档",
+        "tab": "Docs",
         "icon": "book-open",
         "groups": [
           {
-            "group": "开始使用",
+            "group": "Getting started",
             "icon": "rocket",
             "pages": [
               "introduction",
               "introduction/concepts",
-              "introduction/ui-tour",
               "journey/install",
               "journey/basic-settings",
               "journey/login",
               "journey/first-translation",
+              "introduction/ui-tour",
               "journey/product-map"
             ]
           },
           {
-            "group": "功能模块",
+            "group": "Features",
             "icon": "layout-grid",
             "pages": [
-              "modules/collection",
-              "modules/translation",
-              "modules/replace",
-              "modules/glossary",
-              "modules/models",
-              "modules/sync",
-              "modules/shared",
-              "modules/account-settings"
+              {
+                "group": "Collection",
+                "icon": "mouse-pointer",
+                "pages": [
+                  "modules/collection",
+                  "collection/manual",
+                  "collection/current-page",
+                  "collection/current-site",
+                  "collection/rules"
+                ]
+              },
+              {
+                "group": "Translation",
+                "icon": "globe",
+                "pages": [
+                  "modules/translation",
+                  "translation/site-list",
+                  "translation/edit-entries",
+                  "translation/manual-translation",
+                  "translation/ai-batch",
+                  "modules/queue",
+                  "queue/task-management",
+                  "translation/submit-shared"
+                ]
+              },
+              {
+                "group": "Replace",
+                "icon": "repeat",
+                "pages": [
+                  "modules/replace",
+                  "replace/auto-replace",
+                  "replace/modes",
+                  "replace/page-modal"
+                ]
+              },
+              {
+                "group": "Models",
+                "icon": "cpu",
+                "pages": [
+                  "modules/models",
+                  "models/platform-models",
+                  "models/custom-models",
+                  "models/prompts",
+                  "models/runtime-config"
+                ]
+              },
+              {
+                "group": "Glossary",
+                "icon": "book-a",
+                "pages": [
+                  "modules/glossary",
+                  "glossary/local-glossary",
+                  "glossary/platform-glossary",
+                  "glossary/sync"
+                ]
+              },
+              {
+                "group": "Sync & sharing",
+                "icon": "cloud",
+                "pages": [
+                  "modules/sync",
+                  "sync/local-import-export",
+                  "sync/layer-cloud",
+                  "sync/google-drive",
+                  "modules/shared",
+                  "shared/browse-download",
+                  "shared/submit",
+                  "shared/discover-modes"
+                ]
+              },
+              {
+                "group": "Account & settings",
+                "icon": "credit-card",
+                "pages": [
+                  "modules/account-settings",
+                  "account/login",
+                  "account/plans",
+                  "account/quotas",
+                  "settings/basic",
+                  "settings/shared-settings",
+                  "advanced/developer",
+                  "advanced/protected-tags",
+                  "advanced/sensitive-mask"
+                ]
+              }
             ]
           },
           {
-            "group": "网页采集",
-            "icon": "mouse-pointer",
-            "pages": [
-              "collection/overview",
-              "collection/manual",
-              "collection/current-page",
-              "collection/current-site",
-              "collection/rules"
-            ]
-          },
-          {
-            "group": "翻译管理",
-            "icon": "globe",
-            "pages": [
-              "translation/site-list",
-              "translation/edit-entries",
-              "translation/manual-translation",
-              "translation/ai-batch",
-              "queue/overview",
-              "queue/task-management",
-              "translation/submit-shared"
-            ]
-          },
-          {
-            "group": "页面替换",
-            "icon": "repeat",
-            "pages": [
-              "replace/auto-replace",
-              "replace/modes",
-              "replace/page-modal"
-            ]
-          },
-          {
-            "group": "模型配置",
-            "icon": "cpu",
-            "pages": [
-              "models/overview",
-              "models/platform-models",
-              "models/custom-models",
-              "models/prompts",
-              "models/runtime-config"
-            ]
-          },
-          {
-            "group": "词库",
-            "icon": "book-a",
-            "pages": [
-              "glossary/overview",
-              "glossary/local-glossary",
-              "glossary/platform-glossary",
-              "glossary/sync"
-            ]
-          },
-          {
-            "group": "数据同步",
-            "icon": "cloud",
-            "pages": [
-              "sync/local-import-export",
-              "sync/layer-cloud",
-              "sync/google-drive"
-            ]
-          },
-          {
-            "group": "共享翻译",
-            "icon": "share-2",
-            "pages": [
-              "shared/overview",
-              "shared/browse-download",
-              "shared/submit",
-              "shared/discover-modes"
-            ]
-          },
-          {
-            "group": "账号与设置",
-            "icon": "credit-card",
-            "pages": [
-              "account/login",
-              "account/plans",
-              "account/quotas",
-              "settings/basic",
-              "settings/shared-settings"
-            ]
-          },
-          {
-            "group": "故障排查",
-            "icon": "file-question-mark",
+            "group": "Help",
+            "icon": "circle-help",
             "pages": [
               "troubleshooting/index",
               "troubleshooting/ai-errors",
-              "troubleshooting/sync-errors"
-            ]
-          },
-          {
-            "group": "附录",
-            "icon": "file-text",
-            "pages": [
+              "troubleshooting/sync-errors",
               "appendix/glossary",
               "appendix/data-format"
             ]
@@ -212,14 +219,7 @@
         ]
       },
       {
-        "tab": "安装",
-        "icon": "download",
-        "pages": [
-          "journey/install"
-        ]
-      },
-      {
-        "tab": "官网",
+        "tab": "Website",
         "icon": "globe",
         "href": "https://layerai.yun"
       }

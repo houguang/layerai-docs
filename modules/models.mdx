@@ -1,84 +1,83 @@
 ---
-title: 模型配置
-description: 平台模型、自定义 API、提示词与运行时参数配置。
+title: Model Configuration
+description: Platform models, custom APIs, prompts, and runtime parameter configuration.
 icon: "cpu"
 ---
 
-模型配置决定 AI 翻译使用哪个大模型、如何调用 API，以及批量翻译时的并发与重试策略。
+Model configuration determines which large model AI translation uses, how the API is called, and concurrency/retry strategy for batch translation. Entry point: options page → **Model configuration**.
 
-<Frame caption="模型配置概览">
-  <img src="/assets/images/modules/4.png" alt="模型配置概览" />
+<Frame caption="Model configuration overview">
+  <img src="/assets/images/modules/4.png" alt="Model configuration overview" />
 </Frame>
 
-## 配置概览
+| Type | Description |
+| --- | --- |
+| **Platform models** | Official Layer models. Sign-in required; tokens follow your plan. |
+| **Custom models** | OpenAI-compatible / Anthropic / Gemini / Ollama and similar APIs you configure |
 
-扩展管理页 → **模型配置**，设置默认翻译模型与相关参数。
+Also configure the default model, [prompt templates](/models/prompts), and [runtime parameters](/models/runtime-config) (batching, concurrency, retries). Some platform models are Pro / Max only—see [Plans](/account/plans).
 
-<Card title="模型配置概述（参考）" icon="cpu" href="/models/overview">
-  平台模型与自定义模型的选择建议。
-</Card>
+## Platform models
 
-## 平台模型
-
-登录 Layer 账号后可使用官方接入的 GPT、Claude、Gemini 等模型，按套餐消耗 Token 额度。
+After signing in to a Layer account, use officially integrated models such as GPT, Claude, and Gemini. Token quotas are consumed according to your plan.
 
 <Tabs>
-  <Tab title="适用">
-    不想自行配置 API Key、希望开箱即用的用户。
+  <Tab title="Best for">
+    Users who do not want to configure their own API keys and prefer a ready-to-use setup.
   </Tab>
-  <Tab title="额度">
-    Free / Pro / Max 各有不同 Token 配额，见 [账号与设置](/modules/account-settings)。
+  <Tab title="Quotas">
+    Free / Pro / Max have different Token quotas—see [Account & settings](/modules/account-settings).
   </Tab>
 </Tabs>
 
-<Card title="平台模型" icon="sparkles" href="/models/platform-models">
-  可用模型列表与额度说明。
+<Card title="Platform models" icon="sparkles" href="/models/platform-models">
+  Available models and quota details.
 </Card>
 
-## 自定义模型
+## Custom models
 
-支持 OpenAI 兼容 API、Anthropic、Gemini、Ollama 等，数据直连你的 API 提供商。
+Supports OpenAI-compatible APIs, Anthropic, Gemini, Ollama, and more. Data goes directly to your API provider.
 
 <Steps>
-  <Step title="添加模型">
-    在模型配置中新增自定义模型，填写 Endpoint 与 API Key。
+  <Step title="Add a model">
+    Add a custom model in model configuration; enter the Endpoint and API Key.
   </Step>
-  <Step title="设为默认">
-    将常用模型设为默认，AI 一键翻译时使用。
+  <Step title="Set as default">
+    Set your preferred model as default for AI one-click translate.
   </Step>
-  <Step title="测试连接">
-    保存前验证 API 可用，避免队列批量失败。
+  <Step title="Test connection">
+    Verify the API before saving to avoid batch failures in the queue.
   </Step>
 </Steps>
 
-<Card title="自定义模型" icon="plug" href="/models/custom-models">
-  各提供商配置示例与常见问题。
+<Card title="Custom models" icon="plug" href="/models/custom-models">
+  Provider setup examples and common issues.
 </Card>
 
-## 提示词与运行时
+## Prompts and runtime
 
 <Tabs>
-  <Tab title="翻译提示词">
-    自定义系统提示词，控制译风、格式与术语处理方式。
+  <Tab title="Translation prompts">
+    Customize the system prompt to control style, format, and term handling.
   </Tab>
-  <Tab title="运行时配置">
-    分片大小、并发数、超时与重试，影响 [翻译队列](/modules/queue) 表现。
+  <Tab title="Runtime config">
+    Chunk size, concurrency, timeout, and retries—these affect [translation queue](/modules/queue) behavior.
   </Tab>
 </Tabs>
 
 <CardGroup cols={2}>
-  <Card title="翻译提示词" icon="message-square" href="/models/prompts">
-    提示词模板与变量说明。
+  <Card title="Translation prompts" icon="message-square" href="/models/prompts">
+    Prompt templates and variable reference.
   </Card>
-  <Card title="运行时配置" icon="gauge" href="/models/runtime-config">
-    并发、分片与重试参数。
+  <Card title="Runtime config" icon="gauge" href="/models/runtime-config">
+    Concurrency, chunking, and retry parameters.
   </Card>
 </CardGroup>
 
-## 与其他模块的衔接
+## How it connects to other modules
 
-完成模型配置后，即可在 [翻译管理](/modules/translation) 与 [第一个翻译流程](/journey/first-translation) 中使用 AI 一键翻译。
+After model configuration is complete, you can use AI one-click translate in [Translation management](/modules/translation) and [Your first translation](/journey/first-translation).
 
-<Card title="AI 错误排查" icon="circle-help" href="/troubleshooting/ai-errors">
-  API 调用失败时的排查指引。
+<Card title="AI error troubleshooting" icon="circle-help" href="/troubleshooting/ai-errors">
+  Guidance when API calls fail.
 </Card>

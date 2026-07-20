@@ -1,92 +1,64 @@
 ---
-title: 配额与用量
-description: Token 额度与共享下载次数说明。
+title: Quotas and usage
+description: Token quotas and shared download limits.
 icon: "chart-bar"
 ---
 
 <Note>
-  建议先阅读 [账号与设置模块概览](/modules/account-settings)，再查看本页细节。
+  We recommend reading the [Account and settings module overview](/modules/account-settings) first, then returning here for details.
 </Note>
 
-LayerAI 对平台模型 Token 与共享翻译下载次数按套餐分配额度，用户可在基础配置中查看当前用量。
+LayerAI allocates platform model tokens and shared translation download counts by plan. You can view current usage in Basic settings.
 
-## 查看位置
+## Where to view
 
-基础配置 → **账号** 模块。
+Basic settings → **Account** section.
 
-## Token 额度
+## Token quotas
 
-使用 **平台模型** 进行 AI 翻译时消耗 Token，按套餐分配：
+AI translation with **platform models** consumes tokens, allocated by plan:
 
-- Free 模型池
-- Pro 模型池
-- Max 模型池
+- Free model pool
+- Pro model pool
+- Max model pool
 
-**自定义模型** 使用用户自有的 API 额度，不占用 Layer Token（除非走平台代理）。
+**Custom models** use your own API quota and do not consume Layer tokens (unless traffic goes through a platform proxy).
 
-## 共享下载配额
+## Shared download quotas
 
-每月可下载共享翻译包的次数因套餐而异。配额用尽后需等待周期重置或升级套餐。
+Monthly download limits for shared translation packs vary by plan. When the quota is exhausted, wait for the cycle to reset or upgrade your plan.
 
-## 配额用尽时的处理方式
+## When quotas are exhausted
 
-- Token 用尽 → 改用 [自定义模型](/models/custom-models) 或升级套餐
-- 下载配额用尽 → 等待重置或使用已下载的包
+- Tokens exhausted → switch to a [custom model](/models/custom-models) or upgrade your plan
+- Download quota exhausted → wait for reset or use packs you already downloaded
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
+  <Card title="Sign in" icon="user" href="/account/login">
+    Sign in
   </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
+  <Card title="Plans" icon="credit-card" href="/account/plans">
+    Plans
   </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
+  <Card title="Basic settings" icon="settings" href="/settings/basic">
+    Basic settings
   </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
+  <Card title="Shared settings" icon="share-2" href="/settings/shared-settings">
+    Shared settings
   </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
+  <Card title="Developer settings" icon="code" href="/advanced/developer">
+    Developer settings
   </Card>
-  <Card title="受保护标签" icon="shield" href="/advanced/protected-tags">
-    受保护标签
+  <Card title="Protected tags" icon="shield" href="/advanced/protected-tags">
+    Protected tags
   </Card>
-  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
-    敏感词脱敏
+  <Card title="Sensitive-term masking" icon="eye-off" href="/advanced/sensitive-mask">
+    Sensitive-term masking
   </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Account and settings (module overview)" icon="layout-grid" href="/modules/account-settings">
+    Return to the module hub for section overviews and demo videos.
   </Card>
 </CardGroup>
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="登录账号" icon="user" href="/account/login">
-    登录账号
-  </Card>
-  <Card title="套餐说明" icon="credit-card" href="/account/plans">
-    套餐说明
-  </Card>
-  <Card title="基础配置" icon="settings" href="/settings/basic">
-    基础配置
-  </Card>
-  <Card title="共享相关设置" icon="share-2" href="/settings/shared-settings">
-    共享相关设置
-  </Card>
-  <Card title="开发者配置" icon="code" href="/advanced/developer">
-    开发者配置
-  </Card>
-  <Card title="受保护标签" icon="shield" href="/advanced/protected-tags">
-    受保护标签
-  </Card>
-  <Card title="敏感词脱敏" icon="eye-off" href="/advanced/sensitive-mask">
-    敏感词脱敏
-  </Card>
-  <Card title="账号与设置（模块概览）" icon="layout-grid" href="/modules/account-settings">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>

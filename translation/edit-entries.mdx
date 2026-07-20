@@ -1,86 +1,62 @@
 ---
-title: 编辑词条
-description: 修改译文、启用禁用与删除单条记录。
+title: Edit entries
+description: Edit translations, enable or disable entries, and delete individual records.
 icon: "pen-line"
 ---
 
 <Note>
-  建议先阅读 [翻译管理模块概览](/modules/translation)，再查看本页细节。
+  We recommend reading the [Translation management module overview](/modules/translation) first, then returning here for details.
 </Note>
 
-## 编辑方式
+## Ways to edit
 
-### 正则表达式替换
-<Frame caption="正则表达式替换">
+### Regex replacement
+<Frame caption="Regex replacement">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/1.mp4" />
 </Frame>
 
-### 占位符替换
-<Frame caption="占位符替换">
+### Placeholder replacement
+<Frame caption="Placeholder replacement">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/2.mp4" />
 </Frame>
 
-### 手动添加
-<Frame caption="手动添加">
+### Manual add
+<Frame caption="Manual add">
   <video controls playsInline className="w-full aspect-video rounded-xl" src="/assets/videos/3.mp4" />
 </Frame>
 
-## 启用 / 禁用
+## Enable / disable
 
-禁用后该词条**不会参与页面替换**，但数据仍保留，可随时重新启用。
+A disabled entry **does not participate in page replacement**, but the data is kept and can be re-enabled at any time.
 
-在翻译列表弹窗中可通过开关控制单条启用状态。
+In the translation list modal, use the toggle to control each entry.
 
-## 删除
+## Delete
 
-删除词条后，页面上对应位置恢复显示原文（若自动替换开启且没有其他匹配规则）。
+After you delete an entry, the page shows the original text again at that location (if auto-replace is on and no other rule matches).
 
 <Warning>
-  删除操作不可撤销，建议先 [导出备份](/sync/local-import-export)。
+  Deletion cannot be undone. [Export a backup](/sync/local-import-export) first.
 </Warning>
 
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
-    翻译管理
+  <Card title="Translation management" icon="folder-open" href="/translation/site-list">
+    Browse and manage entries by site.
   </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
+  <Card title="Manual translation" icon="hand" href="/translation/manual-translation">
+    Export chunks, translate externally, then paste JSON back.
   </Card>
-  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
-    AI 批量翻译
+  <Card title="AI batch translation" icon="zap" href="/translation/ai-batch">
+    Start AI translation in the extension and write jobs to the queue.
+  </Card><Card title="Queue task management" icon="settings-2" href="/queue/task-management">
+    Track progress, retry failures, cancel, and clean up jobs.
   </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
+  <Card title="Submit shared translation" icon="upload" href="/translation/submit-shared">
+    Submit a site pack for others to download.
   </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
-    翻译管理
-  </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
-  </Card>
-  <Card title="AI 批量翻译" icon="zap" href="/translation/ai-batch">
-    AI 批量翻译
-  </Card>
-  <Card title="翻译队列概述" icon="list" href="/queue/overview">
-    翻译队列概述
-  </Card>
-  <Card title="队列任务管理" icon="settings-2" href="/queue/task-management">
-    队列任务管理
-  </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
-  </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Translation management (module overview)" icon="layout-grid" href="/modules/translation">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>

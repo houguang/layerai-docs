@@ -1,78 +1,54 @@
 ---
-title: AI 批量翻译
-description: 在扩展内一键发起 AI 翻译并写入队列。
+title: AI batch translation
+description: Start AI translation in the extension and write jobs to the queue.
 icon: "zap"
 ---
 
 <Note>
-  建议先阅读 [翻译管理模块概览](/modules/translation)，再查看本页细节。
+  We recommend reading the [Translation management module overview](/modules/translation) first, then returning here for details.
 </Note>
 
-AI 批量翻译功能允许用户一次性选中多条待译词条，由扩展在后台队列中依次调用 AI 模型完成翻译。
+AI batch translation lets you select multiple pending entries at once. The extension calls the AI model in a background queue and writes results back.
 
-## 触发位置
+## Where to start
 
-- 网页 **翻译列表弹窗** → AI 一键翻译
-- **翻译管理** 站点详情 → 勾选条目 → AI 一键翻译
+- On-page **translation list modal** → AI translate
+- **Translation management** site details → select entries → AI translate
 
-## 前置条件
+## Prerequisites
 
-- 已在 [模型配置](/models/overview) 设置默认模型
-- 自定义模型需配置有效 API Key 与 Endpoint
-- 平台模型需登录且 Token 额度充足
+- A default model is set in [Model configuration](/modules/models)
+- Custom models need a valid API key and endpoint
+- Platform models require sign-in and enough token quota
 
-## 执行过程
+## How it runs
 
-1. 选中待翻译字段加入 [翻译队列](/queue/overview)
-2. 后台按 [运行时配置](/models/runtime-config) 分片、并发、重试
-3. 完成后结果写回词条，可在队列页查看详情
+1. Selected fields are added to the [translation queue](/modules/queue)
+2. The background worker chunks, runs concurrently, and retries per [runtime configuration](/models/runtime-config)
+3. Results are written back to entries; open the queue page for details
 
-## 错误处理
+## Error handling
 
-常见错误见 [AI 错误排查](/troubleshooting/ai-errors)。
+See [AI error troubleshooting](/troubleshooting/ai-errors) for common failures.
 
-## 本模块其他参考
-
-<CardGroup cols={2}>
-  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
-    翻译管理
-  </Card>
-  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
-    编辑词条
-  </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
-  </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
-  </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
-  </Card>
-</CardGroup>
-
-## 本模块其他参考
+## More in this module
 
 <CardGroup cols={2}>
-  <Card title="翻译管理" icon="folder-open" href="/translation/site-list">
-    翻译管理
+  <Card title="Translation management" icon="folder-open" href="/translation/site-list">
+    Browse and manage entries by site.
   </Card>
-  <Card title="编辑词条" icon="pencil" href="/translation/edit-entries">
-    编辑词条
+  <Card title="Edit entries" icon="pencil" href="/translation/edit-entries">
+    Edit translations, enable/disable, or delete individual records.
   </Card>
-  <Card title="手动翻译" icon="hand" href="/translation/manual-translation">
-    手动翻译
+  <Card title="Manual translation" icon="hand" href="/translation/manual-translation">
+    Export chunks, translate externally, then paste JSON back.
+  </Card><Card title="Queue task management" icon="settings-2" href="/queue/task-management">
+    Track progress, retry failures, cancel, and clean up jobs.
   </Card>
-  <Card title="翻译队列概述" icon="list" href="/queue/overview">
-    翻译队列概述
+  <Card title="Submit shared translation" icon="upload" href="/translation/submit-shared">
+    Submit a site pack for others to download.
   </Card>
-  <Card title="队列任务管理" icon="settings-2" href="/queue/task-management">
-    队列任务管理
-  </Card>
-  <Card title="提交共享翻译" icon="upload" href="/translation/submit-shared">
-    提交共享翻译
-  </Card>
-  <Card title="翻译管理（模块概览）" icon="layout-grid" href="/modules/translation">
-    返回模块 Hub 页，查看分块介绍与演示视频。
+  <Card title="Translation management (module overview)" icon="layout-grid" href="/modules/translation">
+    Back to the module hub for section intros and demo videos.
   </Card>
 </CardGroup>
