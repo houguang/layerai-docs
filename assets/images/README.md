@@ -19,4 +19,4 @@ Demo videos and many screenshots currently show the **Chinese UI** (`*_zh` / `*_
 | `journey/` | Getting-started flow screenshots |
 | `modules/` | Screenshots for each feature module hub page |
 
-Run `python scripts/generate-media-placeholders.py` to generate placeholder screenshots (replace same-named files with final screenshots).
+Do not commit empty stub videos (tiny invalid `.mp4` shells) or “LayerAI Docs Placeholder” PNGs. Prefer real screenshots or screen recordings under the paths above.
